@@ -1,0 +1,686 @@
+ResID,GLWD_ID,GRAND_ID,Source,LAKE_NAME,DAM_NAME,LONG_DEG,LAT_DEG,LONG_OUTLE,LAT_OUTLET,VOLUME_Gra,VOL_SRC,COUNTRY,SEC_CNTRY,RIVER,NEAR_CITY,DAM_YEAR,note,X_coord,Y_coord,X_CORRECT,Y_CORRECT,LisfloodX3,LisfloodY3,remap_com
+1,NA,3662,GranD,,Nangbeto,NA,NA,1.43375,7.432917,1710,GranD,Togo,Benin,Mono,Atakapame,1987,added from GranD from Berny's list,NA,NA,1.45,7.35,1.475,7.325,shift 1 pixel south
+2,NA,408,GranD,,Lower Salmon,NA,NA,-114.905417,42.84125,13.4,GranD,United States,,Snake River,,1949,"added from GranD, GloFAS station below G0652",NA,NA,-114.95,42.75,-114.375,42.575,remapped
+3,NA,717,GranD,,McArthur,NA,NA,-95.98875,50.39875,220,GranD,Canada,,Winnipeg,Winnipeg,1954,added from GranD,NA,NA,-95.95,50.35,-95.975,50.375,remapped
+4,NA,704,GranD,,Long Spruce,NA,NA,-94.370417,56.397917,277,GranD,Canada,,Nelson,Gillam,1977,"added from GranD, GloFAS station G0226",NA,NA,-94.35,56.35,-94.425,56.375,remapped
+5,1915,NA,GLWD,,Qyrsac,20.26,42.14,NA,NA,NA,ICOLD,Albania,,Drin,Shkoder,1972,"cat2, clts, not mr, not fc",20.05,42.25,20.05,42.25,20.075,42.225,remapped
+6,2460,NA,GLWD,,Mitchinamecus,-75.09,47.35,NA,NA,NA,ICOLD_LRs,Canada,,Lievre,Menjo,1942,,-75.15,47.25,-75.15,47.25,-75.175,47.225,remapped
+7,3673,NA,GLWD,Clinton Lake,,-95.35,38.92,NA,NA,NA,Statistics,United States,,,,0,,-95.35,38.95,-95.35,38.95,-95.325,38.925,remapped
+8,3689,NA,GLWD,,Syncrude Tailings,-111.33,57.48,NA,NA,NA,LRs,Canada,,Piece,Fort McMurray,1992,,-111.25,57.45,-111.25,57.45,-111.325,57.475,unsure of position
+9,3719,NA,GLWD,,Callada,77.17,8.53,NA,NA,NA,LRs,India,,Callada,Trivandrum,0,"cat2, cts 1 pixel",77.15,8.55,77.15,8.55,77.125,8.525,remapped
+10,2512,NA,GLWD,Poco da Cruz,Poco Da Cruz,-37.63,-8.43,NA,NA,NA,ICOLD_LRs,Brazil,,Moxoto,Ibimirim,1957,,-37.65,-8.45,-37.65,-8.45,-37.675,-8.475,remapped
+11,3676,NA,GLWD,,,26.85,-28.55,NA,NA,NA,Statistics,South Africa,,,,0,not mr,26.85,-28.55,26.85,-28.55,26.775,-28.525,remapped
+12,2674,NA,GLWD,Tuttle Creek Lake,Tuttle Creek,-96.71,39.39,NA,NA,NA,LRs,United States,,Big Blue,Manhattan,1962,GloFAS station below G0741,-96.55,39.25,-96.65,39.35,-96.575,39.275,remapped
+13,3606,NA,GLWD,,Upper Falls,-84.18,47.33,NA,NA,NA,ICOLD_LRs,Canada,,Montreal,Sault Ste. Marie,1956,"cat2, above great lakes",-84.45,47.25,-84.45,47.25,-84.425,47.275,remapped
+14,3706,NA,GLWD,,Buffalo Bill,-109.21,44.48,NA,NA,NA,ICOLD_LRs,United States,,Shoshone,Cody,1910,,-109.25,44.45,-109.25,44.45,-109.225,44.475,correct position
+15,3315,NA,GLWD,,R.L. Harris,-85.56,33.31,NA,NA,NA,ICOLD,United States,,Tallapoosa,Lineville,1983,,-85.65,33.25,-85.65,33.25,-85.625,33.275,remapped
+16,3661,NA,GLWD,Powell River,,-82.02,36.57,NA,NA,NA,Statistics,United States,,,,0,,-82.05,36.55,-82.05,36.55,-82.075,36.525,remapped
+17,3664,NA,GLWD,Conchas Lake,,-104.2,35.45,NA,NA,NA,Statistics,United States,,,,0,,-104.15,35.35,-104.15,35.35,-104.175,35.425,remapped
+18,3665,NA,GLWD,Abiquiu Reservoir,,-106.49,36.27,NA,NA,NA,Statistics,United States,,,,0,,-106.45,36.25,-106.45,36.25,-106.425,36.225,remapped
+19,3688,NA,GLWD,,Shuifumiao,112.17,27.71,NA,NA,NA,ICOLD_LRs,China,,Tr. Xiang Jiang,Shuangfeng,1960,,112.25,27.65,112.15,27.75,112.225,27.675,remapped
+20,3720,NA,GLWD,,Lois(Scanlon),-124.41,49.92,NA,NA,NA,ICOLD_LRs,Canada,,Lois,Powell River,1941,"cat2, cts, 2 pixels",-124.45,49.95,-124.45,49.95,-124.425,49.875,correct position
+21,3645,NA,GLWD,,Rio Tercero N 1,-64.47,-32.22,NA,NA,NA,ICOLD_LRs,Argentina,,Tercero,Emblse,1936,,-64.45,-32.25,-64.45,-32.25,-64.425,-32.175,correct position
+22,3657,NA,GLWD,,,25.15,-33.17,NA,NA,NA,Statistics,South Africa,,,,0,"cat2, no mr, no fc",25.15,-33.25,25.15,-33.25,25.175,-33.225,remapped
+23,3681,NA,GLWD,,Graminha (Caconde),-46.56,-21.63,NA,NA,NA,ICOLD_LRs,Brazil,,Pardo,Pocos de Caldas,1966,,-46.65,-21.55,-46.65,-21.55,-46.625,-21.575,remapped
+24,2860,NA,GLWD,,Chute Des Georges(main Dam),-71.28,48.36,NA,NA,NA,ICOLD_LRs,Canada,,Shipshaw,Chicoutimi,1953,,-71.35,48.35,-71.25,48.25,-71.225,48.325,remapped
+25,3652,NA,GLWD,,,-8.05,40.38,NA,NA,NA,Statistics,Portugal,,,,0,"cat2, not mr, not fc, cts",-8.15,40.35,-8.15,40.35,-8.175,40.325,remapped
+26,3064,NA,GLWD,,Stave Falls,-122.54,49.43,NA,NA,NA,ICOLD_LRs,Canada,,Stave,Mission City,1911,"cat2, cts, 4 pixels",-122.65,49.35,-122.65,49.35,-122.625,49.375,remapped
+27,3695,NA,GLWD,,Calima I,-76.52,3.89,NA,NA,NA,ICOLD,Colombia,,Calima,Buga,1965,"cat2, cts, not mr, not fc",-76.55,3.85,-76.55,3.85,-76.575,3.875,remapped
+28,2508,NA,GLWD,,Fred Haigh (Lake Monduran(res)),151.8,-24.83,NA,NA,NA,ICOLD_LRs,Australia,,Kolan,Gin Gin,1974,"cat2, cts 5 pixels",151.85,-24.85,151.85,-24.85,151.825,-24.875,remapped
+29,2979,NA,GLWD,,Rapide Blanc,-73.25,47.68,NA,NA,NA,LRs,Canada,,St. Maurice,La Tuque,1934,GloFAS station downstream G0534,-73.25,47.75,-73.05,47.85,-72.975,47.825,remapped
+30,3647,NA,GLWD,Wickiup Reservoir,,-121.75,43.69,NA,NA,NA,Statistics,United States,,,,0,,-121.75,43.65,-121.75,43.65,-121.725,43.675,remapped
+31,3648,NA,GLWD,Fresno Reservoir,,-110.05,48.71,NA,NA,NA,Statistics,United States,,,,0,GloFAS station downstream G0453,-109.95,48.65,-109.95,48.65,-109.975,48.625,remapped
+32,3669,NA,GLWD,E. V. Spence Reservoir,Robert Lee (Spence[res]),-100.57,31.93,NA,NA,NA,ICOLD_LRs,United States,,Colorado,Robert Lee,1969,,-100.55,31.95,-100.55,31.95,-100.525,31.925,remapped
+33,2062,NA,GLWD,Preissac,Rapide 7(Main Dam),-78.35,48.33,NA,NA,NA,ICOLD_LRs,Canada,,Ottawa,Cadillac,1949,,-78.35,48.35,-78.35,48.35,-78.375,48.375,remapped
+34,3644,NA,GLWD,,,-6.8,30.92,NA,NA,NA,Statistics,Morocco,,,,0,"remove, looks like a lake",-6.75,30.95,-6.75,30.95,-6.775,30.925,remapped
+35,3703,NA,GLWD,,Huangshi,111.09,29.22,NA,NA,NA,LRs,China,,Tr. Yuan Jiang,Changde,1960,"cat2, not mr, not fc",111.15,29.15,111.15,29.15,111.175,29.175,remapped
+36,3637,NA,GLWD,,Madden,-79.58,9.27,NA,NA,NA,ICOLD_LRs,Panama,,Chagres,Panama City,1938,"cat2, cts 5pixels",-79.55,9.25,-79.55,9.25,-79.575,9.225,remapped
+37,3682,NA,GLWD,,Tashutkul,73.94,43.36,NA,NA,NA,ICOLD_LRs,Kazakhstan,,Chu,Chu,1974,,73.85,43.35,73.85,43.35,73.875,43.375,remapped
+38,3639,NA,GLWD,,,146.1,-36.01,NA,NA,NA,Statistics,Australia,,,,0,,146.05,-36.05,146.05,-36.05,146.025,-35.975,remapped
+39,1293,NA,GLWD,,Hemren,45.02,34.2,NA,NA,NA,ICOLD_LRs,Iraq,,Diyala,Baqubah,1983,,44.95,34.15,44.95,34.15,44.975,34.125,remapped
+40,3608,NA,GLWD,,Chief Joseph,-119.44,48.07,NA,NA,NA,ICOLD,United States,,Columbia,Bridge Port,1955,,-119.05,48.05,-119.75,48.05,-119.625,47.975,remapped
+41,616,NA,GLWD,Finch'a',Finchaa,37.14,9.47,NA,NA,NA,ICOLD_LRs,Ethiopia,,Finochaa,Addis Ababa,1973,"cat2, not mr, not fc",37.35,9.55,37.35,9.55,37.375,9.575,remapped
+42,2777,NA,GLWD,,Zhzopingtai,113.11,33.74,NA,NA,NA,ICOLD,China,,Sha He,Lushan,1959,"cat2, not mr, not fc",113.15,33.75,113.15,33.75,113.225,33.725,remapped
+43,3634,NA,GLWD,,Hollingsworth,-84.15,48.29,NA,NA,NA,ICOLD_LRs,Canada,,Michipicoten,Sault St. Marie,1959,"cat2, above great lakes",-84.15,48.35,-84.55,47.95,-84.475,47.975,remapped
+44,3630,NA,GLWD,Boqueirao,,-36.25,-7.53,NA,NA,NA,Statistics,Brazil,,,,0,GloFAS station downstream G1223,-36.15,-7.45,-36.15,-7.45,-36.175,-7.475,remapped
+45,3632,NA,GLWD,,,25.27,-29.52,NA,NA,NA,Statistics,South Africa,,,,0,"cat2, not main river, not flood control",25.25,-29.55,25.25,-29.55,25.225,-29.525,remapped
+46,3633,NA,GLWD,,,24.53,-33.71,NA,NA,NA,Statistics,South Africa,,,,0,"cat2, no mr, no fc",24.55,-33.75,24.55,-33.75,24.575,-33.725,remapped
+47,3328,NA,GLWD,,Bonneville,-121.74,45.69,NA,NA,NA,LRs,United States,,Columbia,Portland,1981,,-121.85,45.65,-121.85,45.65,-121.875,45.675,remapped
+48,3623,NA,GLWD,Hebgen Lake,,-111.26,44.78,NA,NA,NA,Statistics,United States,,,,0,,-111.25,44.75,-111.33458,44.86375,-111.325,44.825,remapped
+49,3702,NA,GLWD,,Gaozhou (Liangde),110.99,22.16,NA,NA,NA,ICOLD_LRs,China,,Tr. Jiang Jiang,Gaozhou,1959,"cat2, nor mr, not fc",111.05,22.15,110.95,22.15,110.975,22.025,correct position
+50,1753,NA,GLWD,Mark Twain Lake,Clarence Canyon,-91.78,39.49,NA,NA,NA,ICOLD_LRs,United States,,Salt,Louisiana,1984,,-91.65,39.55,-91.65,39.55,-91.625,39.525,remapped
+51,3618,NA,GLWD,Caballo Reservoir,,-107.27,33,NA,NA,NA,Statistics,United States,,,,0,GloFAS station G0871,-107.25,32.95,-107.25,33.05,-107.275,32.925,remapped
+52,3619,NA,GLWD,Rye Patch Reservoir,,-118.31,40.59,NA,NA,NA,Statistics,United States,,,,0,"cat2, endorheic basin",-118.35,40.45,-118.35,40.55,-118.325,40.475,remapped
+53,3621,NA,GLWD,,,29.09,-14.1,NA,NA,NA,Statistics,Zambia,,,,0,"cat2, other reservoir downsteam",29.15,-14.25,29.15,-14.25,29.125,-14.225,remapped
+54,NA,895,GranD,,Gavins Point Dam,0,0,-97.487083,42.85375,666.1,GranD,United States,,Missouri,,1958,"added from GranD, GloFAS station below G0656",0,0,-97.55,42.85,-97.475,42.875,remapped
+55,3615,NA,GLWD,,,-1.33,14.72,NA,NA,NA,Statistics,Mali,Burkina Faso,,,0,"cat2, not mr, not fc",-1.35,14.75,-1.35,14.75,-1.325,14.725,correct position
+56,3617,NA,GLWD,Cheney Reservoir,,-97.85,37.76,NA,NA,NA,Statistics,United States,,,,0,,-97.85,37.75,-97.85,37.75,-97.825,37.725,remapped
+57,2398,NA,GLWD,,Rapel,-71.47,-34.17,NA,NA,NA,ICOLD_LRs,Chile,,Rapel,Melipilla,1968,"cat2, cts, 4 pixels",-71.55,-34.05,-71.55,-34.05,-71.525,-34.075,remapped
+58,3670,NA,GLWD,,Sesquile,-73.83,4.97,NA,NA,NA,ICOLD_LRs,Colombia,,Tomine,Zipaquira,1962,,-73.85,5.05,-73.85,5.05,-73.825,5.025,remapped
+59,1546,NA,GLWD,Pyhajarvi,Melo,23.51,61.37,NA,NA,NA,ICOLD_LRs,Finland,,Kokemaenjoki,Tampere,1971,,23.45,61.45,23.35,61.35,23.425,61.475,remapped
+60,3612,NA,GLWD,,,-91.23,43.65,NA,NA,NA,Statistics,United States,,,,0,"remove, no dam",-91.25,43.55,-91.25,43.55,-91.225,43.575,remapped
+61,1517,NA,GLWD,,Rapide-Des-Cedres,-75.69,46.11,NA,NA,NA,ICOLD_LRs,Canada,,Lievre,Notre-Dame du-Laus,1930,,-75.65,46.05,-75.65,46.05,-75.675,46.125,remapped
+62,3649,NA,GLWD,,Brazeau,-115.65,52.94,NA,NA,NA,ICOLD_LRs,Canada,,Brazeau,Lodgepole,1962,,-115.65,52.95,-115.65,52.95,-115.625,52.975,remapped
+63,3607,NA,GLWD,Bung Boraphet,,100.26,15.69,NA,NA,NA,Statistics,Thailand,,,,0,"remove, not reservoir but lake,swamp",100.25,15.65,100.25,15.65,100.175,15.725,remapped
+64,3549,NA,GLWD,De Gray Reservoir,,-93.17,34.23,NA,NA,NA,Statistics,United States,,,,0,,-93.15,34.25,-93.15,34.25,-93.125,34.225,remapped
+65,3566,NA,GLWD,,,-4.28,37.25,NA,NA,NA,Statistics,Spain,,,,0,"cat2, not mr, not fc",-4.35,37.25,-4.35,37.25,-4.375,37.275,remapped
+66,3683,NA,GLWD,,Mohammed V,-2.93,34.63,NA,NA,NA,LRs,Morocco,,Moulouya,Nador,1967,"cat2. not mr, not fc",-2.95,34.65,-2.95,34.65,-2.925,34.675,remapped
+67,3692,NA,GLWD,,Fenhe,111.87,38.09,NA,NA,NA,ICOLD,China,,Fen He,Taiyuan,1961,,111.85,38.05,111.85,38.05,111.925,38.075,correct position - centered in pixel
+68,3516,NA,GLWD,Lahontan Reservoir,,-119.18,39.39,NA,NA,NA,Statistics,United States,,,,0,"cat2, 5 pixels to pit (ldd sink)",-119.05,39.45,-119.05,39.45,-119.075,39.425,remapped
+69,3641,NA,GLWD,,Rebnisjaure,17.13,66.5,NA,NA,NA,ICOLD_LRs,Sweden,,Skelleftealv,Arjeplog,1974,"cat2, not mr, not fc",17.25,66.45,17.25,66.45,17.325,66.425,remapped
+70,3712,NA,GLWD,,Paloma,-71,-30.74,NA,NA,NA,ICOLD_LRs,Chile,,Grande,Ovalle,1967,,-70.95,-30.75,-71.05,-30.65,-71.025,-30.725,remapped
+71,1418,NA,GLWD,West Point Lake,West Point,-85.22,33.08,NA,NA,NA,ICOLD_LRs,United States,,Chattahoochee,West Point,1974,,-85.15,33.05,-85.15,32.95,-85.175,32.925,remapped
+72,3470,NA,GLWD,,,-91.3,43.87,NA,NA,NA,Statistics,United States,,,,0,"cat2, some hydraulic structue not dam",-91.35,43.95,-91.35,43.95,-91.325,43.875,remapped
+73,3476,NA,GLWD,,,125.82,43.88,NA,NA,NA,Statistics,China,,,,0,,125.75,43.95,125.75,43.95,125.725,43.925,remapped
+74,3716,NA,GLWD,,Chivor,-73.34,4.96,NA,NA,NA,ICOLD,Colombia,,Bata,Guateque,1975,,-73.35,4.95,-73.35,4.95,-73.325,4.925,remapped
+75,3406,NA,GLWD,,,29.21,-28.72,NA,NA,NA,Statistics,South Africa,,,,0,cat2,29.25,-28.75,29.25,-28.75,29.225,-28.775,remapped
+76,3376,NA,GLWD,John Martin Reservoir,,-103.03,38.07,NA,NA,NA,Statistics,United States,,,,0,GloFAS station downstream G0776,-102.95,38.05,-102.95,38.05,-102.975,38.075,remapped
+77,3713,NA,GLWD,,Carlos R.U.,-100.26,18.42,NA,NA,NA,ICOLD_LRs,Mexico,,Baisas,Iguala,1986,"cat2, not mr, not fc",-100.25,18.45,-100.25,18.45,-100.275,18.375,correct position
+78,1333,NA,GLWD,,East Forebay Dyke GF-16,-97.07,58.11,NA,NA,NA,ICOLD_LRs,Canada,,North River,Churchill,1971,,-97.05,58.25,-97.05,58.25,-97.025,58.275,remapped
+79,1687,NA,GLWD,Teaureau,Mattawin (Papide Taureau),-73.8,46.78,NA,NA,NA,LRs,Canada,,Mattawin,St. Michel des-Saints,1930,,-73.65,46.85,-73.65,46.85,-73.675,46.875,remapped
+80,3304,NA,GLWD,,,33.65,13.51,NA,NA,NA,Statistics,Sudan,,,,0,,33.65,13.55,33.65,13.44815,33.625,13.525,remapped
+81,3680,NA,GLWD,Twin Buttes Reservoir,Twin Buttes,-100.56,31.36,NA,NA,NA,LRs,United States,,Concho,San Angelo,1963,,-100.55,31.35,-100.55,31.35,-100.525,31.375,remapped
+82,3653,NA,GLWD,,Yuzhnosurkhansk,67.65,37.87,NA,NA,NA,ICOLD_LRs,Uzbekistan,,Surkhandaria,Termez,1967,"cat2, not mr, not fc",67.65,37.85,67.65,37.85,67.625,37.825,remapped
+83,1135,NA,GLWD,Lake Saint Lawrence,Saunders / Moses (Niagara),-75.04,44.94,NA,NA,NA,LRs,United States,Canada,St. Lawrence,Cornwall / Massena,1958,GloFAS station downstream G0596,-74.75,45.05,-74.75,45.05,-74.775,45.025,remapped
+84,3248,NA,GLWD,,,-104.31,32.68,NA,NA,NA,Statistics,United States,,,,0,,-104.35,32.65,-104.35,32.65,-104.375,32.575,correct position
+85,3251,NA,GLWD,Lake Fork Reservoir,,-95.61,32.86,NA,NA,NA,Statistics,United States,,,,0,,-95.55,32.85,-95.55,32.85,-95.525,32.825,remapped
+86,2236,NA,GLWD,,Wanapum,-119.97,46.92,NA,NA,NA,ICOLD_LRs,United States,,Columbia,Beverley,1963,GloFAs station G0533,-119.95,46.65,-119.95,46.65,-119.975,46.875,remapped
+87,3176,NA,GLWD,,,30.48,29.23,NA,NA,NA,Statistics,Egypt,,,,0,"remove, endorheic area",30.45,29.25,30.45,29.25,30.425,29.175,remapped
+88,3182,NA,GLWD,,,-6.2,40.33,NA,NA,NA,Statistics,Spain,,,,0,"cat2, another big res downstream",-6.15,40.25,-6.15,40.25,-6.125,40.225,remapped
+89,769,NA,GLWD,,Waboose,-88.16,50.76,NA,NA,NA,ICOLD_LRs,Canada,,Ogoki,Thunder Bay,1942,,-88.05,50.75,-88.05,50.75,-87.975,50.775,remapped
+90,1756,NA,GLWD,Great Sacandaga Lake,Conklingville (Gr. Scandage Lake[res]),-74.1,43.2,NA,NA,NA,ICOLD,United States,,Sacandaga,Lake Luzerne,1928,,-73.95,43.35,-73.95,43.35,-73.925,43.325,remapped
+91,3109,NA,GLWD,,,-3.98,43.02,NA,NA,NA,Statistics,Spain,,,,0,GloFAS station below G1583,-4.05,42.95,-4.05,42.95,-4.025,42.975,remapped
+92,3137,NA,GLWD,Waconda Lake,,-98.39,39.49,NA,NA,NA,Statistics,United States,,,,0,GloFAS station below,-98.35,39.45,-98.35,39.45,-98.325,39.475,remapped
+93,3121,NA,GLWD,,,29.88,-28,NA,NA,NA,Statistics,South Africa,,,,0,"cat2, not main river, not flood control purpose",29.95,-27.95,29.95,-27.95,29.925,-27.975,remapped
+94,1116,NA,GLWD,Rossignol,Upper Lake Falls,-65.08,44.2,NA,NA,NA,ICOLD_LRs,Canada,,Mersey,Liverpool,1928,"cat2, cts",-65.05,44.15,-65.05,44.15,-65.025,44.175,remapped
+95,1567,NA,GLWD,Choke Canyon Reservoir,Choke Canyon,-98.38,28.49,NA,NA,NA,ICOLD_LRs,United States,,Frio,Three Rivers,1982,,-98.25,28.45,-98.35,28.45,-98.275,28.475,remapped
+96,2437,NA,GLWD,,Tiznados,-67.55,9.3,NA,NA,NA,ICOLD,Venezuela,,Tiznados,Ortiz,1982,,-67.55,9.25,-67.55,9.25,-67.625,9.525,remapped
+97,3666,NA,GLWD,,Jacarei,-46.43,-22.95,NA,NA,NA,ICOLD_LRs,Brazil,,Jacarei,Braganca Paulista,1981,,-46.45,-22.95,-46.45,-22.95,-46.425,-22.925,remapped
+98,3685,NA,GLWD,,Funil,-44.59,-22.57,NA,NA,NA,ICOLD_LRs,Brazil,,Paraiba,Itatiaia,1969,GloFAS station below G1410,-44.55,-22.55,-44.55,-22.55,-44.575,-22.525,remapped
+99,2964,NA,GLWD,,,-5.12,39.24,NA,NA,NA,Statistics,Spain,,,,0,,-5.15,39.15,-5.15,39.15,-5.175,39.175,remapped
+100,2980,NA,GLWD,Proctor,,-98.51,32.04,NA,NA,NA,Statistics,United States,,,,0,,-98.45,31.95,-98.45,31.95,-98.475,31.975,remapped
+101,2981,NA,GLWD,,,-5.4,39.05,NA,NA,NA,Statistics,Spain,,,,0,GloFAS station below G1572,-5.55,38.95,-5.45,39.05,-5.525,38.975,remapped
+102,3668,NA,GLWD,,Kattakurgan,66.28,39.8,NA,NA,NA,ICOLD_LRs,Uzbekistan,,Karadarya,Kattakurgan,1968,"cat2, not mr, not fc",66.25,39.85,66.25,39.85,66.275,39.875,remapped
+103,3718,NA,GLWD,,New Bullards Bar,-121.13,39.44,NA,NA,NA,ICOLD,United States,,N. Yuba,Marysville,1970,,-121.15,39.45,-121.15,39.45,-121.125,39.425,correct position
+104,2956,NA,GLWD,,,35.93,14.75,NA,NA,NA,Statistics,Sudan,,,,0,,35.85,14.85,35.85,14.85,35.925,14.925,remapped
+105,2888,NA,GLWD,Saryyazin Skoye,,62.65,36.32,NA,NA,NA,Statistics,Turkmenistan,,,,0,"cat2, not mr, not fc",62.65,36.45,62.65,36.45,62.625,36.425,remapped
+106,3122,NA,GLWD,,"Cat Arm Dam ""A""",-56.92,50.08,NA,NA,NA,ICOLD_LRs,Canada,,,Jackson's Arm,1984,"cat2, cts, 2 pixels, Newfunland",-56.85,50.05,-56.95,50.05,-56.925,50.075,correct position
+107,3384,NA,GLWD,Blue Mesa Reservoir,Blue Mesa,-107.18,38.47,NA,NA,NA,ICOLD,United States,,Gunnison,Montrose,1966,GloFAS station below G0766,-107.35,38.45,-107.35,38.45,-107.325,38.475,remapped
+108,3717,NA,GLWD,,Swift,-122.11,46.06,NA,NA,NA,ICOLD_LRs,United States,,Lewis,Cougar,1958,,-122.15,46.05,-122.15,46.05,-122.175,46.075,remapped
+109,2845,NA,GLWD,Logan Martin Lake,,-86.22,33.52,NA,NA,NA,Statistics,United States,,,,0,,-86.25,33.45,-86.25,33.45,-86.325,33.475,remapped
+110,2856,NA,GLWD,,,124.14,41.86,NA,NA,NA,Statistics,China,,,,0,,124.15,41.85,124.15,41.85,124.125,41.875,res is before inflow of river from north
+111,3699,NA,GLWD,,Hongmen,116.8,27.42,NA,NA,NA,ICOLD,China,,Litan He,Fuzhou,1960,,116.75,27.45,116.75,27.45,116.725,27.475,remapped
+112,2825,NA,GLWD,"William ""Bill"" Dannelly Reservoir",,-87.4,32.11,NA,NA,NA,Statistics,United States,,,,0,GloFAS station below G0885,-87.35,32.15,-87.35,32.05,-87.375,32.125,correct position - centered in pixel
+113,2829,NA,GLWD,Pymatuning Reservoir,,-80.52,41.59,NA,NA,NA,Statistics,United States,,,,0,cat2,-80.55,41.55,-80.45,41.45,-80.425,41.475,remapped
+114,2790,NA,GLWD,Hubbard Creek Lake,,-99.02,32.77,NA,NA,NA,Statistics,United States,,,,0,,-98.95,32.85,-98.95,32.85,-98.975,32.825,remapped
+115,2812,NA,GLWD,Potholes Reservoir,,-119.31,47.02,NA,NA,NA,Statistics,United States,,,,0,GloFAS station below G0526,-119.25,46.95,-119.25,46.95,-119.275,46.975,remapped
+116,2410,NA,GLWD,,Ibitinga,-48.69,-22.33,NA,NA,NA,ICOLD,Brazil,,Tiete,Ibitinga/Iacanga,1969,,-48.75,-22.15,-48.75,-22.15,-48.725,-22.175,remapped
+117,3667,NA,GLWD,,Qinghe,124.21,42.54,NA,NA,NA,ICOLD_LRs,China,,Qing He,Shen'yang,1964,,124.15,42.55,124.15,42.55,124.175,42.525,remapped
+118,2745,NA,GLWD,,,29.9,31.12,NA,NA,NA,Statistics,Egypt,,,,0,"cat2, cts",29.85,31.15,29.85,31.15,29.875,31.125,remapped
+119,3693,NA,GLWD,,Xiaojiang,109.12,21.85,NA,NA,NA,LRs,China,,Xiao Jiang,Qinzhou,1960,"cat2, cts",109.15,21.85,109.15,21.85,109.125,21.825,remapped
+120,2705,NA,GLWD,Blackfoot Reservoir,,-111.62,42.93,NA,NA,NA,Statistics,United States,,,,0,,-111.65,42.95,-111.65,42.95,-111.675,42.975,remapped
+121,3662,NA,GLWD,,Hepu,109.55,22.09,NA,NA,NA,ICOLD_LRs,China,,Xiaojiang He,Bobai,1960,,109.55,22.05,109.55,22.05,109.575,22.025,remapped
+122,506,NA,GLWD,,Jebba,4.75,9.25,NA,NA,NA,ICOLD_LRs,Nigeria,,Niger,Jebba,1984,,4.85,9.15,4.85,9.15,4.775,9.125,remapped
+123,2698,NA,GLWD,Arenal,,-84.86,10.48,NA,NA,NA,Statistics,Costa Rica,,,,0,"cat2, not mr, not fc",-84.75,10.45,-84.75,10.45,-84.775,10.475,remapped
+124,3631,NA,GLWD,,Strathcona,-125.61,49.78,NA,NA,NA,ICOLD,Canada,,Campbell,Campbell River,1958,"cat2, cts 2 pixels",-125.55,49.95,-125.55,49.95,-125.575,49.975,remapped
+125,3715,NA,GLWD,,Zimapan,-99.5,20.67,NA,NA,NA,ICOLD,Mexico,,Moctezuma,Cadereyta,1994,,-99.55,20.65,-99.55,20.65,-99.525,20.675,remapped
+126,1768,NA,GLWD,Poechos,Poechos,-80.49,-4.61,NA,NA,NA,ICOLD_LRs,Peru,,Chira,Sullana,1975,"cat2, cts, not mr, not fc",-80.55,-4.65,-80.55,-4.65,-80.525,-4.675,remapped
+127,2144,NA,GLWD,Araros,Araros (Paulo Sarazate),-40.45,-4.28,NA,NA,NA,ICOLD_LRs,Brazil,,Acarau,Reriutaba,1958,,-40.45,-4.25,-40.45,-4.25,-40.475,-4.225,remapped
+128,468,NA,GLWD,Kootenay,Coor-Linn,-116.9,49.67,NA,NA,NA,ICOLD_LRs,Canada,,Kootenay,Nelson,1932,,-116.95,49.65,-116.95,49.65,-116.925,49.625,remapped
+129,3119,NA,GLWD,,Adolfo Ruiz Cortines (Mocuzari),-109.11,27.27,NA,NA,NA,ICOLD_LRs,Mexico,,Rio Mayo,Navojoa,1955,,-109.15,27.25,-109.15,27.25,-109.125,27.225,remapped
+130,2620,NA,GLWD,,,-91.09,43.24,NA,NA,NA,Statistics,United States,,,,0,"cat2, some hydraulic structue, not dam",-91.15,43.15,-91.15,43.15,-91.075,43.225,remapped
+131,3638,NA,GLWD,,Terzaghi (Mission),-122.45,50.84,NA,NA,NA,ICOLD,Canada,,Bridge,Lillooet,1960,,-122.35,50.75,-122.25,50.75,-122.275,50.775,remapped
+132,2619,NA,GLWD,,Burrinjuck,148.69,-34.97,NA,NA,NA,ICOLD_LRs,Australia,,Murrubidgee,Yass,1956,GloFAS station downsteam G1507,148.65,-34.95,148.55,-35.05,148.575,-34.975,remapped
+133,2281,NA,GLWD,Lake Buchanan,Buchanan,-98.39,30.82,NA,NA,NA,ICOLD,United States,,Colorado,Marble,1937,,-98.45,30.75,-98.45,30.75,-98.425,30.775,remapped
+134,2875,NA,GLWD,,Kangsabati Kumari Dam,86.75,23,NA,NA,NA,ICOLD,India,,Kangsabati,Bankura,1965,,86.75,22.95,86.75,22.95,86.725,22.975,remapped
+135,3678,NA,GLWD,,Jim Gray Intake(Shute Des George- Intake),-71.16,48.79,NA,NA,NA,ICOLD_LRs,Canada,,Shipshaw,Chicoutimi,1953,,-71.15,48.75,-71.15,48.75,-71.175,48.675,correct position - centered in pixel
+136,1138,NA,GLWD,,Nijam Sugar,78,18.14,NA,NA,NA,LRs,India,,Manjira,Hyderabad,1931,,77.95,18.15,77.95,18.15,77.975,18.125,remapped
+137,2568,NA,GLWD,,,-37.88,-7.1,NA,NA,NA,Statistics,Brazil,,,,0,GloFAS station downsteam G1210,-37.95,-7.05,-37.95,-7.05,-37.925,-7.025,remapped
+138,3636,NA,GLWD,,Ribeirao Da Prata,-43.96,-22.77,NA,NA,NA,LRs,Brazil,,Prata,Mangaratiba,1958,,-43.95,-22.75,-43.88292,-22.70042,-43.875,-22.725,remapped
+139,3675,NA,GLWD,,Pedu Dam,100.82,6.24,NA,NA,NA,ICOLD_LRs,Malaysia,,S. Pedu,Alor Star,1969,"cat2, very small upstream area",100.85,6.25,100.76708,6.24125,100.775,6.225,remapped
+140,1180,NA,GLWD,Dale Hollow Lake,Dale Hollow,-85.29,36.58,NA,NA,NA,ICOLD_LRs,United States,,Obey,Celina,1948,,-85.45,36.55,-85.45,36.55,-85.425,36.525,remapped
+141,2551,NA,GLWD,,,-5.28,38.94,NA,NA,NA,Statistics,Spain,,,,0,GloFAS station below G1572,-5.45,38.95,-5.45,38.95,-5.475,38.925,remapped
+142,1400,NA,GLWD,,Narayanpur,76.31,16.19,NA,NA,NA,ICOLD,India,,Krishna,Bijapur,1982,,76.35,16.25,76.35,16.25,76.325,16.225,shift 1 pixel west
+143,2430,NA,GLWD,Lake Meredith,Sanford (Lake Meredith[res]),-101.7,35.59,NA,NA,NA,LRs,United States,,Canadian,Borger,1965,GloFAS station downsteam G0820,-101.55,35.75,-101.55,35.75,-101.575,35.725,remapped
+144,3705,NA,GLWD,,Xidayang,114.77,38.75,NA,NA,NA,ICOLD_LRs,China,,Tang He,Baoding,1971,,114.75,38.75,114.75,38.75,114.775,38.725,remapped
+145,2744,NA,GLWD,Almus Baraji,Ayvacik,37.02,40.36,NA,NA,NA,LRs_cor,Turkey,,Yesilirmak,Samsun,1981,"cat2, not mr, not fc",36.95,40.45,36.85,40.45,36.875,40.425,remapped
+146,2481,NA,GLWD,Boysen Reservoir,,-108.2,43.3,NA,NA,NA,Statistics,United States,,,,0,"GloFAS station at dam G0642, downstream G0610",-108.15,43.45,-108.15,43.35,-108.175,43.425,remapped
+147,3691,NA,GLWD,,Yuecheng,114.15,36.29,NA,NA,NA,ICOLD_LRs,China,,Zhang He,Cixian,1970,,114.15,36.25,114.15,36.25,114.225,36.275,correct position - centered in pixel
+148,1183,NA,GLWD,Kemijarvi,Seitakorva,27.53,66.62,NA,NA,NA,ICOLD,Finland,,Kemijoki,Kemijarvi,1968,,27.35,66.55,27.35,66.55,27.375,66.475,remapped
+149,1554,NA,GLWD,Stockton Lake,Stockton,-93.7,37.56,NA,NA,NA,ICOLD,United States,,Sac,Stockton,1969,,-93.75,37.65,-93.75,37.75,-93.775,37.675,remapped
+150,2045,NA,GLWD,,McNary,-118.93,46.06,NA,NA,NA,LRs,United States,,Columbia,Umatilla,1953,,-119.25,45.95,-119.25,45.95,-119.275,45.925,remapped
+151,3613,NA,GLWD,,Castelo de Bode,-8.23,39.66,NA,NA,NA,ICOLD_LRs,Portugal,,Zezere,Tomar,1951,GloFAS station downsteam G0737,-8.25,39.55,-8.25,39.55,-8.325,39.525,remapped
+152,1165,NA,GLWD,Ayame,Ayame I,-3.21,5.73,NA,NA,NA,ICOLD,Ivory Coast,,Bia,Aboisso,1959,"cat2, cts",-3.15,5.55,-3.15,5.55,-3.175,5.625,remapped
+153,3535,NA,GLWD,,Colbun (Cipreses Hydroelec. Sta),-71.26,-35.69,NA,NA,NA,ICOLD,Chile,,Maule,Linares,1985,,-71.35,-35.65,-71.35,-35.65,-71.325,-35.675,remapped
+154,2461,NA,GLWD,,Alarcon,-2.23,39.68,NA,NA,NA,ICOLD_LRs,Spain,,Jucar,Alarcon,1955,GloFAS station below G1575,-2.15,39.55,-2.15,39.55,-2.125,39.575,remapped
+155,1501,NA,GLWD,Matatila,Matatila,78.32,25.05,NA,NA,NA,ICOLD_LRs,India,,Betwa,Jhansi,1958,,78.35,25.05,78.35,25.05,78.375,25.075,remapped
+156,2736,NA,GLWD,Broken Bow Lake,Broken Bow,-94.69,34.22,NA,NA,NA,ICOLD_LRs,United States,,Mountian Fork,Eagletown,1968,,-94.65,34.15,-94.65,34.15,-94.675,34.175,remapped
+157,3686,NA,GLWD,,Chengbihe,106.64,23.98,NA,NA,NA,ICOLD_LRs,China,,Chengbi He,Bose,1966,,106.65,23.95,106.65,23.95,106.675,23.975,remapped
+158,2395,NA,GLWD,Yardi,,40.5,10.21,NA,NA,NA,Statistics,Ethiopia,,,,0,"remove, looks like lake",40.55,10.25,40.55,10.25,40.525,10.225,remapped
+159,3707,NA,GLWD,,Hub,67.14,25.28,NA,NA,NA,ICOLD,Pakistan,,Hub,Karachi,1979,"cat2, cts 3 pixels",67.15,25.25,67.05,25.25,67.125,25.275,correct position - centered in pixel
+160,1218,NA,GLWD,Kikuletwa,Nyumba Ya Mungu (Nym Dam),37.41,-3.68,NA,NA,NA,ICOLD_LRs,Tanzania,,Pangani,,1966,"cat2, not fc",37.45,-3.75,37.45,-3.75,37.475,-3.775,remapped
+161,1085,NA,GLWD,Walter F. George Reservoir,Walter F. George (Lock and  Dam),-85.14,31.81,NA,NA,NA,ICOLD,United States,,Chattahoochee,Fort Gains,1962,,-85.05,31.65,-85.05,31.65,-85.075,31.625,remapped
+162,1693,NA,GLWD,,Wivenhoe,152.56,-27.29,NA,NA,NA,ICOLD_LRs,Australia,,Brisbane,Ipswich,1984,GloFAS station downstream G1448,152.55,-27.35,152.55,-27.35,152.625,-27.375,remapped
+163,2381,NA,GLWD,,,-44.53,-21.4,NA,NA,NA,Statistics,Brazil,,,,0,,-44.55,-21.35,-44.55,-21.35,-44.625,-21.325,correct position - centered in pixel
+164,2364,NA,GLWD,,,-2.75,31.57,NA,NA,NA,Statistics,Algeria,,,,0,"cat2, not mr, not fc, lake below",-2.75,31.55,-2.75,31.55,-2.775,31.525,remapped
+165,841,NA,GLWD,,Ivankovo,36.38,56.69,NA,NA,NA,ICOLD_LRs,Russia,,Volga,Kalinin,1937,"cat2, many reservoirs downstream",37.15,56.75,37.15,56.75,37.125,56.725,move 1 pixel west
+166,NA,413,GranD,,Minidoka,0,0,-113.48375,42.66875,117.4,GranD,United States,,Snake River,,1905,added from GranD,0,0,-113.35,42.65,-113.425,42.675,remapped
+167,1916,NA,GLWD,Torrojen,Torron,13,63.88,NA,NA,NA,ICOLD_LRs,Sweden,,Indalsalven,Ostersund,1936,"cat2, not mr not fc",13.05,63.75,13.05,63.75,13.075,63.775,remapped
+168,2728,NA,GLWD,,Sigalda(Thorisvatn {res}),-18.89,64.27,NA,NA,NA,LRs,Iceland,,Tungnaa,Selfoss,1977,,-18.85,64.35,-18.85,64.35,-18.925,64.325,remapped
+169,2930,NA,GLWD,Tiber Reservoir,Tiber/Fresno Res?,-111.31,48.36,NA,NA,NA,ICOLD,United States,,Marias,Fresno,1956,GloFAS station below G0481,-111.15,48.35,-111.15,48.35,-111.125,48.325,remapped
+170,2588,NA,GLWD,,Adiguzel,29.21,38.25,NA,NA,NA,ICOLD_LRs,Turkey,,B. Menderes,Denizli,1993,,29.25,38.15,29.15,38.15,29.225,38.175,remapped
+171,3654,NA,GLWD,,Idriss,-4.65,34.14,NA,NA,NA,ICOLD,Morocco,,Inqouene,Fes,1973,"cat2, not mr, not fc",-4.75,34.15,-4.75,34.15,-4.725,34.175,remapped
+172,1553,NA,GLWD,,Burrendong,149.17,-32.75,NA,NA,NA,ICOLD_LRs,Australia,,Macquarie,Wellington,1967,GloFAS station G1485,149.15,-32.75,149.05,-32.65,149.125,-32.675,remapped
+173,1836,NA,GLWD,Camatague,Embalse de Guarico,-67.02,9.82,NA,NA,NA,LRs,Venezuela,,Guarico,Camatagua,1967,,-66.95,9.75,-66.95,9.75,-66.975,9.825,remapped
+174,2294,NA,GLWD,Lake Keowee,,-82.89,34.87,NA,NA,NA,Statistics,United States,,,,0,,-82.95,34.75,-82.95,34.75,-82.875,34.725,res getsWaterFromWestRiverShiftTo -82.875and34_725
+175,2653,NA,GLWD,,La Grande 1,-78.54,53.74,NA,NA,NA,LRs,Canada,,La Grande,Fort George,1994,"cat2, cts, 5 pixels",-78.65,53.75,-78.56708,53.73625,-78.575,53.725,remapped
+176,3701,NA,GLWD,,Maroun,50.25,30.67,NA,NA,NA,ICOLD_LRs,Iran,,Maroun,Behbahan,1998,"cat2, not mr, not fc",50.25,30.65,50.25,30.65,50.375,30.725,remapped
+177,1939,NA,GLWD,,Moxoto,-38.21,-9.37,NA,NA,NA,ICOLD_LRs,Brazil,,Sao Francisco,Paulo Afonso,1974,,-38.15,-9.45,-38.25,-9.35,-38.225,-9.375,correct position - centered in pixel
+178,2251,NA,GLWD,Allegheny Reservoir,,-78.93,41.96,NA,NA,NA,Statistics,United States,,,,0,GloFAS station below G0711,-78.95,41.85,-78.95,41.85,-78.975,41.875,remapped
+179,2253,NA,GLWD,Clear Lake Reservoir,,-121.15,41.86,NA,NA,NA,Statistics,United States,,,,0,,-121.15,41.95,-121.05,41.95,-121.175,41.825,remapped
+180,3674,NA,GLWD,,Hiangbizuang,114.25,38.27,NA,NA,NA,LRs,China,,Hutuo He,Huolu,1968,,114.25,38.25,114.25,38.25,114.275,38.275,remapped
+181,3663,NA,GLWD,,Solis,-100.58,20.06,NA,NA,NA,ICOLD_LRs,Mexico,,Lerma,Acambaro,1949,,-100.65,20.05,-100.65,20.05,-100.675,20.075,remapped
+182,3247,NA,GLWD,,Wyangala,148.98,-33.95,NA,NA,NA,ICOLD_LRs,Australia,,lachlan,Cowra,1971,,149.05,-33.95,148.95,-33.95,148.925,-33.975,remapped
+183,3327,NA,GLWD,,Yahekou,112.55,33.34,NA,NA,NA,ICOLD_LRs,China,,Bai He,Nanzhao,1959,,112.65,33.25,112.65,33.25,112.625,33.325,remapped
+184,3627,NA,GLWD,,Karacaoren,30.79,37.27,NA,NA,NA,LRs,Turkey,,Asagiaksu,Burdur,1989,,30.75,37.25,30.75,37.25,30.825,37.325,remapped
+185,3708,NA,GLWD,Pine Flat Reservoir,Pine Flat Reservoir,-119.28,36.88,NA,NA,NA,ICOLD_LRs,United States,,Kings,Piedra,1954,,-119.35,36.85,-119.35,36.85,-119.325,36.825,remapped
+186,965,NA,GLWD,,Uglich,37.89,57.28,NA,NA,NA,ICOLD,Russia,,Volga,Uglich,1940,"cat2, many reservoirs downstream",38.25,57.45,38.25,57.45,38.275,57.525,remapped
+187,2215,NA,GLWD,,,80.74,7.25,NA,NA,NA,Statistics,Sri Lanka,,,,0,,80.75,7.25,80.75,7.25,80.775,7.275,remapped
+188,2218,NA,GLWD,,,-5.81,41.72,NA,NA,NA,Statistics,Spain,,,,0,,-5.95,41.55,-5.95,41.55,-5.975,41.575,remapped
+189,2221,NA,GLWD,Lake Corpus Christi,,-97.92,28.15,NA,NA,NA,Statistics,United States,,,,0,GloFAS station below G0919,-97.85,28.05,-97.85,28.05,-97.875,28.075,remapped
+190,3003,NA,GLWD,,Santa Rita,-75.18,6.28,NA,NA,NA,ICOLD_LRs,Colombia,,Nare,Medellin,1978,,-75.15,6.25,-75.15,6.25,-75.175,6.325,remapped
+191,2973,NA,GLWD,,Salto Osorio,-52.68,-25.65,NA,NA,NA,ICOLD_LRs,Brazil,,Iguacu,Quedas do Iguacu,1975,GloFAS station G1438,-52.75,-25.65,-52.85,-25.65,-52.975,-25.575,remapped
+192,1646,NA,GLWD,,Batman,41.16,38.22,NA,NA,NA,ICOLD,Turkey,,Batman,Diyarbakir,1999,,41.15,38.15,41.15,38.15,41.225,38.175,shift 1 pxl east
+193,1974,NA,GLWD,Pathfinder Reservoir,Pathfinder,-106.94,42.39,NA,NA,NA,ICOLD_LRs,United States,,North Platte,Casper,1909,GloFAS station downstream G0662,-106.85,42.45,-106.85,42.35,-106.875,42.475,remapped
+194,2208,NA,GLWD,Nong Han,,104.21,17.18,NA,NA,NA,Statistics,Thailand,,,,0,"cat2, not mr, not fc",104.25,17.15,104.25,17.15,104.275,17.175,remapped
+195,2681,NA,GLWD,Seminoe Reservoir,Seminoe,-106.85,42.03,NA,NA,NA,ICOLD_LRs,United States,,North Platte,Rawlins,1939,,-106.85,42.05,-106.85,42.05,-106.875,42.125,remapped
+196,3081,NA,GLWD,,An Dong,128.85,36.64,NA,NA,NA,ICOLD_LRs,South Korea,,Nakdong,Andong,1976,GloFAS station below G0816,128.85,36.55,128.85,36.65,128.775,36.575,remapped
+197,3610,NA,GLWD,,Folsom,-121.12,38.77,NA,NA,NA,ICOLD_LRs,United States,,American,Sacramento,1956,,-121.15,38.75,-121.15,38.75,-121.125,38.725,remapped
+198,3658,NA,GLWD,,Bailianhe,115.51,30.63,NA,NA,NA,ICOLD_LRs,China,,Xi Shui,Xishui,1960,"cat2, not mr, not fc",115.45,30.55,115.45,30.55,115.475,30.575,remapped
+199,1440,NA,GLWD,,Satishaure,17.66,67.67,NA,NA,NA,ICOLD,Sweden,,Lule alv,Kiruna,1966,,18.15,67.55,18.15,67.55,18.125,67.575,remapped
+200,2183,NA,GLWD,Karatomarskoye,,62.88,52.82,NA,NA,NA,Statistics,Kazakhstan,,,,0,,62.95,52.85,63.05,52.95,63.025,52.925,remapped
+201,3711,NA,GLWD,,New Exchequer,-120.28,37.64,NA,NA,NA,ICOLD,United States,,Merced,Snelling,1926,,-120.25,37.55,-120.25,37.55,-120.275,37.575,remapped
+202,1001,NA,GLWD,Red Indian,Exploits,-56.93,48.69,NA,NA,NA,ICOLD_LRs,Canada,,Exploits,Millertown,1928,"cat2, Newfoundland",-56.65,48.75,-56.65,48.75,-56.625,48.775,remapped
+203,1522,NA,GLWD,Richard B. Russell Lake,Richard B. Russell,-82.73,34.17,NA,NA,NA,ICOLD,United States,,Savannah,Augusta,1982,,-82.65,34.05,-82.65,34.05,-82.625,34.025,remapped
+204,2173,NA,GLWD,,,-86.52,33,NA,NA,NA,Statistics,United States,,,,0,GloFAS station below G0876,-86.45,32.85,-86.45,32.85,-86.425,32.825,remapped
+205,3687,NA,GLWD,,Serre-poncon,6.31,44.51,NA,NA,NA,ICOLD_LRs,France,,Durance,Cap,1960,"cat2, not mr, not fc",6.25,44.45,6.25,44.45,6.275,44.475,remapped
+206,763,NA,GLWD,Bloemhofdam,Bloemhofdam (Oppermansdrift),25.67,-27.69,NA,NA,NA,ICOLD_LRs,South Africa,,Vaal,Bloemhof,1970,,25.65,-27.65,25.65,-27.65,25.625,-27.675,remapped
+207,2143,NA,GLWD,Lake Limestone,,-96.36,31.41,NA,NA,NA,Statistics,United States,,,,0,,-96.35,31.35,-96.35,31.35,-96.325,31.375,remapped
+208,3635,NA,GLWD,,Des Joachims,-77.46,46.09,NA,NA,NA,ICOLD_LRs,Canada,,Ottawa,Ottawa,1950,GloFAS station below G0581,-77.35,46.05,-77.65,46.15,-77.725,46.175,remapped
+209,3710,NA,GLWD,,Stinca Costesti,27.26,47.76,NA,NA,NA,ICOLD,Romania,Moldova,Prut,Botosani,1979,,27.25,47.75,27.25,47.75,27.225,47.825,remapped
+210,392,NA,GLWD,Cabonga,Cabonga,-76.56,47.29,NA,NA,NA,ICOLD_LRs,Canada,,Genes de Terre,Mt. Laurier,1957,,-76.35,47.15,-76.45,47.25,-76.475,47.325,remapped
+211,1963,NA,GLWD,Repressa Billings,Rio Grande (Billings Res.),-46.59,-23.79,NA,NA,NA,ICOLD,Brazil,,Grande,Sao Paulo,1928,,-46.65,-23.75,-46.65,-23.75,-46.625,-23.775,remapped
+212,3324,NA,GLWD,San Carlos Reservoir,Coolidge,-110.32,33.2,NA,NA,NA,ICOLD,United States,,Gila,Winkelman,1929,,-110.45,33.15,-110.45,33.15,-110.475,33.175,remapped
+213,3625,NA,GLWD,,Demirkopru,28.39,38.68,NA,NA,NA,LRs,Turkey,,Gediz,Manisa,1960,GloFAS station downstream G0765,28.35,38.65,28.35,38.65,28.325,38.625,remapped
+214,2072,NA,GLWD,,,77.49,23.48,NA,NA,NA,Statistics,India,,,,0,"cat2, not mr, not fc",77.55,23.45,77.55,23.45,77.525,23.475,remapped
+215,2063,NA,GLWD,Buendia,,-2.72,40.39,NA,NA,NA,Statistics,Spain,,,,0,GloFAS station below G1576,-2.75,40.45,-2.75,40.35,-2.775,40.375,remapped
+216,911,NA,GLWD,Porttipahta,Porttipahdan/Tekorjarvi Lake,26.67,68.07,NA,NA,NA,ICOLD_LRs,Finland,,Kitinen,Ivalo,1970,,26.75,67.95,26.75,67.95,26.725,67.975,remapped
+217,1203,NA,GLWD,,Aras,45.22,39.2,NA,NA,NA,ICOLD_LRs,Iran,Azerbaijan,Aras,,1970,GloFAS station below G0728,45.35,39.15,45.35,39.15,45.375,39.125,remapped
+218,2039,NA,GLWD,Senanayake Samudra,,81.49,7.18,NA,NA,NA,Statistics,Sri Lanka,,,,0,"cat2, cts, 2 pixels",81.55,7.25,81.55,7.25,81.525,7.225,remapped
+219,2043,NA,GLWD,Maramsilli,,81.45,20.56,NA,NA,NA,Statistics,India,,,,0,,81.45,20.55,81.55,20.65,81.575,20.625,remapped
+220,2133,NA,GLWD,Strawberry Reservoir,Soldier Creek,-111.15,40.18,NA,NA,NA,ICOLD,United States,,Strawberry,Duchesne,1973,GloFAS station below G0724,-111.05,40.15,-111.05,40.15,-111.025,40.125,remapped
+221,2704,NA,GLWD,,Mactaquac,-66.01,45.76,NA,NA,NA,ICOLD,Canada,,St. John,Fredericton,1968,GloFAS station below G0561,-66.05,45.65,-66.85,45.95,-66.875,45.975,remapped
+222,3316,NA,GLWD,,Copeton,150.97,-29.94,NA,NA,NA,ICOLD_LRs,Australia,,GWydir,Inverell,1976,GloFAS station below G1463,150.95,-29.95,150.95,-29.95,150.925,-29.925,remapped
+223,1782,NA,GLWD,Khrishnaraja,Krisharaja Sagar,76.49,12.47,NA,NA,NA,ICOLD_LRs,India,,Cauvery,Mysore,1932,,76.55,12.45,76.55,12.45,76.525,12.425,remapped
+224,3547,NA,GLWD,,Maithon Res.,86.79,23.84,NA,NA,NA,ICOLD_LRs,India,,Barakar,Asansol,1957,,86.75,23.85,86.75,23.85,86.825,23.825,remapped
+225,3586,NA,GLWD,,Bin El Ouidane,-6.41,32.1,NA,NA,NA,ICOLD,Morocco,,El Abid,Beni Mellal,1953,"cat2, not mr, not fc, other rd",-6.45,32.05,-6.45,32.05,-6.475,32.125,remapped
+226,3671,NA,GLWD,Lake Owyhee,Owyhee,-117.35,43.48,NA,NA,NA,ICOLD_LRs,United States,,Owyhee,Nyssa,1932,GloFAS station G0636,-117.25,43.65,-117.25,43.65,-117.225,43.625,remapped
+227,3698,NA,GLWD,,Yellowtail,-108.08,45.23,NA,NA,NA,ICOLD,United States,,Bighorn,Hardin,1966,GloFAS station downstream G0556,-108.05,45.25,-107.95,45.35,-107.975,45.325,remapped
+228,1507,NA,GLWD,Lake McConaughy,Kingsley,-101.85,41.26,NA,NA,NA,ICOLD,United States,,North Platte,Keystone,1941,GloFAS station below G0695,-101.65,41.25,-101.75,41.25,-101.725,41.225,remapped
+229,3614,NA,GLWD,,Venustiano Carranza(Dn. Martin),-100.67,27.49,NA,NA,NA,ICOLD_LRs,Mexico,,Salado,Anahuac,1932,,-100.65,27.45,-100.65,27.45,-100.625,27.475,remapped
+230,2830,NA,GLWD,,Kilickaya,38.11,40.23,NA,NA,NA,ICOLD_LRs,Turkey,,Kelkit,Sivas,1989,"cat2, not mr, not fc",38.05,40.25,38.05,40.25,38.075,40.225,remapped
+231,3492,NA,GLWD,,Jaguari Dike (Jaguari Res.),-46.1,-23.2,NA,NA,NA,ICOLD_LRs,Brazil,,Jaguari,Jacarei,1972,,-46.05,-23.25,-46.05,-23.25,-46.025,-23.175,remapped
+232,3611,NA,GLWD,,Bang Lang,101.3,6.09,NA,NA,NA,ICOLD,Thailand,,Pattani,Yala,1981,,101.25,6.15,101.25,6.15,101.275,6.175,remapped
+233,3640,NA,GLWD,,Prado,-74.85,3.8,NA,NA,NA,ICOLD_LRs,Colombia,,Prado,Ibague,1971,,-74.85,3.75,-74.85,3.75,-74.875,3.775,correct position - centered in pixel
+234,1288,NA,GLWD,Smith Mountain Lake,Smith Mountain,-79.65,37.11,NA,NA,NA,ICOLD_LRs,United States,,Roanoke,Altavista,1963,,-79.45,37.05,-79.45,37.05,-79.525,37.025,remapped
+235,1610,NA,GLWD,,Pavlovskay,56.74,55.62,NA,NA,NA,ICOLD_LRs,Russia,,Ufa,Ufa,1959,"cat2, not mr not fc many rd",56.55,55.45,56.55,55.45,56.575,55.425,remapped
+236,546,NA,GLWD,Lake Pend Oreille,Albeni Falls,-116.44,48.13,NA,NA,NA,ICOLD_LRs,United States,,Pend Oreille,"Newport, WA",1955,"Glofas station below G0432, above G0474",-116.65,48.25,-116.95,48.15,-116.975,48.175,remapped
+237,2237,NA,GLWD,,Estreito,-47.25,-20.14,NA,NA,NA,ICOLD_LRs,Brazil,,Grande,Pedregulho,1969,,-47.45,-20.05,-47.45,-20.05,-47.275,-20.175,remapped
+238,2785,NA,GLWD,,Laguna Del Maule,-70.51,-36.06,NA,NA,NA,ICOLD_LRs,Chile,,Maule,Talca,1957,"cat2, very small upsteam area",-70.55,-36.05,-70.55,-36.05,-70.575,-36.025,correct position - centered in pixel
+239,686,NA,GLWD,Lam Pao,Lam Pao,103.47,16.77,NA,NA,NA,ICOLD_LRs,Thailand,,Lam Pao,Udon Thani,1970,,103.45,16.55,103.45,16.65,103.475,16.625,remapped
+240,1947,NA,GLWD,Lake Havasu,,-114.34,34.45,NA,NA,NA,Statistics,United States,,,,0,,-114.25,34.35,-114.35,34.45,-114.125,34.275,relocate-144_125and34_275WaterFromEastToo
+241,3357,NA,GLWD,,CerronGrande (Silencio),-88.51,13.72,NA,NA,NA,ICOLD_LRs,El Salvador,,Lempa,Hutyapa,1973,,-88.55,13.75,-88.55875,13.62375,-88.525,13.675,remapped
+242,2108,NA,GLWD,Kyle,Kyle,30.92,-20.19,NA,NA,NA,ICOLD_LRs,Zimbabwe,,Mtilikwe,Masvingo,1960,"cat2, not main river, not flood control purpose",31.05,-20.25,31.05,-20.25,31.025,-20.225,remapped
+243,1936,NA,GLWD,Moyingyi,,96.61,17.55,NA,NA,NA,Statistics,Burma,,,,0,"cat2, cts",96.65,17.55,96.65,17.55,96.675,17.525,remapped
+244,3474,NA,GLWD,,Hidkal (Chataprabha Project),74.96,15.79,NA,NA,NA,ICOLD,India,,Chataprabha,Belgaum,1979,,74.95,15.75,75.15,15.85,75.075,15.825,remapped
+245,1406,NA,GLWD,Fairbairn,Fairbairn,148.03,-23.71,NA,NA,NA,ICOLD_LRs,Australia,,Nogoa,Emerald,1972,GloFAS station downstream G1421,148.05,-23.65,148.05,-23.65,148.075,-23.675,remapped
+246,1938,NA,GLWD,McIlwaine,,30.52,-17.81,NA,NA,NA,Statistics,Zimbabwe,,,,0,"cat2, other reservoir downstream",30.55,-17.85,30.55,-17.85,30.525,-17.825,correct position - centered in pixel
+247,2597,NA,GLWD,Lake Travis,Marshall Ford,-98.09,30.46,NA,NA,NA,LRs,United States,,Colorado,Austin,1942,GloFAS station below G0904,-97.95,30.35,-97.95,30.35,-97.925,30.375,remapped
+248,2992,NA,GLWD,Valdecanas,Valdecanas,-5.38,39.82,NA,NA,NA,ICOLD_LRs,Spain,,Tajo,Belvis,1964,,-5.45,39.85,-5.55,39.85,-5.575,39.775,remapped
+249,376,NA,GLWD,Lokan Terkojarvi,Lokka,27.77,67.97,NA,NA,NA,ICOLD_LRs,Finland,,Luiro,Ivalo,1967,,27.55,67.85,27.55,67.85,27.775,67.825,shift 1 pixel east
+250,3721,NA,GLWD,,New Melones,-120.52,37.98,NA,NA,NA,ICOLD,United States,,Stanislaus,Modesto,1979,,-120.55,37.95,-120.55,37.95,-120.525,37.975,correct position
+251,1890,NA,GLWD,Falls Lake Reservoir,,-78.71,36.03,NA,NA,NA,Statistics,United States,,,,0,GloFAS station below G0827,-78.65,35.95,-78.65,35.85,-78.575,35.975,remapped
+252,1882,NA,GLWD,,,33.3,-24.46,NA,NA,NA,Statistics,Mozambique,,,,0,"cat2, close to sea",33.45,-24.55,33.45,-24.55,33.425,-24.525,remapped
+253,375,NA,GLWD,Flathead Lake,Keer,-114.18,47.89,NA,NA,NA,LRs,United States,,Flathead,Dixon,1938,GloFAS station G0494,-114.15,47.75,-114.15,47.75,-114.175,47.725,remapped
+254,1316,NA,GLWD,,Panchet Hill Res.,86.61,23.65,NA,NA,NA,ICOLD_LRs,India,,Damodar,Asansol,1959,,86.75,23.65,86.65804,23.65833,86.725,23.675,remapped
+255,1842,NA,GLWD,Lake Ray Hubbard,,-96.5,32.9,NA,NA,NA,Statistics,United States,,,,0,,-96.55,32.85,-96.55,32.85,-96.525,32.825,remapped
+256,1844,NA,GLWD,Krasnooskol'skoye,,37.55,49.35,NA,NA,NA,Statistics,Ukraine,,,,0,,37.55,49.25,37.55,49.25,37.525,49.225,remapped
+257,3690,NA,GLWD,,Mequinenza,0.11,41.35,NA,NA,NA,ICOLD_LRs,Spain,,Ebro,Mequinenza,1966,GloFAS station downstream G1577,0.15,41.35,0.15,41.35,0.225,41.375,remapped
+258,1455,NA,GLWD,Norfork Lake,Norfork,-92.23,36.42,NA,NA,NA,LRs,United States,,N. Fork of White,Northfork,1944,,-92.25,36.25,-92.25,36.25,-92.225,36.275,remapped
+259,1833,NA,GLWD,Vileiskoye,,27.13,54.48,NA,NA,NA,Statistics,Belarus,,,,0,"cat2, not mr, not fc",26.95,54.45,26.95,54.45,26.975,54.475,remapped
+260,2230,NA,GLWD,,Kadana Dam,73.75,23.27,NA,NA,NA,ICOLD_LRs,India,,Mahi,Santrampur,1978,,73.75,23.25,73.75,23.25,73.825,23.275,remapped
+261,1014,NA,GLWD,Revue,Chicamba Real,33.08,-19.12,NA,NA,NA,ICOLD_LRs,Mozambique,,Revue,Chimoio,1959,,33.15,-19.15,33.15,-19.15,33.175,-19.175,gathers h20 from south too
+262,813,NA,GLWD,Petit Manicouagan,Hart Jaune,-67.78,51.85,NA,NA,NA,ICOLD_LRs,Canada,,Hart Jaune,Gagnon,1960,,-67.95,51.75,-67.85,51.85,-67.775,51.825,remapped
+263,1824,NA,GLWD,,,-92.3,44.51,NA,NA,NA,Statistics,United States,,,,0,"remove, not a reservoir",-92.15,44.45,-92.15,44.45,-92.075,44.425,res is after inflow of river
+264,1777,NA,GLWD,Quabbin Reservoir,Quabbin Reservoir,-72.31,42.41,NA,NA,NA,ICOLD_LRs,United States,,Beaver Brook,Ware,1938,,-72.35,42.35,-72.35,42.35,-72.325,42.325,remapped
+265,1177,NA,GLWD,Tana,Masinga,37.46,-0.87,NA,NA,NA,ICOLD_LRs,Kenya,,Tana,Embu,1980,,37.65,-0.85,37.65,-0.85,37.575,-0.875,remapped
+266,3677,NA,GLWD,,Quiminha,13.71,-8.99,NA,NA,NA,ICOLD_LRs,Angola,,Bengo,Cabiri,1975,"cat2, close to sea",13.65,-8.95,13.65,-8.95,13.825,-8.975,shift res to 13.825 and -8_975
+267,1866,NA,GLWD,Banks Lake,North (Banks Lake),-119.22,47.78,NA,NA,NA,LRs,United States,,Offstam,Grand Coulee,1951,,-119.05,47.95,-119.05,47.95,-119.025,47.925,remapped
+268,3696,NA,GLWD,,Gangnan,113.94,38.33,NA,NA,NA,ICOLD,China,,Hutuo He,Shijiazhuang,1962,,113.95,38.35,113.95,38.35,114.025,38.325,remapped
+269,3650,NA,GLWD,,Passo Fundo,-52.51,-28.49,NA,NA,NA,ICOLD,Brazil,,Passo Fundo,S.Valentim,1972,,-52.55,-28.55,-52.55,-28.55,-52.525,-28.575,remapped
+270,1776,NA,GLWD,Lake George,,-73.56,43.62,NA,NA,NA,Statistics,United States,,,,0,GloFAS station below G0584,-73.45,43.75,-73.45,43.75,-73.475,43.725,remapped
+271,574,NA,GLWD,M'Bakaou,M'bakaou,12.81,6.41,NA,NA,NA,ICOLD,Cameroon,,Djerem,Tibati,1971,"cat2, not mr, not fc",12.85,6.35,12.85,6.35,12.825,6.325,remapped
+272,1595,NA,GLWD,,Powell,-124.5,50.07,NA,NA,NA,ICOLD_LRs,Canada,,Powell,Powell,1912,"cat2, cts 1 pixel",-124.55,49.85,-124.55,49.85,-124.525,49.925,remapped
+273,1761,NA,GLWD,Cascade Reservoir,,-116.1,44.63,NA,NA,NA,Statistics,United States,,,,0,,-116.05,44.55,-116.05,44.55,-116.075,44.525,remapped
+274,3679,NA,GLWD,,Bersimis,-69.33,49.23,NA,NA,NA,ICOLD,Canada,,Bersimis,Labrieville,1959,,-69.25,49.15,-69.25,49.15,-69.275,49.175,remapped
+275,1755,NA,GLWD,Palestine,,-95.5,32.18,NA,NA,NA,Statistics,United States,,,,0,,-95.45,32.05,-95.45,32.05,-95.425,32.075,remapped
+276,2729,NA,GLWD,,Nanwan,113.96,32.04,NA,NA,NA,ICOLD_LRs,China,,Tr. Huai He,Xin'yang,1955,,113.95,32.05,113.95,32.05,113.975,32.125,remapped
+277,3555,NA,GLWD,,Blowering,148.25,-35.49,NA,NA,NA,ICOLD_LRs,Australia,,Tumut,Tumut,1968,,148.25,-35.45,148.25,-35.45,148.275,-35.425,remapped
+278,2268,NA,GLWD,Center Hill Lake,Center Hill,-85.72,35.96,NA,NA,NA,ICOLD,United States,,Caney Fork,Lancaster,1951,,-85.85,36.05,-85.85,36.05,-85.825,36.075,remapped
+279,2446,NA,GLWD,,Cijara,-4.86,39.31,NA,NA,NA,ICOLD,Spain,,Guadiana,Alia,1956,,-4.95,39.35,-4.95,39.35,-5.025,39.375,remapped
+280,3659,NA,GLWD,,Mossyrock,-122.19,46.5,NA,NA,NA,LRs,United States,,Cowlitz,Toledo,1968,,-122.35,46.45,-122.45,46.55,-122.425,46.525,remapped
+281,1798,NA,GLWD,,Pedra,-40.25,-13.87,NA,NA,NA,ICOLD,Brazil,,Rio De Contas,Jequie,1970,,-40.25,-13.85,-40.25,-13.85,-40.225,-13.875,correct position - centered in pixel
+282,3672,NA,GLWD,,Turkwel,35.14,1.71,NA,NA,NA,LRs,Kenya,,Suam,Eldoret,1991,"cat2, endoheic basin",35.15,1.75,35.15,1.75,35.325,1.875,remapped
+283,200,NA,GLWD,Abitibi,Twin Falls,-79.59,48.76,NA,NA,NA,ICOLD_LRs,Canada,,Abitibi,Iroqois,1921,GloFAS station below G0401,-80.15,48.75,-80.57875,48.74958,-80.575,48.775,remapped
+284,3655,NA,GLWD,,Montary Lock and Dam,-119.67,45.89,NA,NA,NA,LRs,United States,,Columbia,Umatilla,1957,,-119.75,45.85,-119.75,45.85,-119.725,45.825,remapped
+285,1696,NA,GLWD,,,121.33,16.73,NA,NA,NA,Statistics,Philippines,,,,0,,121.45,16.85,121.45,16.85,121.425,16.825,remapped
+286,1702,NA,GLWD,Lake Whitney,,-97.42,32,NA,NA,NA,Statistics,United States,,,,0,GloFAS station below G0882,-97.35,31.85,-97.35,31.85,-97.375,31.875,remapped
+287,1311,NA,GLWD,Lewis Smith Lake,Lewis Smith,-87.12,34.06,NA,NA,NA,ICOLD_LRs,United States,,Dippey Fork,Haleyvile,1961,,-87.15,33.95,-87.15,33.95,-87.125,33.975,remapped
+288,2807,NA,GLWD,Palisades Reservoir,Palisades,-111.12,43.24,NA,NA,NA,ICOLD_LRs,United States,,S. Fork Snake,"Jackson, Wyo",1957,GloFAS station G0645,-111.25,43.35,-111.15,43.25,-111.175,43.325,remapped
+289,3253,NA,GLWD,,Duncan,-117.39,49.93,NA,NA,NA,ICOLD_LRs,Canada,,Columbia,Kaslo,1967,,-117.45,49.75,-117.45,49.75,-117.475,49.775,remapped
+290,1648,NA,GLWD,Lewisville Lake,,-97,33.15,NA,NA,NA,Statistics,United States,,,,0,,-96.95,33.05,-96.95,33.05,-96.975,33.075,remapped
+291,637,NA,GLWD,Hondo,Rio Hondo,-64.98,-27.53,NA,NA,NA,ICOLD_LRs,Argentina,,Dulce,Termas de Rio Hondo,1967,,-64.95,-27.55,-64.95,-27.55,-64.925,-27.525,remapped
+292,1639,NA,GLWD,Lake Seminole,,-84.8,30.8,NA,NA,NA,Statistics,United States,,,,0,"GloFAS station G0895, downstream G0899",-84.95,30.75,-84.85,30.65,-84.875,30.725,remapped
+293,3177,NA,GLWD,,Andizhan,73.05,40.78,NA,NA,NA,ICOLD_LRs,Uzbekistan,Kyrgyzstan,Karadarya,Osh,1980,"cat2, not mr, not fc, res.down",73.05,40.75,73.05,40.75,73.075,40.775,remapped
+294,2377,NA,GLWD,,Erlonggshan,124.82,43.2,NA,NA,NA,ICOLD_LRs,China,,Dongliac He,Siping,1967,,124.85,43.15,124.75,43.25,124.775,43.225,remapped
+295,2606,NA,GLWD,,Big Horn (Abraham Lake Res.),-116.44,52.15,NA,NA,NA,LRs,Canada,,North Saskatchewan,Brazeau/Nordegg,1972,GloFAS station below G0318,-116.35,52.25,-116.35,52.25,-116.325,52.325,remapped
+296,3651,NA,GLWD,,Ross,-121.03,48.87,NA,NA,NA,ICOLD_LRs,United States,Canada,Skagit,Rockport,1949,,-121.05,48.75,-121.05,48.75,-121.075,48.725,remapped
+297,248,NA,GLWD,Outardes Quatre,Outardes (Quatre Dam),-69.15,50.16,NA,NA,NA,ICOLD,Canada,,Outardes,Baie Comeau,1968,GloFas station below G0420,-68.85,49.65,-68.95,49.65,-68.925,49.725,remapped
+298,399,NA,GLWD,Grand,Plain Diversion Dam Grand L.. Res.,-57.35,49.01,NA,NA,NA,LRs,Canada,,Junction Brook,Deer Lake,1924,"cat2, Newfoundland",-57.25,49.15,-57.25,49.15,-57.225,49.125,remapped
+299,705,NA,GLWD,Minindee,Menindee,142.33,-32.41,NA,NA,NA,ICOLD_LRs,Australia,,Darling,Broken Hill,1960,"remove, lake not connected to channel",142.35,-32.45,142.35,-32.35,142.375,-32.375,remapped
+300,3030,NA,GLWD,,Gustavo Diaz Ordaz FDTE. (Bacurato),-108.26,25.77,NA,NA,NA,ICOLD_LRs,Mexico,,Sinaloa,Guamuchil,1982,,-108.25,25.75,-107.95,25.85,-107.925,25.875,remapped
+301,541,NA,GLWD,,Bamendjin,10.57,5.83,NA,NA,NA,ICOLD_LRs,Cameroon,,Noun,Tcherenoqu,1974,"cat2, not mr, not fc",10.55,5.75,10.55,5.75,10.525,5.725,remapped
+302,860,NA,GLWD,John H. Kerr Reservoir,John H. Kerr,-78.32,36.55,NA,NA,NA,ICOLD,United States,,Roanoke,Roanoke Rapids,1953,,-78.25,36.55,-78.25,36.55,-78.275,36.575,remapped
+303,1007,NA,GLWD,Guarico,Guarico,-67.37,9.05,NA,NA,NA,ICOLD_LRs,Venezuela,,Guarico,Calabozo,1957,,-67.35,9.05,-67.35,9.05,-67.375,9.025,remapped
+304,301,NA,GLWD,Sipiwesk,Kelsey (Sipiwesk and Cauchon Ls.),-97.81,54.99,NA,NA,NA,ICOLD_LRs,Canada,,Nelson,Thompson,1960,,-97.35,55.15,-97.35,55.15,-97.375,55.175,remapped
+305,1562,NA,GLWD,Almendra,,-6.16,41.22,NA,NA,NA,Statistics,Spain,,,,0,,-6.25,41.25,-6.25,41.25,-6.275,41.275,remapped
+306,855,NA,GLWD,,Burdekin Falls,147.05,-20.61,NA,NA,NA,ICOLD_LRs,Australia,,Burdekin,Ravenswood,1988,GloFAS station downstream G1397,147.15,-20.65,147.15,-20.65,147.175,-20.625,remapped
+307,3358,NA,GLWD,,Florentino Ameghino,-66.49,-43.82,NA,NA,NA,ICOLD_LRs,Argentina,,Chubut,Gaiman,1963,,-66.45,-43.85,-66.45,-43.65,-66.475,-43.725,remapped
+308,898,NA,GLWD,Lake Of The Cherokees,Pensacola,-94.78,36.67,NA,NA,NA,ICOLD,United States,,Grand,Pensacola,1940,GloFAS station below (below a lake) G0809,-95.05,36.45,-95.05,36.45,-94.975,36.475,remapped
+309,1157,NA,GLWD,K'ok'a,Koka,39.08,8.38,NA,NA,NA,ICOLD_LRs,Ethiopia,,Avash,Addis Abeba,1960,GloFAS station below G1074,39.15,8.45,39.15,8.45,39.125,8.425,remapped
+310,3624,NA,GLWD,,Sariyar,31.23,40.06,NA,NA,NA,ICOLD_LRs,Turkey,,Sakarya,Ankara,1956,GloFAS station downstream G0704,31.05,40.05,31.05,40.05,31.425,40.075,remapped
+312,606,NA,GLWD,,Rosanna,-52.51,-22.62,NA,NA,NA,LRs,Brazil,,Paranapanema,Teodoro Sampaio,1985,,-52.15,-22.55,-52.15,-22.55,-52.875,-22.575,remapped - duplicate
+313,1512,NA,GLWD,Keystone Lake,,-96.25,36.22,NA,NA,NA,Statistics,United States,,,,0,GloFAS station below G0811,-96.25,36.15,-96.25,36.15,-96.275,36.175,remapped
+314,1946,NA,GLWD,Yojoa,El Pescadero,-87.99,14.86,NA,NA,NA,ICOLD_LRs,Honduras,,Perscadero,San Pedro Sula,1964,"cat2, not mr, not fc",-88.05,14.95,-88.05,14.95,-88.025,14.925,remapped
+315,1168,NA,GLWD,Sardis Lake,Sardis,-89.68,34.47,NA,NA,NA,LRs,United States,,Ltl Tallahatchie,Batesville,1940,GloFAS station below G0856,-89.75,34.45,-89.75,34.45,-89.775,34.425,remapped
+316,2195,NA,GLWD,Voivis,Polyphyton,21.96,40.22,NA,NA,NA,ICOLD,Greece,,Allakmon,Kozani,1974,"cat2, cts, not mr, not fc",22.05,40.25,22.10042,40.30125,22.075,40.275,remapped
+317,958,NA,GLWD,,Caribou Falls,-94.4,50.21,NA,NA,NA,ICOLD_LRs,Canada,,English,Kenora,1958,,-94.55,50.25,-94.95,50.25,-94.975,50.275,remapped
+318,2005,NA,GLWD,,Fengshuba,115.47,24.5,NA,NA,NA,LRs,China,,Dong Jiang,Longchuan,1974,,115.35,24.45,115.35,24.45,115.375,24.425,remapped
+319,1488,NA,GLWD,Banabuiu,,-38.98,-5.34,NA,NA,NA,Statistics,Brazil,,,,0,GloFAS station downstream G1191,-38.95,-5.35,-38.95,-5.35,-38.925,-5.325,remapped
+320,475,NA,GLWD,,Tiga,8.58,11.33,NA,NA,NA,ICOLD_LRs,Nigeria,,Kano,Chiroma,1974,GloFAS station below G1043,8.35,11.45,8.35,11.45,8.425,11.425,remapped
+321,833,NA,GLWD,Noi,Sirindhorn,105.39,15.01,NA,NA,NA,ICOLD,Thailand,,Lam Dom Noi,Ubon Rathatani,1971,"cat2, not mr, not fc",105.35,15.15,105.35,15.15,105.425,15.175,remapped
+322,2025,NA,GLWD,,Betania,-75.49,2.6,NA,NA,NA,LRs,Colombia,,Magdalena,Neiva,1984,GloFAS station downstream G1691,-75.45,2.65,-75.45,2.65,-75.425,2.725,gets water from west river too
+323,2718,NA,GLWD,Lake Berryessa,Monticello,-122.22,38.59,NA,NA,NA,ICOLD_LRs,United States,,Putah Creek,Sacramento,1957,,-122.15,38.55,-122.15,38.55,-122.125,38.525,remapped
+324,548,NA,GLWD,Umbozero,Iova,34.4,67.71,NA,NA,NA,ICOLD_LRs,Russia,,Iova,Murmansk,1960,"cat2, cts",34.25,67.55,34.25,67.55,34.225,67.525,remapped
+325,854,NA,GLWD,,Kompienga,0.63,11.16,NA,NA,NA,ICOLD_LRs,Burkina Faso,,Kompienga,Pama,1987,"cat2, other reservoir downstream, not mr",0.65,11.15,0.65,11.15,0.675,11.125,remapped
+326,1108,NA,GLWD,Koitere,Kaltimo,30.7,62.97,NA,NA,NA,ICOLD_LRs,Finland,,Pielisjoki,Joensuu,1958,"cat2, not mr, not fc, station sdd G0108",30.75,62.95,30.65,62.85,30.675,62.875,remapped
+327,1467,NA,GLWD,Ross R. Barnett Reservoir,,-90.01,32.47,NA,NA,NA,Statistics,United States,,,,0,GloFAS station below G0886,-90.05,32.45,-90.05,32.45,-90.025,32.425,remapped
+328,3684,NA,GLWD,,Idukki,77.17,9.55,NA,NA,NA,LRs,India,,Periyar,Idukki,1974,"cat2, not mr, not fc",77.15,9.55,77.15,9.55,77.125,9.525,remapped
+329,3709,NA,GLWD,,Charvak,70.03,41.65,NA,NA,NA,ICOLD_LRs,Uzbekistan,,Chirchik,Tashkent,1977,"cat2, not mr, not fc, res down.",70.05,41.65,70.05,41.65,69.975,41.625,remapped
+330,1462,NA,GLWD,Kalri,,68.06,24.94,NA,NA,NA,Statistics,Pakistan,,,,0,"cat2, all outflow diverted to irrigation cannals",68.05,24.85,68.05,24.95,68.075,24.925,correct position - centered in pixel
+331,1454,NA,GLWD,Lake Gaston,,-77.91,36.53,NA,NA,NA,Statistics,United States,,,,0,GloFAS station below G0802,-77.65,36.45,-77.85,36.45,-77.825,36.525,remapped
+332,1587,NA,GLWD,Bhadra,Bhadra,75.58,13.63,NA,NA,NA,ICOLD,India,,Bhadra,Shimoga,1963,"cat2, not mr, not fc",75.65,13.75,75.65,13.75,75.625,13.725,remapped
+333,3660,NA,GLWD,,Zhanghe,112.03,31.01,NA,NA,NA,ICOLD,China,,Juzhang He,Jingmen,1965,"cat2, water is directed to E, not rep. in ldd",111.95,31.05,112.05,31.05,111.925,31.075,unsure of position - not on 3arcmin
+334,1272,NA,GLWD,Beaver Lake,Beaver,-94.02,36.3,NA,NA,NA,ICOLD_LRs,United States,,White,Beaver,1963,,-93.85,36.45,-93.85,36.45,-93.875,36.425,remapped
+335,1921,NA,GLWD,,Wujiangdu,106.61,27.29,NA,NA,NA,ICOLD,China,,Wu Jiang,Zun'yi,1981,,106.75,27.35,106.75,27.35,106.725,27.325,remapped
+336,916,NA,GLWD,Oros,Oros,-39.1,-6.24,NA,NA,NA,ICOLD,Brazil,,Jaquaribe,Oros,1962,GloFAS station downstream G1197,-38.95,-6.25,-38.95,-6.25,-38.975,-6.275,remapped
+337,2171,NA,GLWD,Navajo Reservoir,Navajo,-107.44,36.93,NA,NA,NA,ICOLD_LRs,United States,,San Juan,Blanco,1963,GloFAS station below G0797,-107.55,36.85,-107.65,36.85,-107.625,36.825,remapped
+338,3059,NA,GLWD,,Catalan,35.29,37.09,NA,NA,NA,ICOLD,Turkey,,Seyhan,Adana,1997,,35.35,37.05,35.35,37.05,35.275,37.225,remapped
+339,1383,NA,GLWD,,,33.56,-24.37,NA,NA,NA,Statistics,Mozambique,,,,0,"cat2, close to sea",33.45,-24.45,33.45,-24.45,33.525,-24.475,remapped
+340,573,NA,GLWD,Meeplaeg,Pudops,-56.62,48.26,NA,NA,NA,ICOLD_LRs,Canada,,Gray,Millertown,1967,"cat2,cat2, Newfoundland",-56.75,48.15,-56.75,48.15,-56.775,48.175,remapped
+341,1086,NA,GLWD,Selingue,Selingue,-8.17,11.5,NA,NA,NA,ICOLD_LRs,Mali,,Sankarani,Bamako,1982,"cat2, not mr, not fc",-8.25,11.65,-8.25,11.65,-8.225,11.625,resCorrectImproveStation is in the middle of lake
+342,NA,2385,GranD,,Volta Grande,0,0,-48.217917,-20.02625,2170,GranD,Brazil,,Grande,Volta Grande,1974,added from GranD,0,0,-48.25,-20.05,-48.225,-20.025,remapped
+343,1100,NA,GLWD,Hawea,Hawea Lake Control,169.4,-44.37,NA,NA,NA,ICOLD_LRs,New Zealand,,Hawea,Dunedin,1959,,169.25,-44.55,169.25,-44.55,169.275,-44.575,remapped
+344,713,NA,GLWD,Tobin,Squaw Rapids (Tobin Lake Rec.),-103.49,53.57,NA,NA,NA,LRs,Canada,,Saskatchewan,Prince Albert,1962,,-103.45,53.65,-103.45,53.65,-103.425,53.675,remapped
+345,1544,NA,GLWD,,Benmore,170.16,-44.31,NA,NA,NA,ICOLD_LRs,New Zealand,,Waitaki,Oamaru,1965,,170.15,-44.55,170.15,-44.55,170.225,-44.575,remapped
+346,534,NA,GLWD,Lake Livingston,Livingston Lake,-95.14,30.8,NA,NA,NA,ICOLD_LRs,United States,,Trinity,Liberty,1969,GloFAS station below G0900,-95.05,30.65,-95.05,30.65,-95.075,30.625,remapped
+347,974,NA,GLWD,Kempt,Lake Manouane,-74.33,47.36,NA,NA,NA,ICOLD_LRs,Canada,,Manouane,Arvida,1941,,-74.25,47.45,-74.25,47.45,-74.175,47.525,remapped
+348,1603,NA,GLWD,Lake Mohave,Davis,-114.66,35.47,NA,NA,NA,ICOLD,United States,,Colorado,Needles,1950,,-114.55,35.25,-114.55,35.25,-114.575,35.225,remapped
+349,603,NA,GLWD,Ubolratna,Ubolratna,102.6,16.69,NA,NA,NA,ICOLD,Thailand,,Nam Pong,Khon Kaen,1965,,102.65,16.75,102.65,16.75,102.625,16.775,remapped
+350,1078,NA,GLWD,Massinger Barragen,Massingir,32.01,-23.91,NA,NA,NA,ICOLD_LRs,Mozambique,South Africa,Elefantes,Chokwe,1975,,32.15,-23.85,32.15,-23.85,32.125,-23.875,remapped
+351,1329,NA,GLWD,Manapouri,,167.44,-45.51,NA,NA,NA,Statistics,New Zealand,,,,0,,167.55,-45.55,167.55,-45.55,167.625,-45.575,remapped
+352,2517,NA,GLWD,Guanting Shuiku,Guanting,115.69,40.33,NA,NA,NA,LRs,China,,Yionding He,Zhangjiakou,1954,,115.55,40.25,115.55,40.25,115.625,40.225,remapped
+353,2577,NA,GLWD,,Meishan,115.82,31.59,NA,NA,NA,LRs,China,,Shi He,Lu'an,1956,,115.85,31.65,115.85,31.65,115.875,31.675,remapped
+354,1309,NA,GLWD,Cedar Creek Reservoir,,-96.15,32.3,NA,NA,NA,Statistics,United States,,,,0,,-96.05,32.15,-96.05,32.15,-96.125,32.275,efcc2254 moved North to capture small creeks only 
+355,943,NA,GLWD,,Tawa,77.94,22.43,NA,NA,NA,ICOLD_LRs,India,,Tawa,Hoshangabad,1975,,77.95,22.55,77.95,22.55,77.975,22.525,remapped
+356,1299,NA,GLWD,,,-5.15,6.3,NA,NA,NA,Statistics,Ivory Coast,,,,0,GloFAS station below G1103,-5.05,6.25,-5.05,6.25,-5.125,6.225,remapped
+357,202,NA,GLWD,Oulujarvi,Jylhama,27.7,64.35,NA,NA,NA,ICOLD_LRs,Finland,,Oulujoki,Oulu,1950,GloFAS station below G0080,26.75,64.45,26.75,64.45,26.825,64.525,remapped
+358,1036,NA,GLWD,Lake Sidney Lanier,Buford,-83.93,34.29,NA,NA,NA,ICOLD_LRs,United States,,Chattahoochee,Buford,1958,,-84.05,34.15,-84.05,34.15,-84.025,34.175,remapped
+359,1155,NA,GLWD,Greers Ferry Lake,Grers Ferry,-92.3,35.55,NA,NA,NA,ICOLD_LRs,United States,,Little Red,Heber Springs,1962,,-92.05,35.55,-92.05,35.55,-92.025,35.525,remapped
+360,2160,NA,GLWD,,Batang Ai,112.01,1.22,NA,NA,NA,ICOLD_LRs,Malaysia,,Batang Ai,Lubok Antu,1985,,111.95,1.15,111.95,1.25,111.875,1.175,remapped
+361,626,NA,GLWD,Lake of the Ozarks,Osage,-92.72,38.15,NA,NA,NA,ICOLD,United States,,Osage,Bagnell,1931,,-93.35,38.25,-93.35,38.25,-92.675,38.225,remapped
+362,626,NA,GLWD,Lake of the Ozarks,Osage,-92.72,38.15,NA,NA,NA,ICOLD,United States,,Osage,Bagnell,1931,GloFAS station below G0772,-92.65,38.15,-92.65,38.15,-92.675,38.225,remapped
+363,657,NA,GLWD,Rijkavesi,Puntarikoski,29.75,62.87,NA,NA,NA,ICOLD_LRs,Finland,,Canal of Hoytiainen,Joensuu,1957,"cat2,not mr, lots of lakes downstream",29.45,62.85,29.45,62.85,29.675,62.675,remapped
+364,1193,NA,GLWD,Canyon Ferry Lake,Canyon Ferry,-111.56,46.5,NA,NA,NA,ICOLD_LRs,United States,,Missouri,Helena,1954,,-111.75,46.65,-111.75,46.65,-111.675,46.625,remapped
+365,1996,NA,GLWD,,Iron Gates 1(Portile de Fier 1),22.26,44.6,NA,NA,NA,LRs,Romania,Yugoslavia,Danube,Drobeta-Turnu Severin Foca,1972,,22.55,44.65,22.55,44.35,22.525,44.325,remapped
+366,1021,NA,GLWD,,Aqu,-36.9,-5.72,NA,NA,NA,ICOLD,Brazil,,Piranhas,Aqu,0,,-36.85,-5.65,-36.95,-5.75,-36.875,-5.675,recieves water from east too
+367,1244,NA,GLWD,Madre,,-97.82,25.86,NA,NA,NA,Statistics,Mexico,,,,0,"remove, no reservoir in google maps nor GranD",-97.85,26.05,-97.85,26.05,-97.775,26.025,res in main river shift to -97.775 and 26_025
+368,3714,NA,GLWD,,Ramganga,78.74,29.56,NA,NA,NA,LRs,India,,Ramganga,Dhampur,1978,"cat2, not mr, not fc",78.75,29.55,78.75,29.55,78.775,29.525,remapped
+369,3104,NA,GLWD,,Pongolaport,31.96,-27.41,NA,NA,NA,ICOLD,South Africa,,Pongola,Gollela,1973,,32.05,-27.45,32.05,-27.45,32.025,-27.425,remapped
+370,361,NA,GLWD,,Dneprodzershinsk,34.17,48.77,NA,NA,NA,ICOLD_LRs,Ukraine,,Dnieper,Dneprodzershinsk,1964,,34.55,48.55,34.55,48.55,34.525,48.575,remapped
+371,1581,NA,GLWD,,Paraibuna Dike(Paraibuna Res.),-45.44,-23.44,NA,NA,NA,ICOLD_LRs,Brazil,,,Paraibuna,1978,,-45.65,-23.35,-45.65,-23.35,-45.575,-23.425,remapped
+372,3487,NA,GLWD,,Chencun,118.06,30.39,NA,NA,NA,LRs,China,,Qing'yi Jiang,Jingxian,1972,,118.15,30.45,118.15,30.45,118.175,30.475,remapped
+373,471,NA,GLWD,,Kanev,31.22,49.98,NA,NA,NA,ICOLD,Ukraine,,Dnieper,Kanev,1976,,31.45,49.85,31.45,49.85,31.475,49.825,remapped
+374,3697,NA,GLWD,Don Pedro Reservoir,Don Pedro,-120.39,37.74,NA,NA,NA,ICOLD_LRs,United States,,Tuolumne,La Grange,1971,,-120.35,37.75,-120.35,37.75,-120.425,37.725,remapped
+375,3600,NA,GLWD,San Luis Reservoir,San Luis,-121.13,37.05,NA,NA,NA,ICOLD_LRs,United States,,San Luis Creek,Los Banos,1967,,-121.05,37.05,-121.05,37.05,-121.025,37.075,remapped
+376,337,NA,GLWD,Stephens,Kettle Rapids,-95.07,56.42,NA,NA,NA,ICOLD_LRs,Canada,,Nelson,Gillam,1970,GloFAS station G0227,-94.65,56.35,-94.75,56.35,-94.675,56.375,remapped
+377,562,NA,GLWD,Vaaldam,Vaaldam,28.32,-27.01,NA,NA,NA,ICOLD,South Africa,,Vaal,Vereeniging,1938,"cat2, rd, no fc",28.15,-26.85,28.15,-26.85,28.175,-26.875,remapped
+378,1773,NA,GLWD,,Hongshan,119.62,42.54,NA,NA,NA,ICOLD_LRs,China,,Laoha He,Chifeng,1964,,119.75,42.65,119.75,42.75,119.675,42.725,remapped
+379,2053,NA,GLWD,,IR. H. Juanda (Jatiluhur),107.29,-6.59,NA,NA,NA,ICOLD,Indonesia,,Tji Titarum,Purwakarta,1967,"cat2, cts",107.35,-6.55,107.35,-6.55,107.375,-6.525,remapped
+380,1074,NA,GLWD,Gove,Gove,15.91,-13.24,NA,NA,NA,ICOLD_LRs,Angola,,Cunene,Huambo,1974,"cat2, not mr, not fc",15.85,-13.45,15.85,-13.45,15.875,-13.425,remapped
+381,1922,NA,GLWD,,Shuikou,118.87,26.25,NA,NA,NA,ICOLD,China,,Minjiang,Minqing,1995,"cat2, cts",118.95,26.25,118.85,26.25,118.825,26.275,remapped
+382,2155,NA,GLWD,Elephant Butte Reservoir,Elephant Butte,-107.16,33.32,NA,NA,NA,ICOLD_LRs,United States,,Rio Gand,Truth or Consequence,1916,,-107.15,33.15,-107.15,33.15,-107.175,33.175,remapped
+383,1474,NA,GLWD,,Manso,-56.06,-14.8,NA,NA,NA,ICOLD,Brazil,,Manso,Cuiaba,1991,GloFAS station downstream G1366,-56.15,-14.75,-56.15,-14.75,-55.775,-14.875,remapped
+384,1521,NA,GLWD,,Yantan,108.19,23.87,NA,NA,NA,ICOLD,China,,Hongshuihe,Duan,1995,,108.25,23.95,108.25,23.95,108.275,23.925,remapped
+385,298,NA,GLWD,Kentucky Lake,Kentucky,-88.09,36.27,NA,NA,NA,ICOLD_LRs,United States,,Tennessee,Calvert City,1944,,-88.25,37.05,-88.25,37.05,-88.225,37.025,remapped
+386,298,NA,GLWD,Kentucky Lake,Kentucky,-88.09,36.27,NA,NA,NA,ICOLD_LRs,United States,,Tennessee,Calvert City,1944,,-88.25,36.95,-88.25,36.95,-88.225,37.025,remapped
+387,1172,NA,GLWD,,,-105.38,28.86,NA,NA,NA,Statistics,Mexico,,,,0,GloFAS station below G0911,-105.35,28.95,-105.35,28.95,-105.275,28.975,remapped
+388,1189,NA,GLWD,,Baie D'Espoir Salmon,-55.99,48.06,NA,NA,NA,ICOLD_LRs,Canada,,Salmon,St.. Albans,1966,"cat2, cts, Newfoundland",-55.95,47.95,-55.95,47.95,-55.775,47.975,remapped
+389,2177,NA,GLWD,,Sterkfonten,29.03,-28.47,NA,NA,NA,ICOLD,South Africa,,Nuwe Jaar Spruit,Harrissmith,1980,"cat2, reservoir downstream, not main river",29.05,-28.35,29.05,-28.35,29.025,-28.375,remapped
+390,621,NA,GLWD,Baskatong,Mercier,-75.75,46.83,NA,NA,NA,ICOLD_LRs,Canada,,Gatineau,Mt. Laurier,1927,,-75.95,46.75,-75.95,46.75,-75.975,46.725,remapped
+391,3609,NA,GLWD,,Xianghongdian,116.07,31.52,NA,NA,NA,LRs,China,,Pi He,Lu'an,1958,,116.05,31.55,116.12234,31.5539,116.125,31.575,remapped
+392,874,NA,GLWD,Lake Cumberland,Wolf Creek,-85.03,36.94,NA,NA,NA,ICOLD,United States,,Cumberland,Burkesville,1951,GloFAS station below G0807,-85.15,36.85,-85.15,36.85,-85.125,36.875,remapped
+393,866,NA,GLWD,Lake Ouachita,Blakely Mountain (Lake Ouachita),-93.37,34.62,NA,NA,NA,ICOLD_LRs,United States,,Ouachita,Hot springs Arkansas,1953,GloFAS station below G0858,-93.25,34.55,-93.25,34.55,-93.225,34.575,remapped
+394,3626,NA,GLWD,,Kajakai,65.26,32.35,NA,NA,NA,ICOLD_LRs,Afghanistan,,Helmand,Kandahar,1952,,65.15,32.35,65.15,32.35,65.125,32.325,remapped
+395,1181,NA,GLWD,,Mettur (Stanley),77.78,11.89,NA,NA,NA,ICOLD_LRs,India,,Cauvery,Salem,1934,,77.85,11.85,77.85,11.85,77.825,11.825,remapped
+396,1125,NA,GLWD,Victoria,,-57.37,48.32,NA,NA,NA,Statistics,Canada,,,,0,"cat2, Newfoundland",-57.15,48.35,-57.15,48.35,-57.125,48.325,remapped
+397,3546,NA,GLWD,,Chung Ju,127.51,36.43,NA,NA,NA,ICOLD_LRs,South Korea,,Han,Chung Ju,1985,,127.45,36.45,127.45,36.45,127.475,36.475,remapped
+398,1321,NA,GLWD,,Al Massira,-7.56,32.46,NA,NA,NA,ICOLD,Morocco,,Oumer r'bia,Settat,1979,,-7.65,32.45,-7.65,32.45,-7.625,32.475,remapped
+399,379,NA,GLWD,Cerros Colorados,Loma De La Lata (Los Barreales Res.),-68.73,-38.58,NA,NA,NA,ICOLD_cor,Argentina,,Neuquen,Centenario,1977,"cat2, ldd wrong, too small uparea",-68.55,-38.55,-68.64931,-38.55485,-68.675,-38.525,remapped
+400,1104,NA,GLWD,Lake Norman,,-80.96,35.61,NA,NA,NA,Statistics,United States,,,,0,GloFAS station below G0845,-80.95,35.45,-80.95,35.45,-80.925,35.475,remapped
+401,2234,NA,GLWD,,Koyna (Shivaji Sagar),73.76,17.6,NA,NA,NA,ICOLD_LRs,India,,Koyna,Karad,1961,"cat2, not mr, not fc",73.75,17.45,73.75,17.45,73.775,17.425,remapped
+402,1097,NA,GLWD,,,-68.76,-35.05,NA,NA,NA,Statistics,Argentina,,,,0,,-68.65,-35.05,-68.65,-35.05,-68.675,-35.025,remapped
+403,1219,NA,GLWD,Jayakwadi,Paithan (Jayakvadi Stage I),75.21,19.54,NA,NA,NA,LRs,India,,Godavari,Aurangabad,1976,,75.35,19.45,75.35,19.45,75.375,19.475,remapped
+404,585,NA,GLWD,,Princon del Bonete,-57.36,-33.1,NA,NA,NA,ICOLD_LRs,Uruguay,,Negro,Mercedes,1983,,-57.45,-33.05,-57.45,-33.05,-57.425,-33.075,remapped
+405,1657,NA,GLWD,,Siruar,99.23,2.5,NA,NA,NA,ICOLD,Indonesia,,Asahan,Medan,1981,,99.25,2.55,99.25,2.55,99.275,2.525,remapped
+406,441,NA,GLWD,Eufaula Lake,Eufaula,-95.69,35.21,NA,NA,NA,ICOLD,United States,,Canadian,Whitefield,1964,GloFAS station below G0829,-95.45,35.25,-95.45,35.25,-95.375,35.325,remapped
+407,2835,NA,GLWD,,So Yang Gang,127.92,37.96,NA,NA,NA,ICOLD_LRs,South Korea,,Han,Chuncheon,1973,,127.85,37.95,127.85,37.95,127.825,37.925,remapped
+408,3704,NA,GLWD,,Panjiakou,118.28,40.46,NA,NA,NA,ICOLD_LRs,China,,Luan He,Tangshan,1979,,118.25,40.45,118.25,40.45,118.275,40.425,remapped
+409,1052,NA,GLWD,Banda Nwanta,,-2.29,8.32,NA,NA,NA,Statistics,Ghana,,,,0,GloFAS station below G1078,-2.15,8.15,-2.15,8.15,-2.225,8.275,remapped
+410,1043,NA,GLWD,Chozrayskoye,,44.4,45.55,NA,NA,NA,Statistics,Russia,,,,0,"cat2, not mr, not fc",44.65,45.45,44.65,45.45,44.625,45.475,remapped
+411,192,NA,GLWD,Il'Men',Volkhov,31.3,58.3,NA,NA,NA,ICOLD_LRs,Russia,,Volkhov,Volkhov,1926,"remove, looks like a lake",31.25,58.45,31.25,58.45,31.275,58.475,remapped
+412,1460,NA,GLWD,,Dniester,28.98,47.73,NA,NA,NA,ICOLD_LRs,Moldova,Ukraine,Dniester,Mogilev-Podol'sk,0,GloFas station below G0525,29.05,47.35,29.15,47.25,29.125,47.275,remapped
+413,1591,NA,GLWD,,Derbendikhan,45.84,35.19,NA,NA,NA,ICOLD_LRs,Iraq,Iran,Diyala,Sulaymaniya,1961,,45.75,35.15,45.75,35.15,45.725,35.125,remapped
+414,2758,NA,GLWD,,Xijin,109.26,22.68,NA,NA,NA,ICOLD,China,,Yu Jiang,Hengxian,1964,,109.25,22.65,109.25,22.65,109.275,22.675,correct position
+415,2772,NA,GLWD,,Pantabangan,121.14,15.85,NA,NA,NA,ICOLD_LRs,Philippines,,Upper Pamanga,Cabanatuan,1977,,121.15,15.85,121.15,15.85,121.125,15.825,remapped
+416,2229,NA,GLWD,,Segredo,-52.08,-25.93,NA,NA,NA,ICOLD_LRs,Brazil,,Iguaca,Pinhao,1993,,-52.15,-25.95,-52.15,-25.95,-52.075,-25.925,correct position
+417,2267,NA,GLWD,Clair Engle Lake,Trinity,-122.69,40.94,NA,NA,NA,ICOLD_LRs,United States,,Trinity,Redding,1962,,-122.75,40.85,-122.75,40.85,-122.775,40.825,remapped
+418,1026,NA,GLWD,American Falls Reservoir,,-112.75,42.92,NA,NA,NA,Statistics,United States,,,,0,GloFAS station below G0658,-112.85,42.85,-112.85,42.85,-112.875,42.775,remapped
+419,1131,NA,GLWD,Novillo,Plutarco Elias Calles (el Novillo),-109.57,29.15,NA,NA,NA,ICOLD_LRs,Mexico,,El Yaqui,Hermosillo,1964,,-109.65,29.05,-109.65,29.05,-109.625,29.025,remapped
+420,996,NA,GLWD,Hume,Hume,147.05,-36.1,NA,NA,NA,ICOLD_LRs,Australia,,Murray,Albury,1936,,147.05,-36.05,146.95,-36.15,147.025,-36.075,remapped
+421,601,NA,GLWD,Tshchikskoye,Krasnodar,39.34,45.04,NA,NA,NA,ICOLD_LRs,Russia,,Kuban,Krasnodar,1975,"GloFAS station G0594, other below G0592",39.05,44.95,39.25,44.95,39.175,44.975,remapped
+422,NA,405,GranD,,C.J. Strike,0,0,-115.97375,42.949583,304.7,GranD,United States,,Snake River,,1952,"added from GranD, GloFAS station below G0647",0,0,-116.05,42.95,-115.975,42.925,"shift S, gets waters from river arriving from se"
+423,598,NA,GLWD,J. Strom Thurmond Lake,Clark Hill,-82.3,33.79,NA,NA,NA,LRs,United States,,Savannah,Augusta,1953,,-82.25,33.65,-82.25,33.65,-82.225,33.675,remapped
+424,3656,NA,GLWD,,Wuyaowu,103.57,29.44,NA,NA,NA,LRs,China,,Dadu He,Leshan,1972,"remove, cannot see in googlemaps, not GranD",103.65,29.55,103.65,29.55,103.625,29.475,remapped
+425,183,NA,GLWD,Bariri,Nova Avanhandava,-49.29,-21.6,NA,NA,NA,ICOLD_LRs,Brazil,,Tiete,Birigui,1982,,-50.15,-21.15,-50.15,-21.15,-50.175,-21.125,improve recieves water from nord
+426,1343,NA,GLWD,Cabra Corral,Gral. M. Gelgrano(Cabra Corral Res.),-65.39,-25.29,NA,NA,NA,ICOLD_LRs,Argentina,,Juramento,Coronel Moldes,1973,,-65.35,-25.25,-65.35,-25.25,-65.325,-25.275,correct position
+427,1005,NA,GLWD,,,-56.63,-32.78,NA,NA,NA,Statistics,Uruguay,,,,0,,-56.75,-32.85,-56.75,-32.85,-56.825,-32.875,remapped
+428,1775,NA,GLWD,,Karoon,49.66,32.18,NA,NA,NA,ICOLD,Iran,,Karun,Masjed Sociman,1975,"cat2, not mr, not fc",49.65,32.05,49.65,32.05,49.625,32.075,remapped
+429,703,NA,GLWD,Hartwell Lake,Hartwell,-82.85,34.51,NA,NA,NA,LRs,United States,,Savannah,Augusta,1960,,-82.85,34.35,-82.85,34.35,-82.825,34.375,remapped
+430,1543,NA,GLWD,,Pte. Adolfo Lopez Mateos (Humaya),-107.42,25.21,NA,NA,NA,ICOLD_LRs,Mexico,,Humaya,Culiacan,1964,GloFAS station downsteam G0929,-107.45,25.15,-107.45,25.15,-107.375,25.125,remapped
+431,809,NA,GLWD,,Jose Maria Oriol (Alcantara II),-6.81,39.76,NA,NA,NA,ICOLD_LRs,Spain,,Tajo,Alcantara,1969,,-6.85,39.75,-6.85,39.75,-6.875,39.725,remapped
+432,3646,NA,GLWD,,Lazaro Cardenas (El Palmito),-105.05,25.62,NA,NA,NA,ICOLD_LRs,Mexico,,Nazas,C.Lerdo,1947,,-105.05,25.55,-105.05,25.55,-105.025,25.575,remapped
+433,638,NA,GLWD,Tiete,Barra Bonita,-48.24,-22.7,NA,NA,NA,ICOLD_LRs,Brazil,,Tiete,Barra Bonita,1963,,-48.45,-22.55,-48.45,-22.55,-48.425,-22.575,remapped
+434,581,NA,GLWD,Split,Jenpeg,-96.25,56.18,NA,NA,NA,ICOLD_cor,Canada,,Nelson,Thompson,1975,GloFAS station G0238,-95.85,56.25,-96.05,56.25,-95.975,56.275,remapped
+435,348,NA,GLWD,,Mape,11.31,6.18,NA,NA,NA,ICOLD_LRs,Cameroon,,Mape,Banyo,1988,"remove, cat2, not mr, not fc",11.25,6.05,11.25,6.05,11.275,6.025,remapped
+436,1434,NA,GLWD,Alvara  Obregon,Alvaro Obregon (Oviachic),-109.8,27.97,NA,NA,NA,ICOLD_LRs,Mexico,,Yaqui,Obregon,1952,,-109.85,27.85,-109.85,27.85,-109.875,27.875,remapped
+437,1284,NA,GLWD,R.K.Roux,P K Le Roux,24.89,-30.18,NA,NA,NA,ICOLD_LRs,South Africa,,Orange,Petrusville,1977,,24.75,-30.05,24.75,-30.05,24.775,-29.975,remapped
+438,655,NA,GLWD,Iriklinskoye,Irika,58.82,51.95,NA,NA,NA,ICOLD_LRs,Russia,,Ural,Orsk,1958,GloFAS station downstream G0342,58.65,51.65,58.65,51.65,58.625,51.675,remapped
+439,2921,NA,GLWD,,John Day,-120.13,45.78,NA,NA,NA,LRs,United States,,Columbia,Arlington,1968,,-120.55,45.75,-120.65,45.75,-120.725,45.725,remapped
+440,1834,NA,GLWD,,Lac Ste. Anne South Dyke,-67.84,50.2,NA,NA,NA,ICOLD,Canada,,Toulnustouc,Godbout,1958,,-67.95,50.15,-67.95,50.15,-67.925,50.125,remapped
+441,567,NA,GLWD,Falcon Reservoir,International Falcon Lake,-99.26,26.76,NA,NA,NA,ICOLD,Mexico,United States,Rio Grande,Rio Grande City,1954,GloFAS station below G0926,-99.15,26.55,-99.15,26.55,-99.175,26.575,remapped
+442,589,NA,GLWD,Lake Texoma,Denison,-96.64,33.92,NA,NA,NA,LRs,United States,,Red,Hedrix,1944,GloFAS station G0854,-96.55,33.85,-96.65,33.85,-96.625,33.875,remapped
+443,2666,NA,GLWD,Miguel Hidalgo,Miguel Hidalgo (El Mahone),-108.53,26.63,NA,NA,NA,ICOLD_LRs,Mexico,,Rio Fuerte,El Fuerte,1956,GloFAS station below G0925,-108.55,26.55,-108.55,26.55,-108.575,26.525,remapped
+444,945,NA,GLWD,Kayrakkumskoye,,61.32,37.18,NA,NA,NA,Statistics,Turkmenistan,,,,0,"cat2, not mr, not fc",61.35,37.25,61.35,37.25,61.275,37.225,remapped
+445,823,NA,GLWD,,Dnieper,35.21,48.24,NA,NA,NA,ICOLD,Ukraine,,Dnieper,Zaporozhie,1932,GloFAS station below G0483,35.15,47.95,35.15,47.95,35.125,47.925,remapped
+446,842,NA,GLWD,Table Rock Lake,Table Rock,-93.57,36.59,NA,NA,NA,ICOLD_LRs,United States,,White,Branson,1959,GloFAS station     below G0800,-93.25,36.55,-93.25,36.55,-93.325,36.625,remapped
+447,937,NA,GLWD,Rana Pratap,,75.6,24.82,NA,NA,NA,Statistics,India,,,,0,,75.55,24.95,75.55,24.95,75.575,24.925,remapped
+448,1170,NA,GLWD,Great,Miena rockfill (Great Lake (res)),146.75,-41.89,NA,NA,NA,ICOLD_LRs,Australia,,Shannon,Launceston,1967,,146.75,-41.95,146.75,-41.95,146.725,-41.975,remapped
+449,931,NA,GLWD,Robert S. Kerr Reservoir,,-94.95,35.38,NA,NA,NA,Statistics,United States,,,,0,GloFAS station below G0835,-94.75,35.35,-94.75,35.35,-94.775,35.325,remapped
+450,1374,NA,GLWD,,Eildon,145.88,-37.18,NA,NA,NA,ICOLD_LRs,Australia,,Goulburn,Alexandra,1927,"cat2, not mr, not fc",145.95,-37.25,145.95,-37.25,145.925,-37.225,remapped
+451,2505,NA,GLWD,,Geheyin,111.07,30.43,NA,NA,NA,ICOLD_LRs,China,,Qingjiang,Changyang,1994,,111.15,30.45,111.15,30.45,111.125,30.475,remapped
+452,926,NA,GLWD,Calueque,,14.61,-17.24,NA,NA,NA,Statistics,Angola,Namibia,,,0,,14.25,-17.35,14.25,-17.35,14.225,-17.375,remapped
+453,258,NA,GLWD,Paduskoye More,Kniazaya Guba,30.86,68.38,NA,NA,NA,ICOLD_LRs,Russia,,Kovda,Murmansk,1955,"cat2, cts",31.65,68.65,31.65,68.65,31.725,68.625,remapped
+454,2479,NA,GLWD,,Dez,48.49,32.7,NA,NA,NA,ICOLD,Iran,,Dez,Dezful,1962,"cat2, not mr, not fc",48.45,32.65,48.45,32.65,48.475,32.625,remapped
+455,2046,NA,GLWD,,Zhexi,110.98,28.16,NA,NA,NA,ICOLD_LRs,China,,Zi Shui,Yiyang,1961,,111.15,28.35,111.15,28.35,111.125,28.325,remapped
+456,362,NA,GLWD,Sam Rayburn Reservoir,Sam Rayburn,-94.36,31.26,NA,NA,NA,ICOLD_LRs,United States,,Angelina,Evadale,1965,GloFAS station below G0901,-94.15,31.05,-94.15,31.05,-94.125,31.075,remapped
+457,NA,NA,GLWD,,Salto Caxias,0,0,NA,NA,NA,,,,Iguacu,,1999,"GloFAS station below G1439, added from GranD",0,0,-53.45,-25.55,-53.525,-25.525,remapped
+458,984,NA,GLWD,Real,Passo Real,-53.15,-28.88,NA,NA,NA,ICOLD_LRs,Brazil,,Jacui,Cruz Alta,1973,,-53.15,-29.05,-53.15,-29.05,-53.175,-29.075,res gets water from NW too
+459,553,NA,GLWD,,Jupia,-51.53,-20.59,NA,NA,NA,ICOLD_LRs,Brazil,,Parana,Tres Lagoas,1968,,-51.65,-20.75,-51.65,-20.75,-51.625,-20.775,remapped
+460,436,NA,GLWD,Kiyevskoye,Kiev,30.48,50.82,NA,NA,NA,ICOLD_LRs,Ukraine,,Dnieper,Kiev,1964,,30.45,50.65,30.45,50.65,30.525,50.625,remapped
+461,528,NA,GLWD,Tungabhadra,Tungabhadra,76.13,15.2,NA,NA,NA,ICOLD,India,,Tungabhadra,Hospet,1957,,76.35,15.25,76.35,15.25,76.325,15.275,remapped
+462,659,NA,GLWD,Bull Shoals Lake,Bull Shoals,-92.63,36.54,NA,NA,NA,ICOLD_LRs,United States,,White,Cotter,1951,GloFAS station below G0825,-92.55,36.35,-92.55,36.35,-92.575,36.375,remapped
+463,1490,NA,GLWD,,Al Wahda,-5.34,34.77,NA,NA,NA,ICOLD_LRs,Morocco,,Ouegha,Lel Rhouiba,1996,,-5.25,34.75,-5.25,34.55,-5.175,34.625,remapped
+464,3029,NA,GLWD,,Xingo,-37.72,-9.66,NA,NA,NA,ICOLD_LRs,Brazil,,Sao Francisco,Caninde,1994,,-37.65,-9.65,-37.75,-9.65,-37.775,-9.625,remapped
+465,824,NA,GLWD,Lake Moultrie,,-80.07,33.31,NA,NA,NA,Statistics,United States,,,,0,"cat2, ldd not repres., should get inflow from ups",-79.95,33.25,-80.05,33.25,-80.025,33.275,remapped
+466,770,NA,GLWD,Adjuntas,Vicente Guerrero,-98.78,23.96,NA,NA,NA,ICOLD_LRs,Mexico,,Soto la Marina,Padilla,1971,,-98.75,24.05,-98.66625,23.95875,-98.675,23.975,remapped
+467,1851,NA,GLWD,,Yunfeng,127.42,42.57,NA,NA,NA,ICOLD_LRs,China,,Yalu Jiang,Jian,1970,,127.25,42.65,127.25,42.65,127.225,42.725,remapped
+468,3237,NA,GLWD,,La Boquilla,-105.51,27.53,NA,NA,NA,ICOLD_LRs,Mexico,,C.Camargo,Chihuahua,1916,,-105.45,27.55,-105.45,27.55,-105.425,27.525,remapped
+469,401,NA,GLWD,,Bayano,-78.65,9.1,NA,NA,NA,ICOLD_LRs,Panama,,Bayano,Panama City,1975,GloFAS station G1069,-78.85,9.15,-78.85,9.15,-78.875,9.175,remapped
+470,802,NA,GLWD,,,-12.62,16.15,NA,NA,NA,Statistics,Mauritania,,,,0,"cat2, not mr, not fc",-12.65,16.15,-12.65,16.15,-12.675,16.175,remapped
+471,2711,NA,GLWD,,Dartmouth,147.62,-36.63,NA,NA,NA,ICOLD_LRs,Australia,,Mitta-Mitta,Tallangatta,1979,,147.55,-36.55,147.55,-36.55,147.525,-36.575,remapped
+472,461,NA,GLWD,Kayrakkumskoye,Kairakkum,70.06,40.32,NA,NA,NA,ICOLD_LRs,Tajikistan,,Syr-Daria,Leninabad,1957,,69.85,40.25,69.85,40.25,69.825,40.275,remapped
+473,923,NA,GLWD,,Serebrianka N 1,35.36,68.46,NA,NA,NA,ICOLD_LRs,Russia,,Voroniya,Murmansk,1970,"cat2, cts",35.55,68.85,35.55,68.85,35.525,68.825,remapped
+474,775,NA,GLWD,,,-7.34,38.43,NA,NA,NA,Statistics,Portugal,Spain,,,0,GloFAS station below G0779,-7.45,38.25,-7.45,38.25,-7.475,38.225,remapped
+475,1101,NA,GLWD,,Wuqiangxi,110.74,28.7,NA,NA,NA,LRs,China,,Yuan Shui,Yuanling,1996,,110.75,28.75,110.75,28.75,110.925,28.775,remapped
+476,774,NA,GLWD,,,35.34,-6.76,NA,NA,NA,Statistics,Tanzania,,,,0,"cat2,not mr, not fc",35.45,-6.65,35.45,-6.65,35.925,-7.125,shift res to 35_925 and -7_125
+477,1346,NA,GLWD,,Manicouagan 2,-68.42,49.48,NA,NA,NA,LRs,Canada,,Manicouagan,Baie Comeau,1964,GloFAS station G0425,-68.35,49.35,-68.35,49.35,-68.375,49.325,remapped
+478,2123,NA,GLWD,Hungry Horse Reservoir,Hungry Horse,-113.78,48.18,NA,NA,NA,ICOLD_LRs,United States,,S. Fork Flathead,Columbia,1953,,-113.95,48.25,-113.95,48.25,-114.025,48.325,remapped
+479,2194,NA,GLWD,Dworshak Reservoir,Dworshak,-116,46.69,NA,NA,NA,ICOLD,United States,,Clearwater,Orofino,1973,GloFAS station below G0539,-116.25,46.55,-116.25,46.55,-116.275,46.525,remapped
+480,660,NA,GLWD,,Acaray,-55.23,-25.22,NA,NA,NA,ICOLD,Paraguay,,Acaray,Hernandaries Mal lorquin,1976,,-54.95,-25.35,-55.05,-25.35,-55.025,-25.375,remapped
+481,2626,NA,GLWD,Lake Oroville,Oroville,-121.49,39.62,NA,NA,NA,ICOLD,United States,,Feather,Oroville,1968,,-121.45,39.55,-121.45,39.55,-121.475,39.575,remapped
+482,747,NA,GLWD,Ujjani,,75.03,18.2,NA,NA,NA,Statistics,India,,,,0,,75.15,18.05,75.15,18.05,75.125,18.075,remapped
+483,788,NA,GLWD,Amistad Reservoir,Internacional La Amistad,-101.23,29.53,NA,NA,NA,ICOLD_LRs,Mexico,United States,Brovo,Acuna,1968,GloFAS station G0923,-101.05,29.45,-101.05,29.45,-101.075,29.475,remapped
+484,1618,NA,GLWD,Miyun Shuiku,Baihe(res. Miyun),116.94,40.51,NA,NA,NA,ICOLD_LRs,China,,Bai He,Beijing,1960,,116.85,40.55,116.85,40.55,116.875,40.525,remapped
+485,1072,NA,GLWD,Linganamakki,Linganamakki (Sharavathy Project),74.93,14.03,NA,NA,NA,ICOLD,India,,Sharavathy,Shimoga,1965,"cat2, cts",74.85,14.15,74.85,14.15,74.825,14.175,remapped
+486,2455,NA,GLWD,,Kremasta (King Paul),21.51,38.94,NA,NA,NA,ICOLD,Greece,,Acheloos,Agrinion,1966,"cat2,cts",21.55,38.85,21.55,38.85,21.525,38.875,remapped
+487,906,NA,GLWD,Flaming Gorge Reservoir,Flaming Gorge,-109.53,41.18,NA,NA,NA,ICOLD_LRs,United States,,Green,Vernal,1964,,-109.45,40.95,-109.45,40.95,-109.475,40.925,remapped
+488,571,NA,GLWD,Lake Francis Case,Fort Randall,-99.3,43.55,NA,NA,NA,ICOLD,United States,,Missouri,Pickstown,1952,,-98.55,43.05,-98.55,43.05,-98.575,43.075,remaped
+489,1142,NA,GLWD,Eucumbene,Eucumbene,148.67,-36.08,NA,NA,NA,ICOLD_LRs,Australia,,Eucumbene,Cooma,1958,GloFAS station downsteam G1510,148.65,-36.15,148.65,-36.15,148.625,-36.125,remapped
+490,850,NA,GLWD,Lake Murray,Lake Murray,-81.46,34.09,NA,NA,NA,LRs,United States,,Saluda,Columbia,1930,,-81.25,34.15,-81.25,34.05,-81.225,34.025,remapped
+491,663,NA,GLWD,"Lakes Wheeler, Wilson",,-87.14,34.72,NA,NA,NA,Statistics,United States,,,,0,GloFAS station below G0830,-87.55,34.85,-87.55,34.85,-87.375,34.825,remapped
+492,661,NA,GLWD,,,-46.81,-20.44,NA,NA,NA,Statistics,Brazil,,,,0,,-47.05,-20.35,-47.05,-20.35,-47.025,-20.325,remapped
+493,651,NA,GLWD,Umtreville,,-94.81,50.22,NA,NA,NA,Statistics,Canada,,,,0,"remove, no dam in GranD nor googleEarth",-95.05,50.15,-95.05,50.15,-95.025,50.175,remapped
+494,510,NA,GLWD,Grajau,Boa Esperanca,-44.21,-6.94,NA,NA,NA,ICOLD,Brazil,,Parnaiba,Floriano,1970,GloFAS station below G1168,-43.55,-6.75,-43.55,-6.75,-43.625,-6.725,remapped
+495,1254,NA,GLWD,Barragem Passo Pundo,Ita,-52.74,-27.72,NA,NA,NA,ICOLD_LRs,Brazil,,Uruguay,Ita,1997,,-52.75,-27.55,-52.75,-27.55,-52.775,-27.575,remapped
+496,89,NA,GLWD,Ijsselmeer,Afsluidijk,5.42,52.66,NA,NA,NA,ICOLD_LRs,Netherlands,,Zuiderzee,Den Oever,1932,"cat2, cts",5.65,52.65,5.65,52.65,5.275,52.975,remapped
+497,717,NA,GLWD,Peribonca,Passes Dangereuses,-71.27,50.14,NA,NA,NA,ICOLD_LRs,Canada,,Peribonka,Arvida,1943,GloFAS station below G0443,-71.25,49.95,-71.25,49.95,-71.225,49.925,remapped
+498,2870,NA,GLWD,,Revelstoke,-118.55,51.55,NA,NA,NA,ICOLD_LRs,Canada,,Columbia,Revelstoke,1984,,-118.25,51.25,-118.25,51.05,-118.225,51.025,remapped
+499,1210,NA,GLWD,,La Vueltosa,-71.43,7.77,NA,NA,NA,LRs,Venezuela,,Caparo,Santa Maria de Caparo,1993,,-71.45,7.75,-71.45,7.75,-71.525,7.675,improve to -71.525 and 7.675
+500,602,NA,GLWD,,Baishan,127.15,43.43,NA,NA,NA,ICOLD,China,,Songhua Jiang,Huadian,1983,,126.65,43.75,126.65,43.75,126.675,43.725,remapped
+501,614,NA,GLWD,,,114.54,23.91,NA,NA,NA,Statistics,China,,,,0,,114.55,23.75,114.55,23.75,114.625,23.725,remapped
+502,158,NA,GLWD,St. Jean,Isle Maligne Powerhouse Dam,-72.02,48.66,NA,NA,NA,ICOLD_LRs,Canada,,Sequenay,Alma,1925,GloFAS station below G0451,-71.75,48.65,-71.85,48.65,-71.675,48.575,remapped
+503,161,NA,GLWD,Grande,Salto Grande,-57.86,-30.83,NA,NA,NA,ICOLD,Argentina,Uruguay,Uruguay,Concordia,1979,GloFAS station downstream G1477,-57.95,-31.25,-57.95,-31.25,-57.925,-31.225,remapped
+504,243,NA,GLWD,Toledo Bend Reservoir,Toledo Bend,-93.81,31.55,NA,NA,NA,ICOLD_LRs,United States,,Sabine,Burr Ferry,1968,,-93.55,31.15,-93.55,31.15,-93.575,31.175,remapped
+505,111,NA,GLWD,Saimmaa,Tainionkoski,28.2,61.39,NA,NA,NA,ICOLD_LRs,Finland,,Vuoksa,Imatra,1948,GloFAS station below G0138,28.35,61.05,28.35,61.05,28.775,61.225,remapped
+506,3620,NA,GLWD,,Futaleufu (Amutui Quimei res.),-71.64,-42.83,NA,NA,NA,ICOLD_LRs,Argentina,,Futaleufu,Trevelin,1976,,-71.75,-42.85,-71.75,-43.05,-71.725,-43.025,remapped
+507,1780,NA,GLWD,Shasta Lake,Shasta,-122.28,40.82,NA,NA,NA,ICOLD,United States,,Sacramento,Redding,1945,,-122.45,40.75,-122.45,40.75,-122.425,40.725,remapped
+508,480,NA,GLWD,Chlew Larn,Chiew Larn and Dike No. 1 Saddle Dam,98.67,9.12,NA,NA,NA,ICOLD_LRs,Thailand,,Khlong Saeng,Surat Thani,1987,,98.85,8.95,98.85,8.85,98.825,8.975,remapped
+509,460,NA,GLWD,Hendrik Verwoerd,Hendrik Verwoerd,25.92,-30.58,NA,NA,NA,ICOLD,South Africa,,Orange,Novals Pont,1972,,25.55,-30.65,25.55,-30.65,25.525,-30.625,remapped
+510,1548,NA,GLWD,,Altinkaya,35.64,41.32,NA,NA,NA,LRs,Turkey,,Kizilirmak,Samsun,1988,GloFAS station below G0689,35.65,41.35,35.65,41.35,35.725,41.375,remapped
+511,811,NA,GLWD,Stora Lullevaten,Suorva (eastern dam),19.12,67.28,NA,NA,NA,ICOLD_LRs,Sweden,,Lule alv,Porjus,1972,GloFAS station below G0056,19.75,67.05,19.75,67.05,19.825,66.975,remapped
+512,556,NA,GLWD,Lake Marion,,-80.47,33.53,NA,NA,NA,Statistics,United States,,,,0,,-80.15,33.45,-80.15,33.45,-80.175,33.475,remapped
+513,1110,NA,GLWD,Hirfanli,Hirfanli,33.69,39.16,NA,NA,NA,ICOLD_LRs,Turkey,,Kizilirmak,Kirsehir,1959,,33.45,39.25,33.55,39.25,33.525,39.275,remapped
+514,308,NA,GLWD,,Daule-Peripa,-79.53,-0.69,NA,NA,NA,ICOLD_LRs,Ecuador,,Daule,Quevedo,1990,,-79.75,-0.95,-79.75,-0.95,-79.725,-0.925,remapped
+515,863,NA,GLWD,,Temengor,101.45,5.52,NA,NA,NA,ICOLD_LRs,Malaysia,,Perak,Gerik,1978,,101.35,5.45,101.35,5.45,101.325,5.425,remapped
+516,1310,NA,GLWD,,Foz Do Arcia,-51.53,-26.05,NA,NA,NA,ICOLD_LRs,Brazil,,Iguacu,Bituruna,1980,,-51.55,-26.05,-51.65,-26.05,-51.625,-26.025,remapped
+517,1813,NA,GLWD,,Liujianxia,103.18,35.84,NA,NA,NA,ICOLD,China,,Huang He,Lanzhou,1968,,103.25,35.85,103.25,35.85,103.275,35.875,remapped
+518,217,NA,GLWD,,Marimbondo,-49.12,-20.28,NA,NA,NA,ICOLD,Brazil,,Grande,Fronteiras/Icem,1975,,-49.15,-20.35,-49.15,-20.35,-49.175,-20.325,remapped
+519,532,NA,GLWD,Te Anau,,167.67,-45.18,NA,NA,NA,Statistics,New Zealand,,,,0,,167.65,-45.45,167.75,-45.35,167.675,-45.425,remapped
+520,934,NA,GLWD,Pukaki,Pukaki Lake Control,170.15,-43.97,NA,NA,NA,ICOLD_LRs,New Zealand,,Pukaki,Timaru,1976,,170.15,-44.15,170.15,-44.15,170.125,-44.175,remapped
+521,518,NA,GLWD,Mhisa,,10.99,60.82,NA,NA,NA,Statistics,Norway,,,,0,GloFAS station below G0170,11.25,60.45,11.25,60.45,11.225,60.425,remapped
+522,372,NA,GLWD,Barkal,Karnafuli(Kaptai),92.26,22.75,NA,NA,NA,ICOLD_LRs,Bangladesh,,Karnafuli,Chittagong,1962,,92.25,22.55,92.25,22.55,92.225,22.475,remapped
+523,1118,NA,GLWD,Vaso Marte R.Gomez,Presidente Aleman Temascal,-99,26.17,NA,NA,NA,LRs,Mexico,,Rio Tonto,Ciudad Aleman,1955,GloFAS station below G0926,-98.95,26.25,-98.95,26.25,-98.925,26.225,remapped
+524,360,NA,GLWD,Barra Bonita,Jurumirim Dike,-48.69,-23.34,NA,NA,NA,ICOLD_LRs,Brazil,,Paranapan,Poraju,1962,,-49.25,-23.25,-49.25,-23.25,-49.225,-23.225,remapped
+525,296,NA,GLWD,Chardarinskoye,Chardara,68.17,41.15,NA,NA,NA,LRs,Kazakhstan,Uzbekistan,Syrdarya,Tashkent,1965,GloFAS station below G0629,67.95,41.25,67.95,41.25,67.975,41.275,remapped
+526,899,NA,GLWD,,Salto Santiago(Main Dam),-53.2,-25.56,NA,NA,NA,ICOLD,Brazil,,Iguacu,Laranjeiras,1980,GloFAS station downsteam G1439,-53.25,-25.55,-52.65,-25.65,-52.625,-25.625,remapped
+527,1076,NA,GLWD,Dukan,Dokan,44.9,36.11,NA,NA,NA,ICOLD_LRs,Iraq,,Lesser Zab,Sulaymaniya,1959,,44.95,36.05,44.95,36.05,44.975,36.025,remapped
+528,1447,NA,GLWD,,Aguamilpa,-104.74,21.82,NA,NA,NA,ICOLD_LRs,Mexico,,Santiago,Tepi,1994,GloFAS station downstream G0936,-104.75,21.85,-104.75,21.85,-104.775,21.825,remapped
+529,600,NA,GLWD,,Shiroro,6.91,9.97,NA,NA,NA,ICOLD_LRs,Nigeria,,Kaduna/Dinya,Minna,1984,"cat2, not mr, not fc",6.85,9.95,6.85,9.95,6.825,9.975,remapped
+530,415,NA,GLWD,,Nam Ngum,102.66,18.61,NA,NA,NA,ICOLD_LRs,Laos,,Nam Ngum,Vientiane,1972,"cat2, ldd not rep. canal that drains to mekong",102.55,18.45,102.54875,18.53292,102.575,18.525,remapped
+531,466,NA,GLWD,,,118.98,29.59,NA,NA,NA,Statistics,China,,,,0,,119.35,29.55,119.15,29.55,119.175,29.525,remapped
+532,3700,NA,GLWD,,El Cajon,-87.74,14.99,NA,NA,NA,ICOLD_LRs,Honduras,,Humuya,San Pedro Sula,1985,,-87.75,15.05,-87.75,15.05,-87.725,15.025,remapped
+533,462,NA,GLWD,Itezhi-Tezhi,,25.95,-15.67,NA,NA,NA,Statistics,Zambia,,,,0,,25.95,-15.75,25.95,-15.75,25.975,-15.775,remapped
+534,871,NA,GLWD,Lake Koocanusa,Libby,-115.19,48.92,NA,NA,NA,ICOLD_LRs,United States,Canada,Kootenay,Libby,1973,"Glofas station below G0459, above G0418",-115.35,48.45,-115.35,48.45,-115.325,48.475,remapped
+535,457,NA,GLWD,Panama,,-79.87,9.17,NA,NA,NA,Statistics,Panama,,,,0,"cat2, cts, 1 pixel",-79.95,9.25,-79.95,9.25,-79.925,9.225,remapped
+536,1124,NA,GLWD,Mangla,Mangla,73.74,33.23,NA,NA,NA,ICOLD_LRs,Pakistan,,Jehlum,Dehlum,1967,,73.65,33.15,73.65,33.15,73.625,33.125,remapped
+537,452,NA,GLWD,Miguel Aleman,,-96.51,18.26,NA,NA,NA,Statistics,Mexico,,,,0,GloFAS station below G0948,-96.35,18.25,-96.35,18.25,-96.425,18.225,remapped
+538,347,NA,GLWD,Gandhi,Gandhi Sagar,75.6,24.43,NA,NA,NA,ICOLD,India,,Chambal,Jhalwar,1960,,75.55,24.65,75.55,24.65,75.575,24.625,remapped
+539,306,NA,GLWD,,Lagdo,13.97,8.88,NA,NA,NA,ICOLD_LRs,Cameroon,,Benoue,Garoua,1972,,13.65,9.05,13.65,9.05,13.725,9.025,remapped
+540,1504,NA,GLWD,,Zhelin,115.33,29.29,NA,NA,NA,LRs,China,,Xiu He,Yongxiu,1972,"cat2, just upsteam of a big lake",115.45,29.25,115.45,29.25,115.475,29.225,remapped
+541,249,NA,GLWD,Hirakud,Hirakud,83.77,21.64,NA,NA,NA,ICOLD,India,,Mahanadi,Sambalpur,1957,,83.85,21.55,83.85,21.55,83.875,21.525,remapped
+542,738,NA,GLWD,Habbaniyah,Haditha,43.45,33.29,NA,NA,NA,ICOLD_LRs,Iraq,,Euphrates,Ramadi,1983,cat2 not mr not fc,43.55,33.35,43.45,33.35,43.375,33.325,remapped
+543,182,NA,GLWD,,Byuo,-6.98,6.64,NA,NA,NA,ICOLD_LRs,Ivory Coast,,Sassandra,Guiglo,1980,GloFAS station below G1106,-7.05,6.25,-7.05,6.25,-7.075,6.275,remapped
+544,477,NA,GLWD,Malpaso,Netzahualcoyotl,-93.58,17.12,NA,NA,NA,ICOLD_LRs,Mexico,,Grijalva,Cardenas,1964,"cat2, ldd downstream not representative",-93.55,17.25,-93.55,17.25,-93.575,17.175,remapped
+545,159,NA,GLWD,Low,Barage OA-11,-76.27,52.51,NA,NA,NA,LRs,Canada,,Eastmain,Radisson,1980,,-76.85,52.25,-76.85,52.25,-76.575,52.225,remapped
+546,1059,NA,GLWD,Ukal,Ukai Dam,73.79,21.35,NA,NA,NA,ICOLD_LRs,India,,Tapi,Fort Songadh,1972,,73.65,21.25,73.65,21.25,73.625,21.275,remapped
+547,118,NA,GLWD,Gouin,Gouin,-74.76,48.54,NA,NA,NA,ICOLD,Canada,,St.Maurice,Sanmaur,1917,,-74.05,48.35,-74.25,48.35,-74.125,48.375,remapped
+548,622,NA,GLWD,Beas,Pong Dam (Beas Project),76.07,32,NA,NA,NA,ICOLD_LRs,India,,Beas,Mukerian,1974,,75.95,31.95,75.95,31.95,75.975,31.975,remapped
+549,193,NA,GLWD,Gorkovskoye,Gorky,43.13,57.11,NA,NA,NA,ICOLD_LRs,Russia,,Volga,Gorky,1955,,43.35,56.65,43.35,56.65,43.375,56.675,remapped
+550,394,NA,GLWD,Dozois,,-77.48,47.59,NA,NA,NA,Statistics,Canada,,,,0,,-77.65,47.55,-77.30625,47.61375,-77.325,47.625,remapped
+551,289,NA,GLWD,,Srisailam H. E. Project,78.58,16.04,NA,NA,NA,ICOLD_LRs,India,,Krishna,Karnool,1984,,78.75,16.05,78.75,16.05,78.875,16.075,remapped
+552,342,NA,GLWD,Itarare,Xavantes,-49.62,-23.38,NA,NA,NA,ICOLD,Brazil,,Paranapanema,Xavantes,1970,,-49.75,-23.15,-49.73292,-23.12958,-49.725,-23.125,remapped
+553,190,NA,GLWD,Novosibirskoye,Novosibirsk,82.03,54.37,NA,NA,NA,ICOLD_LRs,Russia,,Ob,Novosibirsk,1957,,82.95,54.85,82.95,54.85,82.975,54.825,remapped
+554,132,NA,GLWD,Negro,Dr. Gabriel Terra(Rincon Del Bonete),-55.93,-32.7,NA,NA,NA,ICOLD_LRs,Uruguay,,Negro,Paso de los Toros,1946,,-56.45,-32.85,-56.45,-32.85,-56.425,-32.825,remapped
+555,808,NA,GLWD,,Khao Laem,98.79,15.48,NA,NA,NA,ICOLD_LRs,Thailand,,Quae Noi,Kanchanaburi,1984,,98.85,15.25,98.85,15.25,98.875,15.225,remapped
+556,381,NA,GLWD,,,-56.57,4.99,NA,NA,NA,Statistics,Suriname,,,,0,,-56.55,5.15,-56.55,5.15,-56.525,5.125,remapped
+557,234,NA,GLWD,Angostura,La Angostura,-92.56,16.12,NA,NA,NA,ICOLD_LRs,Mexico,,Grijalva,Tuxtla Gutierrez,1974,,-92.85,16.35,-92.85,16.35,-92.825,16.325,remapped
+558,266,NA,GLWD,Inhernillo,El Infiernillo,-101.72,18.58,NA,NA,NA,ICOLD_LRs,Mexico,,Balsas,Apatzingan,1963,"cat2, cts, 5 pixels",-101.85,18.35,-101.95,18.25,-101.925,18.275,remapped
+559,237,NA,GLWD,Votkinskoye,Votkinsk,55.01,57.22,NA,NA,NA,ICOLD_LRs,Russia,,Kama,Votkinsk,1963,,54.05,56.75,54.05,56.75,54.075,56.775,remapped
+560,611,NA,GLWD,Sirikit,Sirikit,100.5,17.95,NA,NA,NA,ICOLD,Thailand,,NAN,Uttaradit,1972,,100.45,17.75,100.45,17.85,100.525,17.775,remapped
+561,542,NA,GLWD,,Karakaya,38.41,38.52,NA,NA,NA,ICOLD_LRs,Turkey,,Firat,Diyarbakir,1987,,39.05,38.35,39.05,38.35,38.825,38.425,remapped
+562,1349,NA,GLWD,Govind,Bhakra Dam (Gobind Sagar),76.47,31.41,NA,NA,NA,ICOLD_LRs,India,,Satluj,Nangal Township,1963,,76.45,31.45,76.45,31.45,76.425,31.425,correct position - centered in pixel
+563,57,NA,GLWD,Cedar,Grand Rapids,-100.14,53.33,NA,NA,NA,ICOLD_LRs,Canada,,Saskatchewan,The Pas,1965,,-99.35,53.15,-99.35,53.15,-99.375,53.175,remapped
+564,402,NA,GLWD,Diefenbaker,Gardiner,-106.9,50.96,NA,NA,NA,ICOLD_LRs,Canada,,South Saskatchewan,Saskatoon,1968,GloFAS station below G0324,-106.85,51.25,-106.85,51.25,-106.825,51.225,remapped
+565,364,NA,GLWD,,Kureisk,88.49,67,NA,NA,NA,ICOLD_LRs,Russia,,Kureika,Norilsk,1989,,88.35,66.95,88.35,66.95,88.325,66.975,remapped
+566,816,NA,GLWD,Manic Trois,Manicouagan 3,-68.65,50.1,NA,NA,NA,ICOLD_LRs,Canada,,Manicouagan,Baie Comeau,1975,,-68.65,49.75,-68.65,49.75,-68.625,49.775,remapped
+567,3694,NA,GLWD,,Nurek,69.43,38.36,NA,NA,NA,ICOLD_LRs,Tajikistan,,Vakhsh,Nurek,1980,"cat2, not mr, not fc",69.35,38.35,69.35,38.35,69.325,38.375,remapped
+568,199,NA,GLWD,Iepe,Capivara,-50.98,-22.83,NA,NA,NA,ICOLD_LRs,Brazil,,Paranapanema,Taciba/Porecatu,1976,,-51.35,-22.65,-51.35,-22.65,-51.325,-22.675,remapped
+569,442,NA,GLWD,Govind Ballabah Pant,Rihand (Gobind Ballabh Pant Sagar),82.84,24.07,NA,NA,NA,LRs,India,,Rihand,Mirzapur,1962,,82.95,24.15,82.95,24.15,82.975,24.175,remapped
+570,98,NA,GLWD,Argyle,Ord River (Lake Argyle),128.77,-16.43,NA,NA,NA,ICOLD,Australia,,Ord,Wyndham,1972,GloFAS station downstream G1349,128.75,-16.15,128.75,-16.15,128.725,-16.125,remapped
+571,177,NA,GLWD,Imandra,Kumskaya,33.07,67.72,NA,NA,NA,ICOLD_LRs,Russia,,Kuma,Kandalaksha,1963,"cat2, cts 3 pixels",32.55,67.45,32.55,67.45,32.575,67.425,remapped
+572,216,NA,GLWD,,Itaparica,-38.61,-8.87,NA,NA,NA,LRs,Brazil,,Sao Francisco,Petrolandia,1986,,-38.55,-8.95,-38.31208,-9.13792,-38.325,-9.125,remapped
+573,969,NA,GLWD,Ondozero,Onda,33.37,63.78,NA,NA,NA,ICOLD_LRs,Russia,,Onda,Petrozavodsk,1956,GloFAS station sdd G1563 or G0073,33.25,63.85,33.25,63.85,33.625,63.725,remapped
+574,494,NA,GLWD,,Agua Vermelha,-50.09,-19.96,NA,NA,NA,ICOLD_LRs,Brazil,,Grande,Guarani D'Oeste,1979,,-50.35,-19.85,-50.35,-19.85,-50.325,-19.875,remapped
+575,386,NA,GLWD,,Manantali,-10.34,13.14,NA,NA,NA,ICOLD_LRs,Mali,,Bafing,Bafoulabe (90km),1988,,-10.45,13.15,-10.45,13.15,-10.425,13.175,remapped
+576,370,NA,GLWD,,Hugh Keenleyside(Arrow),-117.8,50.19,NA,NA,NA,LRs,Canada,,Columbia,Castlegar,1968,,-117.85,49.35,-117.85,49.35,-117.875,49.325,remapped
+577,242,NA,GLWD,Kovdozero,Verkhne-Tulomskaya,31.99,66.68,NA,NA,NA,ICOLD_LRs,Russia,,Tuloma,Murmansk,1965,,32.35,66.75,32.25,66.75,32.275,66.775,remapped
+578,498,NA,GLWD,Nagarjuna,Nagarjunasagar Dam,79.22,16.43,NA,NA,NA,ICOLD,India,,Krishna,Hyderabad,1974,,79.35,16.55,79.35,16.55,79.275,16.575,remapped
+579,596,NA,GLWD,Han Shui,Huanglongtan,111.2,32.66,NA,NA,NA,ICOLD,China,,Du He,Shiyan,1974,,111.45,32.55,111.45,32.55,111.525,32.525,remapped
+580,290,NA,GLWD,Ossokamanuan,,-64.93,53.43,NA,NA,NA,Statistics,Canada,,,,0,,-64.65,53.35,-64.65,53.35,-64.025,53.575,unsure of position - 3arcmin vs 1deg
+581,610,NA,GLWD,Franklin D. Roosevelt Lake,Grand Coulee,-118.17,48.32,NA,NA,NA,ICOLD,United States,,Columbia,Coulee Dam,1942,,-118.95,47.95,-118.85,47.95,-118.925,47.925,remapped
+582,104,NA,GLWD,Kamskoye,Kama,56.26,58.8,NA,NA,NA,ICOLD_LRs,Russia,,Kama,Perm,1954,,56.35,58.15,56.35,58.15,56.325,58.125,remapped
+583,279,NA,GLWD,Assad,,38.1,36.07,NA,NA,NA,Statistics,Syria,,,,0,,38.55,35.85,38.55,35.85,38.525,35.875,remapped
+584,223,NA,GLWD,Pipmuacan,Des Roches,-70.12,49.62,NA,NA,NA,LRs,Canada,,Des Roches,Labrieville,1955,,-69.75,49.35,-69.75,49.35,-69.775,49.375,remapped
+585,644,NA,GLWD,,Piedra del Aguila,-70.08,-40.33,NA,NA,NA,ICOLD,Argentina,,Limay,Bariloche,1993,,-70.05,-40.25,-70.05,-40.25,-70.075,-40.275,remapped
+586,678,NA,GLWD,Gordon,Gordon,146.15,-42.72,NA,NA,NA,ICOLD,Australia,,Gordon,Queenstown,1974,"cat2, cts 5 pixels",145.95,-42.75,145.95,-42.75,145.975,-42.725,see ticket efcc2254
+587,274,NA,GLWD,Er Rosieres,,34.5,11.52,NA,NA,NA,Statistics,Sudan,,,,0,,34.35,11.75,34.35,11.75,34.425,11.775,remapped
+588,576,NA,GLWD,,Mosul,42.86,36.67,NA,NA,NA,ICOLD_LRs,Iraq,,Tigris,Mosul,1983,,42.85,36.65,42.85,36.65,42.825,36.625,remapped
+589,203,NA,GLWD,,Sao Simao,-49.95,-18.62,NA,NA,NA,ICOLD,Brazil,,Paranaiba,Sao Simao,1978,,-50.55,-19.05,-50.55,-19.05,-50.525,-18.975,remapped
+590,74,NA,GLWD,,Cheboksary,46.76,56.19,NA,NA,NA,ICOLD_LRs,Russia,,Volga,Cheboksary,0,,47.15,56.15,47.15,56.15,47.425,56.125,remapped
+592,113,NA,GLWD,,Saratov,48.36,52.74,NA,NA,NA,ICOLD_LRs,Russia,,Volga,Balskpvp,1967,,47.75,52.05,47.75,52.05,47.775,52.075,duplicate - remapped
+593,259,NA,GLWD,,Tres Irmaos,-50.8,-20.86,NA,NA,NA,ICOLD,Brazil,,Tiete,Pereira Barreto,1999,,-51.25,-20.65,-51.25,-20.65,-51.275,-20.675,remapped
+594,1439,NA,GLWD,Bhumphol K. K. Nam,Bhumibol,98.87,17.31,NA,NA,NA,ICOLD,Thailand,,Ping,Tak,1964,,98.95,17.25,98.95,17.25,98.975,17.225,remapped
+595,87,NA,GLWD,Kremenshugskoye,Kremenchug,32.62,49.28,NA,NA,NA,ICOLD,Ukraine,,Dnieper,Kremenchug,1960,,33.25,49.05,33.25,49.05,33.225,49.075,remapped
+596,429,NA,GLWD,Tasik Kenyir,Kenyir Dam,102.72,5,NA,NA,NA,ICOLD_LRs,Malaysia,,S. Trengganu,Kuala Brang,1984,"cat2, cts",102.85,5.05,102.85,5.05,102.875,5.025,remapped
+597,743,NA,GLWD,Tarbela,Tarbela,72.86,34.33,NA,NA,NA,ICOLD_LRs,Pakistan,,Indus,Taxila,1976,,72.75,34.15,72.75,34.15,72.725,34.075,remapped
+598,60,NA,GLWD,,Nizhne-Kamskaya,52.8,55.89,NA,NA,NA,ICOLD_LRs,Russia,,Kama,Nab. Chelny,0,,52.35,55.75,52.35,55.75,52.275,55.725,remapped
+599,658,NA,GLWD,,Shuifeng,125.36,40.67,NA,NA,NA,ICOLD_LRs,China,North Korea,Yalu Jiang,Kuandian,1943,,124.95,40.45,124.95,40.45,124.975,40.475,remapped
+600,116,NA,GLWD,Kainji,Kainji,4.56,10.43,NA,NA,NA,ICOLD_LRs,Nigeria,,Niger,Ilorin,1968,,4.65,9.85,4.65,9.85,4.625,9.875,remapped
+601,328,NA,GLWD,Mingechaurskoye,Mingechaur,46.79,40.93,NA,NA,NA,ICOLD_LRs,Azerbaijan,,Kura,Mingechaur,1953,GloFAS station below G0728,47.05,40.75,47.05,40.75,47.025,40.775,remapped
+602,238,NA,GLWD,,Itumbiara,-49.05,-18.39,NA,NA,NA,ICOLD,Brazil,,Paranaiba,Itumbiara,1980,,-49.15,-18.45,-49.05,-18.35,-49.075,-18.425,correct position - centered in pixel
+603,1319,NA,GLWD,,Verkhne-Svirskaya,34.9,61.11,NA,NA,NA,ICOLD_LRs,Russia,,Svir,Leningrad,1952,"cat2, between two big lakes",34.85,61.05,34.85,61.05,34.875,61.075,remapped
+604,359,NA,GLWD,,Balbina,-58.25,-2.44,NA,NA,NA,ICOLD,Brazil,,Uatuma,Presidente Figueiredo,1987,GloFAS station far downstream G1156,-57.85,-2.55,-57.85,-2.55,-59.475,-1.875,improve position res near station G1157
+605,341,NA,GLWD,,Emborcacao,-47.77,-18.42,NA,NA,NA,ICOLD,Brazil,,Paranaiba,Aragari,1981,,-47.95,-18.45,-47.95,-18.45,-47.975,-18.425,remapped
+606,330,NA,GLWD,,Srinagarind,99.04,14.75,NA,NA,NA,ICOLD_LRs,Thailand,,Quae Yai,Kanchanaburi,1981,,99.05,14.45,99.05,14.45,99.125,14.425,remapped
+607,79,NA,GLWD,Kakhovskoye,Kakhovskaya,33.95,47.27,NA,NA,NA,ICOLD,Ukraine,,Dnieper,Kakhovka,1955,GloFAS station below G0528,33.35,46.75,33.35,46.75,33.375,46.775,remapped
+608,70,NA,GLWD,,Porto Primavera,-54.05,-23.81,NA,NA,NA,ICOLD,Brazil,,Parana,Batai Porta / T. Sampaio,1998,"remove, no reservoir in GranD",-54.15,-23.95,-54.15,-23.95,-54.675,-25.475,remapped - double check note column
+609,201,NA,GLWD,Fort Peck Lake,Fort Peck,-107.29,47.68,NA,NA,NA,ICOLD,United States,,Missouri,Frazer,1937,,-106.35,48.05,-106.45,47.95,-106.375,47.975,remapped
+610,729,NA,GLWD,Toktogul'skoye,Toktogul,72.91,41.76,NA,NA,NA,ICOLD_LRs,Kyrgyzstan,,Naryn,Naryn,1978,,72.65,41.65,72.65,41.65,72.675,41.675,remapped
+611,335,NA,GLWD,,La Grande 4,-73.36,53.88,NA,NA,NA,ICOLD,Canada,,La Grande,Radisson,1984,,-73.55,53.85,-73.55,53.85,-73.475,53.875,remapped
+612,180,NA,GLWD,Kafue,,27.16,-15.66,NA,NA,NA,Statistics,Zambia,,,,0,,27.45,-15.75,28.45,-15.85,28.425,-15.825,remapped
+613,188,NA,GLWD,Repressa Tres Marias,Tres Marias,-45.21,-18.65,NA,NA,NA,ICOLD,Brazil,,Sao Francisco,Tres Marias,1960,GloFAS station downstream G1335,-45.25,-18.25,-45.25,-18.25,-45.275,-18.225,remapped
+614,0,2445,GranD,,Yacyreta,0,0,-56.62625,-27.392083,21000,GranD,Paraguay,NA,Parana,Ituzaingo,1994,added from GranD,0,0,-56.85,-27.45,-56.775,-27.475,remapped
+615,129,NA,GLWD,Repressa de Jupia,Ilha Solteira,-50.58,-19.83,NA,NA,NA,ICOLD_LRs,Brazil,,Parana,Ilha Solteira,1973,,-51.35,-20.35,-51.35,-20.35,-51.375,-20.375,remapped
+616,220,NA,GLWD,Chocon,El Chocon (Min. E.Ramos Mexia res.),-69.01,-39.46,NA,NA,NA,ICOLD,Argentina,,Limay,Senillosa,1973,,-68.75,-39.25,-68.75,-39.25,-68.775,-39.275,remapped
+617,110,NA,GLWD,"Lakes Sakakawea, Audubon",Garrison,-102.32,47.81,NA,NA,NA,ICOLD,United States,,Missouri,River Dale,1956,GloFAS station below G0527,-101.45,47.55,-101.45,47.55,-101.425,47.525,remapped
+618,139,NA,GLWD,,Furnas,-46.09,-21.03,NA,NA,NA,ICOLD_LRs,Brazil,,Grande,Passos,1963,,-46.25,-20.65,-46.25,-20.65,-46.275,-20.675,remapped
+619,112,NA,GLWD,Khantayskoye,Ust-Khantaika,87.75,67.96,NA,NA,NA,ICOLD_LRs,Russia,,Khantaika,Norilsk,1970,,87.75,68.05,87.75,68.05,87.775,68.075,remapped
+620,740,NA,GLWD,Natalkuz,Kenney,-125.34,53.47,NA,NA,NA,ICOLD,Canada,,Nechako,Prince George,1952,GloFAs station below G0278,-124.95,53.55,-124.95,53.55,-124.925,53.575,remapped
+621,122,NA,GLWD,Lake Oahe,Oahe,-100.38,45.49,NA,NA,NA,ICOLD,United States,,Missouri,Pierre,1958,,-100.45,44.45,-100.45,44.45,-100.425,44.475,remapped
+622,71,NA,GLWD,Tsimlyanskoye,Tsimlyansk,42.98,48.05,NA,NA,NA,ICOLD_LRs,Russia,,Don,Rostov,1952,GloFAS station sdd G0504,42.15,47.65,42.15,47.65,42.125,47.625,remapped
+623,437,NA,GLWD,,Mica,-118.44,52.15,NA,NA,NA,ICOLD,Canada,,Columbia,Revelstoke,1973,,-118.55,52.05,-118.55,52.05,-118.525,52.075,remapped
+624,47,NA,GLWD,Rybinkskoye,Rybinsk,38.13,58.49,NA,NA,NA,ICOLD_LRs,Russia,,Volga,Rybinsk,1941,GloFAS station G0198,38.85,58.05,38.55,58.15,38.725,58.225,remapped
+625,173,NA,GLWD,Bahr al Milh,Raza Dyke,43.66,32.78,NA,NA,NA,ICOLD_LRs,Iraq,,Off Stream,Kerbala,1970,,43.85,32.65,43.85,32.65,43.875,32.675,remapped
+626,108,NA,GLWD,Kossou,Kossou,-5.68,7.55,NA,NA,NA,ICOLD_LRs,Ivory Coast,,Bandama,Yamoussokro,1972,,-5.45,7.05,-5.45,7.05,-5.475,7.025,remapped
+627,123,NA,GLWD,Brokopondo,,-57.44,4.13,NA,NA,NA,Statistics,Suriname,,,,0,,-57.25,4.35,-57.25,4.35,-57.275,4.375,remapped
+628,131,NA,GLWD,KapchagayskoyeVodo.,Kapchagay,77.73,43.82,NA,NA,NA,ICOLD_LRs,Kazakhstan,,Ili,Alma-Ata,1970,,77.15,43.85,77.15,43.85,77.125,43.875,remapped
+629,72,NA,GLWD,Southern Indian,Missi Falls Control,-98.61,57.14,NA,NA,NA,ICOLD_LRs,Canada,,Churchill,Lynn Lake,1976,GloFAS station below G0213,-97.75,57.45,-97.75,57.45,-98.875,56.875,see ticket efcc2254
+630,65,NA,GLWD,Itaipu,Itaipu,-54.37,-24.74,NA,NA,NA,ICOLD_LRs,Paraguay,Brazil,Parana,Hernandarias,1982,,-54.65,-25.45,-54.55,-25.35,-54.575,-25.425,remapped
+631,318,NA,GLWD,Keban Baraji,Keban,39.23,38.87,NA,NA,NA,LRs,Turkey,,Firat,Elazig,1974,,38.75,38.85,38.75,38.85,38.775,38.825,remapped
+632,138,NA,GLWD,Sayano-shushenskoye,Sayano-Shushensk,92.41,52.26,NA,NA,NA,ICOLD_LRs,Russia,,Yenisei,Minusinsk,1990,,91.45,52.95,91.45,52.95,91.375,52.825,remapped
+633,61,NA,GLWD,Volgogradskoye,Volgograd,45.85,50.35,NA,NA,NA,ICOLD_LRs,Russia,,Volga,Vologograd,1958,GloFAS station G0441,44.65,48.85,44.75,48.95,44.675,48.825,remapped
+634,27,NA,GLWD,Smallwood,Churchill Falls,-64.31,54.19,NA,NA,NA,LRs,Canada,,Churchill,Churchill,1971,GloFAS station G0286,-64.65,53.75,-64.35,53.65,-63.975,53.525,remapped
+635,276,NA,GLWD,Lake Powell,Glen Cannon,-110.73,37.37,NA,NA,NA,ICOLD_LRs,United States,,Colorado,Lees Ferry,1966,GloFAS station below G0795,-111.45,36.95,-111.45,36.95,-111.475,36.975,remapped
+636,19,NA,GLWD,Itaparica,Sobdradinho,-42.01,-10.18,NA,NA,NA,ICOLD_LRs,Brazil,,Sao Francisco,Juazeiro / Petrolina,1978,,-40.85,-9.45,-40.85,-9.45,-40.825,-9.425,remapped
+637,107,NA,GLWD,Seul,,-92.05,50.4,NA,NA,NA,Statistics,Canada,,,,0,,-93.25,50.65,-93.15,50.65,-93.175,50.625,remapped
+638,278,NA,GLWD,Lake Mead,Hoover (Boulder),-114.39,36.33,NA,NA,NA,ICOLD_LRs,United States,,Colorado,Boulder,1936,,-114.75,36.05,-114.75,36.05,-114.775,36.075,shift 1 pxl west
+639,106,NA,GLWD,"Blommesteinmeer, W.J. Van",,-55.07,4.72,NA,NA,NA,Statistics,Suriname,,,,0,,-55.05,4.95,-55.05,4.95,-55.025,4.925,remapped
+640,208,NA,GLWD,,Kouilou,12.44,-3.55,NA,NA,NA,LRs,Congo,,Kouilou,,1992,,12.35,-3.65,12.35,-3.65,12.375,-3.625,remapped
+641,846,NA,GLWD,,Sanmenxia,110.27,34.96,NA,NA,NA,ICOLD_LRs,China,,Huang He,Samnenxia,1960,,111.25,34.85,111.25,34.85,111.325,34.825,remapped
+642,80,NA,GLWD,Vilyuyskoye,Vilyui,111.16,62.73,NA,NA,NA,ICOLD_LRs,Russia,,Vilyui,Mirnyi,1967,"cat2, ldd wrong, ups area underestimated",110.05,62.15,112.25,63.05,112.475,63.025,remapped
+643,77,NA,GLWD,Buhayrat ath Tharthar,,43.17,34.11,NA,NA,NA,Statistics,Iraq,,,,0,,43.45,33.65,43.45,33.65,43.275,33.925,Changes needed to LDD see ticket efcc2254
+644,727,NA,GLWD,,Ataturk,38.38,37.6,NA,NA,NA,ICOLD_LRs,Turkey,,Firat,Sanliurfa,1992,,38.35,37.45,38.35,37.45,38.325,37.475,remapped
+645,52,NA,GLWD,Tucurui,Tucurui (Raul G. Lhano),-49.49,-4.57,NA,NA,NA,ICOLD,Brazil,,Tocantins,Tucurui,1984,GloFAS station G1174,-49.65,-3.85,-49.65,-3.85,-49.625,-3.875,remapped
+646,40,NA,GLWD,Zaysan,Bukhtarma,83.44,48.7,NA,NA,NA,ICOLD_LRs,Kazakhstan,,Irtysh,Ust-Kamenogorsk,1960,GloFAS station below G0360,83.45,49.55,83.45,49.55,83.375,49.675,remapped
+647,168,NA,GLWD,Caniapiscau,Caniapiscau reservoir / Barrage KA-3,-69.84,54.29,NA,NA,NA,ICOLD_LRs,Canada,,Caniapiscau,Schefferville,1980,,-69.75,55.05,-69.85,54.95,-69.775,54.825,remapped
+648,96,NA,GLWD,,Serra da Mesa (Sao Felix),-48.22,-13.77,NA,NA,NA,ICOLD_LRs,Brazil,,Tocantins,Minacu / Cavalcante,1993,GloFAS station below G1306,-48.15,-13.55,-48.15,-13.55,-48.325,-13.825,remapped
+649,102,NA,GLWD,Ust-Ilimskoye,Ust-Ilim,102.32,57.15,NA,NA,NA,ICOLD_LRs,Russia,,Angara,Ust-Ilimsk,1977,,102.65,57.95,102.65,57.95,102.675,57.975,remapped
+650,63,NA,GLWD,Grande,La Grande 3,-74.87,53.7,NA,NA,NA,ICOLD_LRs,Canada,,La Grande,Radisson,1981,,-75.95,53.75,-75.95,53.75,-75.975,53.725,remapped
+651,54,NA,GLWD,Grande,La Grande 2,-76.73,53.86,NA,NA,NA,ICOLD_LRs,Canada,,La Grande,Radisson,1992,,-77.55,53.75,-77.55,53.75,-77.525,53.775,remapped
+652,42,NA,GLWD,Cabora  Bassa,Cabora Bassa,31.63,-15.73,NA,NA,NA,LRs,Mozambique,Zimbabwe,Zambeze,Tete,1974,,32.75,-15.55,32.74305,-15.54889,32.675,-15.575,remapped
+653,88,NA,GLWD,Zeyskoye,Zeya,127.8,54.26,NA,NA,NA,ICOLD_LRs,Russia,,Zeya,Blagoveshchensk,1978,,127.35,53.85,127.35,53.85,127.325,53.775,remapped
+654,93,NA,GLWD,Krasnoyarskoye,Krasnoyarsk,90.94,54.84,NA,NA,NA,ICOLD_LRs,Russia,,Yenisei,Krasnoyarsk,1967,"GloFAS station G0253, other downstream G0191",92.25,55.85,92.25,55.85,92.275,55.925,remapped
+655,103,NA,GLWD,Williston,"Bennett, W.A.C.",-123.91,55.95,NA,NA,NA,ICOLD,Canada,,Peace,Hudson Hope,1967,GloFAS station below G0233,-122.25,56.05,-122.25,56.05,-122.225,56.025,remapped
+656,154,NA,GLWD,Caroni,Guri (Raul Leoni),-62.83,7.2,NA,NA,NA,ICOLD_LRs,Venezuela,,Caroni,Ciudad Guayana,1986,,-62.95,7.75,-62.95,7.75,-62.975,7.775,remapped
+657,82,NA,GLWD,Manicouagan,Daniel Johnson (Manicouagan 5),-69.13,51.35,NA,NA,NA,ICOLD_LRs,Canada,,Manicouagan,Baie Comeau,1968,,-68.75,50.65,-68.75,50.65,-68.725,50.675,remapped
+658,24,NA,GLWD,Volta,Akosombo,0.11,7.63,NA,NA,NA,ICOLD,Ghana,,Volta,Accra,1981,"cat2, cts",0.05,6.15,0.05,6.15,0.075,6.325,remapped
+659,48,NA,GLWD,Nasser,Aswan High,32.58,22.86,NA,NA,NA,ICOLD_LRs,Egypt,Sudan,Nile,Aswan,1970,,32.85,23.95,32.85,23.95,32.875,23.925,remapped
+660,39,NA,GLWD,Bratskoye,Bratsk,103.07,54.85,NA,NA,NA,ICOLD_LRs,Russia,,Angara,Bratsk,1964,,101.75,56.25,101.75,56.15,101.775,56.175,remapped
+661,35,NA,GLWD,Kariba,Kariba,27.6,-17.23,NA,NA,NA,ICOLD,Zimbabwe,Zambia,Zambezi,Lusaka,1959,,28.75,-16.55,28.75,-16.55,28.775,-16.525,remapped
+662,NA,2677,GranD,Itoiz Reservoir,Itoiz Dam,NA,NA,-1.362083,42.80375,586,GranD,Spain,,Irati,Longuida,2003,"added from GranD_based, from EFAS 2013 calibration",NA,NA,-1.35,42.75,-1.375,42.825,remapped
+663,NA,2684,GranD,,Yesa,NA,NA,-1.180417,42.61625,446.9,GranD,Spain,,Aragon,Yesa,1959,"added from GranD_based, from EFAS 2013 calibration",NA,NA,-1.15,42.65,-1.175,42.625,remapped
+664,NA,2704,GranD,,La Sotonera,NA,NA,-0.66625,42.112083,181.6,GranD,Spain,,Soton,Alcala de Gurrea,1963,"added from GranD_based, from EFAS 2013 calibration",NA,NA,-0.65,42.15,-0.675,42.125,remapped
+665,NA,2757,GranD,,Santolea,NA,NA,-0.319583,40.769583,52.5,GranD,Spain,,Guadalope,Castellote,1932,"added from GranD_based, from EFAS 2013 calibration",NA,NA,-0.35,40.75,-0.325,40.775,remapped
+666,NA,2850,GranD,,Guadalmena,NA,NA,-2.91375,38.365417,346.5,GranD,Spain,,Guadalmena,Chiclana de Segura de la Sierra,1969,"added from GranD_based, from EFAS 2013 calibration",NA,NA,-2.91375,38.36542,-2.925,38.375,remapped
+667,NA,2855,GranD,,Jandula,NA,NA,-3.974583,38.22875,322,GranD,Spain,,Jandula,Andujar,1932,"added from GranD_based, from EFAS 2013 calibration",NA,NA,-3.95,38.25,-3.975,38.225,remapped
+668,NA,2864,GranD,,Guadalen,NA,NA,-3.47875,38.16625,173,GranD,Spain,,Guadalen,Arquillos,1954,"added from GranD_based, from EFAS 2013 calibration",NA,NA,-3.45,38.25,-3.475,38.175,remapped
+669,NA,2865,GranD,,Rumblar,NA,NA,-3.804583,38.162083,126,GranD,Spain,,Rumblar,Barios de la Encina,1941,"added from GranD_based, from EFAS 2013 calibration",NA,NA,-3.85,38.15,-3.825,38.175,remapped
+670,NA,2868,GranD,,Giribaile,NA,NA,-3.51125,38.09125,475,GranD,Spain,,Guadalimar,Ibros,1996,"added from GranD_based, from EFAS 2013 calibration",NA,NA,-3.45,38.15,-3.475,38.075,shift 1 pixel west
+671,NA,2869,GranD,,Yeguas,NA,NA,-4.249583,38.070417,228.7,GranD,Spain,,Yeguas,Montoro,1989,"added from GranD_based, from EFAS 2013 calibration",NA,NA,-4.15,38.15,-4.225,38.075,remapped
+672,NA,2870,GranD,,Guadalmellato,NA,NA,-4.672083,38.045417,147.4,GranD,Spain,,Guadalmellato,Adamuz,1928,"added from GranD_based, from EFAS 2013 calibration",NA,NA,-4.65,38.05,-4.675,38.025,remapped
+673,NA,2872,GranD,,El Pintado,NA,NA,-5.95375,37.987083,202,GranD,Spain,,Viar,Cazalla de la Sierra,1948,"added from GranD_based, from EFAS 2013 calibration",NA,NA,-5.95,38.05,-5.975,37.975,remapped
+674,NA,2876,GranD,,Bembezar,NA,NA,-5.210417,37.90375,347,GranD,Spain,,Bembezar,Hornachuelos,1963,"added from GranD_based, from EFAS 2013 calibration",NA,NA,-5.25,37.95,-5.225,37.925,remapped
+675,NA,2885,GranD,,Zufre,NA,NA,-6.282917,37.80125,168,GranD,Spain,,Rivera de Huelva,Zufre,1987,"added from GranD_based, from EFAS 2013 calibration",NA,NA,-6.35,37.85,-6.275,37.825,remapped
+676,NA,2886,GranD,,Huesna,NA,NA,-5.685417,37.770417,134.6,GranD,Spain,,Huesna,Constantina,1990,"added from GranD_based, from EFAS 2013 calibration",NA,NA,-5.65,37.75,-5.675,37.775,remapped
+677,NA,2894,GranD,Vadomojon,Vadomojon,NA,NA,-4.225417,37.63875,165,GranD,Spain,,Guadajoz,Alcaudete,1997,"added from GranD_based, from EFAS 2013 calibration",NA,NA,-4.25,37.65,-4.225,37.625,remapped
+678,NA,2896,GranD,,Negratin,NA,NA,-2.952917,37.562083,546,GranD,Spain,,Guadiana Menor,Freila,1984,"added from GranD_based, from EFAS 2013 calibration",NA,NA,-2.95292,37.56208,-2.925,37.575,remapped
+679,NA,3486,GranD,,El Grado 1,NA,NA,0.235417,42.15375,399,GranD,Spain,,Cinca,El Grado,1969,"added from GranD_based, from EFAS 2013 calibration",NA,NA,0.25,42.15,0.225,42.175,remapped
+680,NA,3487,GranD,Barasona,Barasona,NA,NA,0.312917,42.12875,92.2,GranD,Spain,,Esera,La Puebla de Castro,1932,"added from GranD_based, from EFAS 2013 calibration",NA,NA,0.35,42.15,0.325,42.125,remapped
+681,NA,3489,GranD,,Oliana,NA,NA,1.294583,42.094583,101.1,GranD,Spain,,Segre,Oliana,1959,"added from GranD_based, from EFAS 2013 calibration",NA,NA,1.35,42.15,1.325,42.075,remapped
+682,NA,3497,GranD,,Rialb,NA,NA,1.192083,41.94125,402,GranD,Spain,,Segre,La Baronia de Rialb,1999,"added from GranD_based, from EFAS 2013 calibration",NA,NA,1.25,41.95,1.225,41.925,remapped
+683,NA,3499,GranD,,Santa Ana,NA,NA,0.585417,41.88625,237,GranD,Spain,,Noguera Ribagorzana,Castillonroy,1961,"added from GranD_based, from EFAS 2013 calibration",NA,NA,0.55,41.95,0.575,41.875,remapped
+684,NA,3505,GranD,,Ribarroja,NA,NA,0.430417,41.245417,206.9,GranD,Spain,,Ebro,Ribaroja d'Ebre,1969,"added from GranD_based, from EFAS 2013 calibration",NA,NA,0.45,41.25,0.425,41.225,remapped
+685,NA,4147,GranD,,Roodekopjies,NA,NA,27.57875,-25.407083,102.6,GranD,South Africa,,Krokodil,Brits,1984,added from GranD from Berny's list,NA,NA,27.55,-25.35,27.575,-25.425,remapped
+686,NA,4159,GranD,,Hartebeespoort,NA,NA,27.850417,-25.727917,198.3,GranD,South Africa,,Krokodil,Brits,1979,added from GranD from Berny's list,NA,NA,27.85,-25.75,27.875,-25.725,remapped
+687,NA,4185,GranD,,Grootdraai,NA,NA,29.295417,-26.917917,362.5,GranD,South Africa,,Vaal,Standerton,1978,added from GranD from Berny's list,NA,NA,29.35,-26.95,29.325,-26.925,remapped

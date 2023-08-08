@@ -1,0 +1,464 @@
+LakID,GLWD_ID,LAKE_NAME,COUNTRY,CONTINENT,LONG_DEG,LAT_DEG,X_CORRECTE,Y_CORRECTE,X_coord_au,Y_coord_au,ZZ_note_lo,GloFAS_sta,LisfloodX3,LisfloodY3,remap_com
+1,8,Baikal,Russia,Asia,108.14,53.63,104.45,52.15,104.45,52.15,,,104.425,52.175,remapped
+2,9,Great Bear,Canada,North America,-121.3,65.91,-123.45,65.15,-123.45,65.15,,G0069,-123.475,65.125,remapped
+3,49,Dubawnt,Canada,North America,-101.44,63.13,-100.85,63.65,-100.85,63.35,not diectly connected but big,,-100.725,63.575,remapped
+4,59,Hovs Gol,Mongolia,Asia,100.48,51.02,100.25,50.55,100.25,50.55,,,100.225,50.575,remapped
+5,75,Hulun,China,Asia,117.38,48.97,117.65,49.25,117.65,49.25,"has inflows and outflow, not closed",,117.325,48.875,needs correction to LDD see ticket efcc2254
+6,78,Poyang,China,Asia,116.06,29.25,116.15,29.65,116.15,29.65,,,116.175,29.725,remapped
+7,97,Baker,Canada,North America,-95.28,64.13,-94.25,64.05,-94.25,64.05,"cat2, close to sea",,-94.225,64.075,remapped
+8,100,Martre,Canada,North America,-117.91,63.33,-117.95,63.35,-117.45,63.25,station below outlet,G0103,-117.325,63.175,remapped
+9,109,Hongze,China,Asia,118.53,33.34,118.75,33.05,118.75,33.15,,,118.725,33.075,remapped
+10,126,Yathkyed,Canada,North America,-98.07,62.69,-97.65,62.95,-97.65,62.95,,,-97.675,62.925,remapped
+11,135,Sevan,Armenia,Asia,45.29,40.39,44.95,40.55,45.05,40.55,"10% outlet, 90% evaporates, for testing",,44.975,40.575,remapped
+12,152,Aberdeen,Canada,North America,-98.59,64.55,-98.35,64.65,-98.35,64.65,,,-98.375,64.625,remapped
+13,184,MacKay,Canada,North America,-111.3,63.96,-109.85,64.15,-110.35,64.05,"cat2, not sure where it drains",,-109.875,64.175,remapped
+14,218,,Russia,Asia,91.18,68.36,89.85,68.25,89.95,68.25,"cat2, upstream of resevoir",,89.825,68.375,remapped
+15,226,Aylmer,Canada,North America,-108.46,64.15,-108.45,64.45,-108.55,64.35,"cat2, area with many lakes",,-108.025,64.075,unsure of position - river flows in opposite direction on 1 deg
+16,230,,China,Asia,112.17,28.92,112.85,28.95,112.65,28.85,,,112.875,28.875,remapped
+17,232,,Canada,North America,-113.84,65.31,-114.35,65.65,-112.55,65.15,,,-114.325,65.625,remapped
+18,233,Chao,China,Asia,117.57,31.57,117.75,31.55,117.75,31.55,,,117.775,31.625,remapped
+19,261,Yang-Cho-Yung,China,Asia,90.76,28.97,90.35,29.15,90.65,29.15,cat2,,90.375,29.125,remapped
+20,268,Biwa-ko,Japan,Asia,136.08,35.25,135.95,35.15,135.95,35.15,,,135.875,35.025,remapped
+21,275,Clinton-Colden,Canada,North America,-107.45,63.94,-107.65,64.05,-107.65,64.05,"cat2, area with many lakes",,-107.325,63.825,remapped - river flows in opposite direction on 1deg
+22,286,Murray,Papua New Guinea,Asia,141.53,-6.95,141.55,-7.05,141.55,-7.05,cat2,,141.525,-7.225,remapped
+23,287,Gaoyou,China,Asia,119.31,32.87,119.35,32.75,119.35,32.75,,,119.375,32.725,remapped
+24,291,Buyr,Mongolia,Asia,117.69,47.81,117.75,47.95,117.75,47.95,"small inflow and outflow, middle of steps, cat2",,117.775,47.925,remapped
+25,300,Ngoring,China,Asia,97.71,34.93,97.75,35.05,97.75,35.05,,G0833,97.775,35.075,remapped
+26,320,Kaminuriak,Canada,North America,-95.79,62.96,-95.75,62.65,-95.75,62.65,,,-95.725,62.725,remapped
+27,334,Artillery,Canada,North America,-107.82,63.17,-108.25,62.95,-108.25,62.95,station at the uotlet,G0105,-108.275,62.925,remapped
+28,336,Gyaring,China,Asia,97.27,34.92,97.25,34.85,97.35,34.85,station is below second lake,G0833,97.275,34.825,remapped
+29,430,Faber,Canada,North America,-117.25,63.95,-117.05,63.75,-117.15,63.85,station at the outlet,G0060,-117.425,64.025,remapped - river flows in opposite direction on 1 deg
+30,433,Keta,Russia,Asia,89.89,68.75,89.55,68.85,89.65,68.75,,,89.625,68.825,remapped
+31,438,Schultz,Canada,North America,-97.44,64.74,-97.05,64.75,-97.05,64.75,,,-97.075,64.775,remapped
+32,449,Wharton,Canada,North America,-99.74,64,-99.75,64.05,-99.75,64.05,"cat2, area with many lakes",,-99.725,64.025,remapped
+33,495,Portnyagino,Russia,Asia,106.95,74.14,106.55,74.15,106.65,74.15,,,106.575,74.175,remapped
+34,500,Udyl',Russia,Asia,139.77,52.07,140.15,52.25,140.05,52.15,,,140.125,52.225,remapped
+35,502,Bolon',Russia,Asia,136.39,49.8,136.55,49.85,136.45,49.85,,,136.575,49.875,remapped
+36,531,Liangzi,China,Asia,114.51,30.23,114.65,30.25,114.55,30.25,,,114.575,30.275,remapped
+37,536,Bangong,China,Asia,79.71,33.61,79.05,33.75,79.05,33.75,seems not closed,,79.075,33.725,remapped
+38,539,Longgan,China,Asia,116.14,29.97,116.15,29.95,116.15,29.95,,,116.225,29.975,remapped
+39,561,Lama_2,Russia,Asia,90.63,69.5,89.95,69.55,89.95,69.55,,,89.875,69.525,remapped
+40,608,Orel',Russia,Asia,139.78,53.45,139.85,53.35,139.75,53.45,"cat2, close to sea but a city downstream",,139.825,53.375,remapped
+41,612,,Russia,Asia,140.25,51.64,140.25,51.75,140.15,51.55,,,140.225,51.675,remapped
+42,615,Ford,Canada,North America,-97.36,63.4,-97.15,63.55,-97.05,63.65,,,-97.175,63.575,remapped
+43,620,Dongting,China,Asia,112.92,29.32,113.05,29.35,113.05,29.35,,,113.025,29.325,remapped
+44,623,Daguan,China,Asia,116.38,30.04,116.35,30.05,116.35,30.05,,,116.425,30.075,remapped
+45,627,Dian Chi,China,Asia,102.69,24.85,102.65,24.75,102.65,24.75,,,102.625,24.775,remapped
+46,642,,India,Asia,93.85,24.56,93.85,24.45,93.85,24.45,,,93.875,24.475,remapped
+47,649,P'u-mo-ts'o,China,Asia,90.4,28.55,90.45,28.65,90.35,28.55,cat2,,90.425,28.625,remapped
+48,671,Kungasalakh,Russia,Asia,107.23,74.61,107.55,74.55,107.55,74.55,,,107.575,74.525,remapped
+49,688,Song-kel,Kyrgyzstan,Asia,75.17,41.84,75.35,41.75,75.25,41.85,"not main river, not so big outflow, cat2",,75.325,41.775,remapped
+50,697,Pangong,India,Asia,78.61,33.82,78.45,33.95,78.45,33.95,seems not closed,,78.425,33.975,remapped
+51,722,,Vietnam,Asia,104.94,21.9,105.05,21.75,104.95,21.85,,,105.025,21.725,remapped
+52,750,,Burma,Asia,96.96,19.99,97.05,19.85,97.05,19.85,,,97.075,19.775,remapped
+53,760,Grandin,Canada,North America,-118.98,63.99,-118.65,63.95,-118.65,63.95,"cat 2, big lake downstream",,-118.775,63.925,remapped
+54,767,Erh,China,Asia,100.18,25.78,100.15,25.65,100.15,25.75,cat2,,100.225,25.625,remapped
+55,776,Vivi,Russia,Asia,93.81,66.76,94.15,66.45,93.85,66.75,cat2,G0058,94.225,66.425,remapped
+56,783,Lama_1,Russia,Asia,89.22,69.35,88.95,69.35,88.95,69.35,,,88.925,69.325,remapped
+57,791,Shijiu,China,Asia,118.87,31.46,118.85,31.45,118.85,31.45,,,118.775,31.475,remapped
+58,794,Saitlan,Russia,Asia,78.56,54.98,78.55,54.95,78.55,54.95,,,78.525,54.925,remapped
+59,799,,Iran,Asia,47.83,31.17,47.75,31.05,47.75,31.05,,,47.675,31.075,remapped
+60,851,Saltaim,Russia,Asia,71.93,56.12,72.05,56.25,71.95,56.15,cat2,,72.025,56.225,remapped
+61,876,Weishan,China,Asia,117.24,34.61,117.35,34.55,117.15,34.65,"in fact connected with upstream Dushan Lake, dam?",,117.325,34.575,remapped
+62,892,Fuxian,China,Asia,102.89,24.49,102.95,24.55,102.85,24.55,,,102.925,24.525,remapped
+63,921,Neyato,Russia,Asia,70.38,70.06,70.15,70.15,70.55,70.05,cat2,,70.225,70.125,remapped
+64,950,Chertovo,Russia,Asia,80.42,64.13,80.95,64.15,80.95,64.15,,,80.925,64.125,remapped
+65,967,,Canada,North America,-96.88,63.64,-95.95,63.65,-95.95,63.65,station below (after station is moved),G0097,-95.925,63.625,remapped
+66,970,,China,Asia,117.07,30.83,117.05,30.75,117.05,30.75,,,117.125,30.725,remapped
+67,972,Teletskoye,Russia,Asia,87.68,51.56,87.45,51.75,87.45,51.75,,,87.325,51.775,remapped
+68,991,,Canada,North America,-108.88,64.65,-108.85,64.55,-109.05,64.65,"cat2, area- many lakes, not sure if on main river",,-108.825,64.575,remapped
+69,1011,Bolshoy Uvat,Russia,Asia,70.47,57.54,70.65,57.55,70.65,57.55,cat2,,70.675,57.575,remapped
+70,1070,,Russia,Asia,68.99,60.68,69.45,60.75,69.45,60.75,"cat2, not very clear connection",,69.475,60.775,remapped
+71,1079,Na,China,Asia,91.48,32.02,91.45,31.95,91.45,32.05,,,91.475,31.975,remapped
+72,1089,Marjorie,Canada,North America,-99.36,64.15,-99.45,64.25,-99.35,64.15,,,-99.425,64.225,remapped
+73,1106,Horton,Canada,North America,-122.5,67.48,-122.45,67.55,-122.25,67.45,,,-122.425,67.575,remapped
+74,1107,Junshan,China,Asia,116.31,28.51,116.25,28.55,116.35,28.45,"cat2, upsteam of huge lake",,116.275,28.625,remapped
+75,1141,,Canada,North America,-115.17,64.23,-115.35,64.05,-115.25,64.25,"area with many lakes, station below",G0090,-115.325,64.075,remapped
+76,1145,Kus,Turkey,Asia,27.96,40.19,28.05,40.15,28.05,40.15,close to sea but there is station downstream,G0720,28.025,40.175,remapped
+77,1164,Beverly,Canada,North America,-100.52,64.61,-100.25,64.55,-100.45,64.65,,,-100.275,64.575,remapped
+78,1185,Nose,Canada,North America,-108.91,65.42,-108.85,65.45,-108.95,65.45,,G0045,-108.875,65.475,remapped
+79,1187,Ozhogino,Russia,Asia,146.64,69.25,146.65,69.25,146.65,69.25,"keep but shouldn't change much, glacial",,146.775,69.225,remapped
+80,1196,Tiberias,Israel,Asia,35.59,32.8,35.55,32.75,35.55,32.85,,G0875,35.575,32.725,see question in efcc2254
+81,1204,Kasumiga-ura,Japan,Asia,140.37,36.05,140.35,36.05,140.35,36.05,"close to sea, but highly populated area",,140.475,35.975,remapped
+82,1206,Dushan Lake,China,Asia,116.87,34.97,117.05,34.85,116.85,35.05,,,116.975,34.875,remapped
+83,1208,,Russia,Asia,140.04,53.43,139.95,53.35,140.05,53.45,"cat2, close to sea but a city downstream",,139.975,53.375,remapped
+84,1226,,Russia,Asia,69.43,60.5,69.55,60.55,69.55,60.55,,,69.575,60.625,remapped
+85,1236,Ulubat,Turkey,Asia,28.59,40.17,28.55,40.15,28.55,40.15,close to sea but there is station downstream,G0720,28.475,40.225,remapped
+86,1270,Po,China,Asia,116.44,30.15,116.45,30.15,116.45,30.15,,,116.525,30.075,remapped
+87,1275,Glubokoye,Russia,Asia,90.1,69.27,89.75,69.35,90.25,69.25,,,89.675,69.325,remapped
+88,1326,,Canada,North America,-96.91,62.91,-96.65,62.85,-96.65,62.85,,,-96.625,62.875,remapped
+89,1327,Kuyumazarskoye,Uzbekistan,Asia,64.83,39.85,64.85,39.85,64.85,39.85,"not main drainage,dry area, cat2",,64.775,39.825,remapped
+90,1335,Nvshan Lake,China,Asia,118.23,32.94,118.25,32.95,118.05,32.95,,,118.275,32.925,remapped
+91,1340,Shuryshkarskiy,Russia,Asia,65.14,65.99,65.25,65.95,65.25,65.95,"cat2, complex lake, multiple chanel landscape",,65.325,65.925,shift 1 pixel east
+92,1350,Luran,Canada,North America,-93.01,64.86,-93.05,64.85,-93.05,64.85,"cat2, area with many lakes",,-92.925,64.825,remapped
+93,1358,Futou,China,Asia,114.2,30.04,114.15,30.05,114.25,30.05,,,114.175,30.075,remapped
+94,1404,Wabu,China,Asia,116.88,32.39,116.85,32.55,116.85,32.55,,,116.875,32.525,remapped
+95,1411,,Russia,Asia,65.79,62.28,65.65,62.25,65.65,62.25,"cat2, complex lake, multiple chanel landscape",,65.825,62.275,remapped
+96,1430,Luoma,China,Asia,118.21,34.06,118.25,34.15,118.25,34.05,,,118.275,34.125,remapped
+97,1433,Danau Ranau,Indonesia,Asia,103.94,-4.89,103.95,-4.85,103.95,-4.85,,,103.925,-4.825,remapped
+98,1458,,Russia,Asia,137.34,50.28,137.15,50.35,137.15,50.35,,,137.125,50.325,remapped
+99,1503,Chang,China,Asia,112.38,30.44,112.45,30.45,112.45,30.45,cat2,,112.475,30.425,remapped
+100,1516,Baunt,Russia,Asia,112.98,55.21,113.05,55.25,113.05,55.25,"cat2, not very big outflow",,113.075,55.275,remapped
+101,1555,Indawngy,Burma,Asia,96.34,25.15,96.35,25.15,96.35,25.15,cat2,,96.375,25.225,remapped
+102,1558,,China,Asia,116.16,28.49,116.15,28.55,116.15,28.55,"cat2, upsteam of huge lake",,116.175,28.575,remapped
+103,1576,Birch,Canada,North America,-121.61,64.62,-121.55,64.65,-121.55,64.65,"just upstream big lake, station downsteam",,-121.475,64.625,remapped
+104,1600,Fish,Canada,North America,-122.57,63.16,-122.75,63.15,-122.75,63.15,"cat2, on small tributary",,-122.775,63.175,remapped
+105,1606,,Russia,Asia,66.3,64.43,66.15,64.45,66.15,64.45,"cat2, complex lake, multiple chanel landscape",,66.125,64.475,remapped
+106,1621,,Canada,North America,-117,67.38,-116.65,67.25,-116.65,67.25,"cat2, not populated area",,-116.675,67.275,remapped
+107,1624,,Russia,Asia,65.17,62.62,65.15,62.65,65.15,62.65,"cat2, complex lake, multiple chanel landscape",,65.175,62.675,remapped
+108,1629,Bulmer,Canada,North America,-120.77,62.8,-120.75,62.85,-120.75,62.85,"cat2, area with many lakes but station below",G0111,-120.725,62.775,remapped
+109,1636,,Russia,Asia,91.77,68.72,91.45,68.55,91.85,68.75,"cat2, upstream of lake and reservoir",,91.475,68.575,remapped
+110,1658,Dongping,China,Asia,116.18,36.01,116.15,36.05,116.15,35.95,"by big city, cat 2",no space,116.225,36.075,remapped
+111,1666,,Canada,North America,-131.79,67.69,-131.85,67.65,-131.85,67.65,"cat2, not populated area",,-131.875,67.625,remapped
+112,1671,Danau Singkarak,Indonesia,Asia,100.54,-0.62,100.55,-0.55,100.55,-0.65,majority of wate diverted to W by hydr. proj.,,100.575,-0.575,remapped
+113,1675,Temchi,Russia,Asia,95,66.79,95.05,66.65,95.05,66.75,cat2,G1543,95.175,66.625,remapped
+114,1709,,Russia,Asia,67.23,61.61,67.15,61.65,67.15,61.65,"cat2, complex lake, multiple chanel landscape",,67.225,61.675,remapped
+115,1789,TudakolÆ,Uzbekistan,Asia,64.18,39.12,64.25,39.05,64.25,39.05,"not main drainage,dry area, cat2",,64.075,39.175,see question in efcc2554
+116,2,Lake Superior,Canada,North America,-88.23,47.72,-84.55,46.45,-84.55,46.45,,,-84.525,46.475,remapped
+117,5,Lake Huron,Canada,North America,-82.21,44.78,-82.45,43.05,-82.35,43.15,,,-82.425,43.025,remapped
+118,6,Lake Michigan,United States,North America,-87.09,43.86,-84.85,45.85,-84.85,45.85,,,-84.825,45.825,remapped
+119,11,Great Slave,Canada,North America,-114.37,62.09,-117.45,61.25,-117.45,61.25,,G0136,-117.425,61.225,remapped
+120,12,Lake Erie,Canada,North America,-81.16,42.25,-78.95,42.85,-78.95,42.85,,,-78.925,42.825,remapped
+121,13,Winnipeg,Canada,North America,-97.25,52.12,-97.85,53.65,-97.85,53.65,,,-97.875,53.675,remapped
+122,15,Lake Ontario,Canada,North America,-77.77,43.85,-75.85,44.45,-75.85,44.45,,,-75.825,44.425,remapped
+123,23,Athabasca,Canada,North America,-109.96,59.1,-111.25,58.85,-111.25,58.75,,G0162,-111.175,58.725,remapped
+124,28,Reindeer,Canada,North America,-102.27,57.19,-102.85,56.55,-103.15,56.25,,G0234,-102.875,56.525,remapped
+125,31,Winnipegosis,Canada,North America,-100.05,52.37,-99.75,51.65,-99.75,51.65,,,-99.775,51.675,remapped
+126,37,Manitoba,Canada,North America,-98.8,50.99,-98.85,51.45,-98.85,51.45,,,-98.775,51.575,remapped
+127,38,Nipigon,Canada,North America,-88.55,49.8,-88.25,49.45,-88.25,49.45,,,-88.325,49.425,remapped
+128,44,Lake of the Woods,Canada,North America,-94.91,49.38,-94.55,49.85,-94.55,49.85,,,-94.575,49.825,remapped
+129,83,Nueltin,Canada,North America,-99.4,60.25,-98.95,60.75,-99.15,60.75,,,-98.975,60.825,remapped
+130,114,Lake Okeechobee,United States,North America,-80.86,26.95,-81.05,26.95,-81.05,26.95,"multiple, controlled outlets to S",,-80.775,26.725,remapped - river flows in opposite direction on 1 deg
+131,124,Kasba,Canada,North America,-102.27,60.34,-101.95,60.05,-101.95,60.05,,,-102.175,60.525,remapped - river flows in opposite direction on 1deg
+132,127,Ronge,Canada,North America,-104.83,55.11,-104.65,55.25,-104.65,55.25,"not main river, but big",,-104.625,55.275,remapped
+133,130,Rainy Lake,Canada,North America,-92.97,48.61,-93.25,48.65,-93.25,48.65,controlled by dam at the outlet,G0446,-93.275,48.625,remapped
+134,146,Lake Saint Clair,Canada,North America,-82.73,42.5,-82.95,42.35,-82.95,42.35,,,-82.925,42.375,remapped
+135,147,Lesser Slave,Canada,North America,-115.49,55.43,-114.85,55.35,-114.85,55.35,,G0256,-114.825,55.375,remapped
+136,153,Chapala,Mexico,North America,-103.05,20.21,-102.85,20.25,-102.85,20.25,"outflow-Rio Grande di Santiego, NW to Pacific",,-102.775,20.325,grabs water also from SE
+137,155,Bienville,Canada,North America,-72.98,55.05,-73.55,54.95,-73.25,54.95,,,-73.275,54.975,remapped
+138,165,Lake Champlain,United States,North America,-73.27,44.45,-73.35,44.95,-73.35,44.95,,G0584,-73.325,45.075,improve gets water also from east
+139,172,Gods,Canada,North America,-94.21,54.62,-94.05,54.85,-94.15,54.75,,G0263,-94.075,54.825,remapped
+140,213,Playgreen,Canada,North America,-97.75,54.07,-97.75,54.05,-97.75,54.05,,,-97.975,54.375,remapped
+141,222,Peter Pond,Canada,North America,-108.55,55.84,-108.45,55.85,-108.55,55.85,,,-108.475,55.825,remapped
+142,224,Minto,Canada,North America,-74.71,57.34,-74.25,57.55,-74.25,57.55,,,-74.275,57.525,remapped
+143,251,Cross,Canada,North America,-97.58,54.71,-97.85,54.65,-97.85,54.65,,,-97.825,54.675,remapped
+144,264,Kamilukuak,Canada,North America,-101.73,62.28,-101.85,62.45,-101.85,62.45,,,-101.875,62.475,remapped
+145,281,Dore,Canada,North America,-107.28,54.76,-107.45,54.75,-107.45,54.75,"cat2, not main river",,-107.475,54.725,remapped
+146,285,St. Joseph,Canada,North America,-90.81,51.04,-90.25,51.15,-90.25,51.15,,,-90.275,51.125,remapped
+147,288,,Canada,North America,-100.44,55.83,-100.55,56.05,-100.45,55.85,,G0224,-100.525,56.125,remapped
+148,299,Buffalo,Canada,North America,-115.49,60.22,-115.25,60.35,-115.35,60.25,"cat2, big lake just downstream",G0149,-115.225,60.325,remapped
+149,323,Churchill,Canada,North America,-108.29,55.96,-108.35,55.85,-108.45,55.85,,,-108.425,55.875,remapped
+150,324,Angikuni,Canada,North America,-100.04,62.27,-99.65,62.25,-99.75,62.25,,,-99.625,62.275,remapped
+151,333,Black,Canada,North America,-105.73,59.05,-105.55,59.15,-105.45,59.15,,G0177,-105.575,59.125,remapped
+152,340,Lake Winnebago,United States,North America,-88.42,44.02,-88.45,44.15,-88.45,44.05,,G0623,-88.425,44.175,remapped
+153,351,Dauphin,Canada,North America,-99.77,51.27,-99.95,51.45,-99.85,51.35,"cat2, not main river",,-99.975,51.425,remapped
+154,353,Payne,Canada,North America,-73.82,59.4,-73.25,59.25,-74.05,59.45,,,-73.275,59.275,remapped
+155,356,Sandy,Canada,North America,-93.03,53,-92.55,53.05,-92.55,53.05,,,-92.575,53.075,remapped
+156,363,Granville,Canada,North America,-100.21,56.4,-100.05,56.45,-100.15,56.45,,,-100.075,56.475,remapped
+157,366,Mille Lacs Lake,United States,North America,-93.65,46.24,-93.65,46.15,-93.65,46.15,"cat2, not main river",,-93.725,46.175,remapped
+158,374,Ootsa,Canada,North America,-125.76,53.62,-125.65,53.55,-126.05,53.75,"cat3, upsteam of reservoir",,-125.675,53.575,remapped
+159,380,Lake Tahoe,United States,North America,-120.04,39.09,-120.15,39.15,-120.05,39.05,,,-120.125,39.175,remapped
+160,391,Ile-a-la-Crosse,Canada,North America,-107.75,55.56,-107.75,55.85,-107.75,55.85,,,-107.775,55.875,remapped
+161,404,,Canada,North America,-108.22,56.37,-108.25,56.25,-108.45,56.55,"cat2, not on main river",,-108.225,56.275,remapped
+162,406,,Canada,North America,-134.19,59.98,-134.35,60.45,-134.25,60.35,,G0148,-134.525,60.575,remapped
+163,409,Primrose,Canada,North America,-109.79,54.89,-109.75,54.85,-109.75,54.85,,,-109.625,54.875,remapped
+164,420,Mills,Canada,North America,-118.15,61.43,-118.65,61.25,-118.45,61.35,"cat2, big lake just upsteam",,-118.625,61.325,remapped
+165,423,St. Peter,Canada,North America,-72.9,46.15,-72.65,46.25,-72.65,46.25,city downstream,,-72.675,46.275,remapped
+166,454,Molson,Canada,North America,-96.82,54.22,-96.75,54.25,-96.75,54.25,cat2,,-96.725,54.325,improve position lake check river up 2 pxls north
+167,464,Goose Lake,United States,North America,-120.41,41.92,-120.45,41.75,-120.45,41.85,,,-120.475,41.775,remapped
+168,474,Pinehouse,Canada,North America,-106.47,55.55,-106.25,55.75,-106.35,55.75,,,-106.325,55.725,remapped
+169,490,Teslin,Canada,North America,-132.39,59.97,-133.25,60.45,-133.25,60.45,,G0154,-133.225,60.425,remapped
+170,493,Matagami,Canada,North America,-77.5,50.07,-77.55,50.25,-77.45,50.25,,,-77.525,50.275,remapped
+171,501,Stuart,Canada,North America,-124.58,54.55,-124.35,54.45,-124.35,54.45,,G0273,-124.375,54.475,shift 1 pixel north
+172,508,Cold,Canada,North America,-110.04,54.53,-109.95,54.55,-109.95,54.55,,,-109.925,54.575,remapped
+173,516,North Caribou,Canada,North America,-90.74,52.79,-90.95,52.75,-90.95,52.75,,,-90.825,52.875,remapped
+174,529,Oxford,Canada,North America,-95.44,54.85,-95.25,54.95,-95.35,54.95,,,-95.275,54.925,remapped
+175,538,St. Martin,Canada,North America,-98.51,51.65,-98.35,51.75,-98.35,51.75,,,-98.325,51.775,remapped
+176,555,Simard,Canada,North America,-78.92,47.57,-79.15,47.55,-79.15,47.55,,G0543,-79.125,47.525,remapped
+177,559,Upper Klamath Lake,United States,North America,-121.89,42.42,-121.85,42.35,-121.85,42.35,"cat2, small dam",G0671,-121.825,42.275,remapped
+178,565,Okanagan,Canada,North America,-119.5,49.92,-119.65,49.55,-119.65,49.65,"cat2, small dam, treat as reservoir?",G0447,-119.625,49.525,remapped
+179,569,,Canada,North America,-117.71,60.93,-117.45,60.85,-117.55,60.85,,G0143,-117.675,60.875,remapped
+180,570,Goeland,Canada,North America,-76.85,49.86,-76.95,49.85,-76.85,49.75,,,-76.925,49.825,remapped
+181,572,Yellowstone Lake,United States,North America,-110.39,44.43,-110.35,44.55,-110.35,44.55,,G0567,-110.375,44.575,remapped
+182,582,Shuswap,Canada,North America,-119.12,50.97,-119.65,50.85,-119.65,50.85,,G0370,-119.625,50.875,remapped
+183,584,"Lakes Nuyakuk, Tikchik, Chauekuktuli",United States,North America,-158.7,59.97,-158.25,59.95,-158.25,59.95,,G0174,-158.475,59.975,remapped
+184,607,,Canada,North America,-89.21,52.94,-89.05,52.85,-89.25,52.85,,,-89.075,52.875,remapped
+185,617,Moosehead Lake,United States,North America,-69.71,45.67,-69.65,45.65,-69.65,45.65,"cat2, station below",G0620,-69.725,45.675,correct position - centered in pixel
+186,619,Tadouie,Canada,North America,-98.33,58.59,-98.25,58.75,-98.25,58.65,"cat2, not main river",,-98.225,58.725,remapped
+187,624,Swan,Canada,North America,-100.74,52.49,-100.75,52.65,-100.75,52.55,"cat2, not main river",,-100.775,52.625,remapped
+188,625,,Canada,North America,-88.01,52.94,-87.85,52.85,-87.85,52.85,,G0271,-87.825,52.925,remapped
+189,628,,Canada,North America,-97.56,57.31,-97.15,57.35,-97.15,57.35,,G0200,-97.575,57.325,correct position - centered in pixel
+190,633,Timiskaming,Canada,North America,-79.44,47.2,-79.45,47.05,-79.55,47.45,"resevoir, but keep as lake?",,-79.425,47.075,remapped
+191,653,,Canada,North America,-87.92,52.24,-87.45,52.15,-87.95,52.25,,G0326,-87.475,52.175,remapped
+192,677,Bear Lake,United States,North America,-111.33,42.01,-111.35,42.15,-111.35,42.05,,,-111.325,42.175,remapped
+193,691,,Canada,North America,-75.03,51.42,-75.25,51.45,-75.25,51.45,,,-75.225,51.475,remapped
+194,693,Aggikani,Canada,North America,-100.27,62.52,-100.45,62.45,-100.55,62.45,,,-100.425,62.425,remapped
+195,716,Eutsuk,Canada,North America,-126.68,53.3,-126.25,53.25,-126.25,53.25,,,-126.275,53.225,remapped
+196,720,,Canada,North America,-105.57,55.67,-105.15,55.65,-105.15,55.65,,,-105.225,55.675,remapped
+197,728,Red Deer,Canada,North America,-101.36,52.95,-101.25,52.85,-101.35,52.95,,G0300,-101.225,52.875,remapped
+198,734,,Canada,North America,-126.1,54.01,-125.05,53.95,-125.85,54.05,,G0278,-125.025,53.975,remapped
+199,739,Harrison,Canada,North America,-121.83,49.52,-121.85,49.35,-121.85,49.45,,,-121.825,49.325,remapped
+200,745,Quesnel,Canada,North America,-120.99,52.61,-121.55,52.55,-121.05,52.55,,G0305,-121.525,52.525,remapped
+201,752,,Canada,North America,-101.88,55.72,-101.45,55.75,-101.65,55.75,,G0235,-101.475,55.775,remapped
+202,753,,Canada,North America,-107.07,55.87,-106.75,55.75,-106.85,55.85,,,-106.775,55.775,remapped
+203,754,Cumberland,Canada,North America,-102.33,54.04,-102.35,54.05,-102.35,54.05,,,-102.325,54.025,correct position - centered in pixel
+204,761,Lake Winnibigoshish,United States,North America,-94.17,47.45,-94.05,47.45,-94.15,47.45,,G0535,-94.075,47.475,remapped
+205,766,Grand Lake,United States,North America,-91.4,29.8,-91.25,29.75,-91.25,29.75,but the station needs to be moved to sink,G0909,-91.225,29.725,lake gets water also from the north
+206,768,Brochet,Canada,North America,-101.68,58.64,-101.65,58.65,-101.65,58.65,,,-101.625,58.625,remapped
+207,771,Turnor,Canada,North America,-108.65,56.56,-108.45,56.65,-108.55,56.65,"cat2, not on main river",,-108.475,56.525,remapped
+208,772,Takla,Canada,North America,-125.84,55.38,-125.55,55.05,-125.75,55.15,,,-125.525,55.075,remapped
+209,782,Pasfield,Canada,North America,-105.31,58.37,-105.25,58.45,-105.25,58.45,station below,,-105.275,58.425,remapped
+210,810,Plonge,Canada,North America,-107.34,55.12,-107.45,55.15,-107.45,55.15,"cat2, not main river",,-107.475,55.175,remapped
+211,837,Waterhen,Canada,North America,-99.57,52.09,-99.55,51.95,-99.55,52.05,,G0334,-99.575,51.925,remapped
+212,858,,Canada,North America,-103.35,55.48,-103.25,55.55,-103.45,55.45,,,-103.325,55.525,remapped
+213,908,Loche,Canada,North America,-109.48,56.46,-109.45,56.45,-109.45,56.45,"cat2, not on main river",,-109.425,56.425,remapped
+214,925,Beaver Hill,Canada,North America,-94.92,54.24,-94.85,54.35,-94.85,54.35,,,-94.875,54.375,remapped
+215,927,Knee,Canada,North America,-94.54,55.08,-94.35,55.15,-94.45,55.15,,G0225,-94.375,55.175,remapped
+216,929,Lake George,United States,North America,-81.61,29.33,-81.65,29.35,-81.55,29.25,,,-81.625,29.325,correct position - centered in pixel
+217,940,Laberge,Canada,North America,-135.16,61.19,-135.15,60.85,-135.25,61.35,,G0132,-135.075,60.975,remapped
+218,949,,Canada,North America,-102.01,54.17,-101.95,54.15,-101.95,54.15,,,-101.975,54.125,remapped
+219,1018,,Canada,North America,-98.64,54.98,-98.55,55.05,-98.55,55.05,,G0245,-98.525,55.075,remapped
+220,1033,Chilko,Canada,North America,-124.11,51.34,-124.15,51.55,-124.05,51.25,,G0335,-124.175,51.575,remapped
+221,1047,,Canada,North America,-103.45,56.78,-103.35,56.95,-103.35,56.95,,,-103.325,56.975,remapped
+222,1064,,El Salvador,North America,-89.03,14.01,-88.75,13.95,-89.05,14.05,,,-88.925,13.925,remapped
+223,1067,,Canada,North America,-97.32,60.4,-97.15,60.25,-97.45,60.45,on main,,-97.125,60.325,remapped
+224,1075,Last Mountain,Canada,North America,-105.22,51.03,-105.05,50.85,-105.15,50.95,,G0373,-104.875,50.725,lake arrives near station before inflow
+225,1081,Castignon,Canada,North America,-68.57,56.32,-68.65,56.35,-68.65,56.35,"area many lakes, not populated, cat2",,-68.575,56.425,remapped
+226,1090,Lac La Croix,Canada,North America,-92.14,48.35,-92.15,48.35,-92.25,48.35,"cat2, our ldd is not corr., should drain N",G0462,-92.175,48.375,remapped
+227,1112,Weagamow,Canada,North America,-91.37,52.88,-91.35,52.85,-91.35,52.85,,,-91.375,52.925,remapped
+228,1166,,Canada,North America,-101.91,55.38,-102.05,55.45,-102.05,55.45,"cat2, not main river",,-102.025,55.425,remapped
+229,1171,,Canada,North America,-66.27,56.26,-66.35,56.45,-66.35,56.45,,G0202,-66.325,56.425,remapped
+230,1182,Cayuga Lake,United States,North America,-76.72,42.7,-76.75,42.75,-76.75,42.75,"cat2, lake ontario downstream, station",G0641,-76.725,42.875,remapped
+231,1186,,Canada,North America,-99.22,58.91,-98.95,58.95,-99.05,58.85,,,-98.925,58.975,remapped
+232,1188,Clear Lake,United States,North America,-122.77,39.02,-122.65,38.95,-122.65,38.95,lots of irrigation cannals between lake and river,,-122.675,38.975,remapped
+233,1198,Aishihik,Canada,North America,-137.1,61.41,-137.05,61.25,-137.05,61.25,,G0159,-137.025,61.225,remapped
+234,1199,Devils Lake,United States,North America,-98.97,48.02,-98.65,47.95,-98.65,47.95,,G0508,-98.675,47.975,remapped
+235,1221,Pelican,Canada,North America,-100.34,52.46,-100.35,52.55,-100.35,52.55,"cat2, not main river",,-100.375,52.575,remapped
+236,1223,,Canada,North America,-69.15,56.3,-69.15,56.55,-69.15,56.45,,G0212,-69.175,56.575,remapped
+237,1227,,Canada,North America,-75.33,49.36,-75.35,49.45,-75.25,49.45,,,-75.275,49.425,remapped
+238,1234,,Canada,North America,-94.69,50.03,-94.75,50.05,-94.65,49.95,"cat2, reservoir, many lakes, but station below",G0387,-94.725,50.025,remapped
+239,1237,,Canada,North America,-93.49,53.15,-93.35,53.05,-93.45,53.15,,,-93.325,53.075,remapped
+240,1239,Tazlina Lake,United States,North America,-146.51,61.88,-146.35,61.95,-146.45,61.85,"cat2, not populated",,-146.325,61.975,remapped
+241,1242,,Canada,North America,-97.47,55.6,-97.45,55.65,-97.45,55.65,,G0245,-97.475,55.625,correct position - centered in pixel
+242,1251,,Canada,North America,-76.81,51.41,-76.85,51.35,-76.85,51.35,,G0352,-76.825,51.375,remapped
+243,1252,Savant,Canada,North America,-90.4,50.51,-90.35,50.65,-90.35,50.65,"cat2, not main river",,-90.325,50.675,remapped
+244,1292,,Canada,North America,-136.37,60.34,-136.15,60.55,-136.35,60.35,cat2,,-136.125,60.525,remapped
+245,1303,,Canada,North America,-103.05,55.83,-103.15,55.65,-103.15,55.75,"cat2, ot main river",,-103.175,55.675,remapped
+246,1305,,Canada,North America,-89.45,50.52,-89.35,50.55,-89.35,50.55,,,-89.475,50.625,remapped
+247,1308,,Canada,North America,-104.55,55.53,-104.45,55.45,-104.55,55.55,,,-104.475,55.425,remapped
+248,1345,,Canada,North America,-68.17,56.67,-68.15,56.65,-68.15,56.65,"area many lakes, not populated, cat2",,-68.325,56.625,correct position
+249,1347,,Canada,North America,-74.17,45.48,-74.05,45.45,-74.05,45.45,,,-73.925,45.375,improve gets water also from north east
+250,1368,Lake Kissimmee,United States,North America,-81.27,27.9,-81.25,27.85,-81.25,27.95,not natural outlet-cannal,,-81.225,27.825,remapped
+251,1376,,Canada,North America,-103.08,56.97,-103.05,56.95,-103.05,56.95,,,-103.075,56.925,remapped
+252,1379,Otelnuc,Canada,North America,-68.19,56.15,-68.15,56.15,-68.15,56.15,"area many lakes, not populated, cat2",,-68.275,56.125,remapped
+253,1396,,Canada,North America,-98.59,58.85,-98.35,58.85,-98.35,58.85,,,-98.375,58.875,remapped
+254,1425,Wasekamio,Canada,North America,-108.76,56.74,-108.75,56.75,-108.75,56.75,"cat2, not on main river",,-108.725,56.725,remapped
+255,1442,,Canada,North America,-97.98,55.48,-97.85,55.55,-97.85,55.55,,G0245,-97.875,55.525,remapped
+256,1448,,Mexico,North America,-95.48,16.51,-95.45,16.45,-95.55,16.45,,G0961,-95.425,16.475,remapped
+257,1449,Adams,Canada,North America,-119.56,51.18,-119.75,50.95,-119.65,51.15,,,-119.725,50.975,remapped
+258,1451,,Canada,North America,-77.3,49.76,-77.15,49.85,-77.15,49.85,,G0404,-77.175,49.825,remapped
+259,1468,,Canada,North America,-90.77,53.93,-90.65,54.05,-90.75,53.95,,G0255,-90.675,54.075,remapped
+260,1477,Parent,Canada,North America,-77.11,48.6,-77.05,48.75,-77.05,48.65,,G0410,-77.025,48.725,remapped
+261,1485,,Canada,North America,-101.12,59.57,-101.15,59.75,-101.25,59.65,,,-101.025,59.625,remapped
+262,1489,Winefred,Canada,North America,-110.53,55.51,-110.55,55.55,-110.55,55.55,"cat2, not main river",,-110.525,55.575,remapped
+263,1493,Lake Apopka,United States,North America,-81.62,28.62,-81.65,28.65,-81.65,28.65,,,-81.675,28.675,remapped
+264,1496,,United States,North America,-89.44,40.96,-89.55,40.75,-89.55,40.75,this is wider channel rather than lake,,-89.525,40.775,remapped
+265,1513,,Canada,North America,-89.09,50.78,-89.05,50.75,-89.15,50.75,,G0363,-89.075,50.775,correct position - centered in pixel
+266,1545,,Canada,North America,-125.18,54.81,-124.95,54.85,-124.95,54.85,,,-124.975,54.825,remapped
+267,1565,Coeur d'Alene Lake,United States,North America,-116.84,47.5,-116.85,47.65,-116.75,47.65,"cat2, small dam on river downstream a lake",,-116.825,47.675,remapped
+268,1582,Nighthawk,Canada,North America,-80.98,48.44,-80.95,48.45,-80.95,48.45,,G0401,-80.975,48.525,remapped
+269,1586,,Canada,North America,-97.75,55.4,-97.65,55.45,-97.65,55.45,,G0245,-97.675,55.425,remapped
+270,1638,Istokpoga Lake,United States,North America,-81.28,27.37,-81.25,27.35,-81.25,27.35,not natural outlet-cannal,,-81.225,27.375,remapped
+271,1661,,Canada,North America,-87.17,50.84,-87.15,50.85,-87.15,50.85,,,-87.125,50.825,remapped
+272,1670,Petenwell Lake,United States,North America,-89.92,44.17,-90.05,44.05,-89.95,44.15,,G0640,-90.025,44.075,remapped
+273,1677,Jackson Lake,United States,North America,-110.67,43.92,-110.65,43.85,-110.65,43.85,,,-110.625,43.825,remapped
+274,1686,Chesuncook Lake,United States,North America,-69.33,45.98,-69.25,45.85,-69.35,45.95,,G0590,-69.275,45.925,remapped
+275,1713,,Canada,North America,-91.94,52.96,-91.95,53.05,-91.95,52.95,,,-91.925,53.025,remapped
+276,1714,Lake Poygan,United States,North America,-88.87,44.12,-88.55,44.05,-88.75,44.15,,,-88.625,44.075,remapped
+277,1732,,Canada,North America,-60.8,52.46,-61.15,52.55,-60.95,52.55,"cat2, station downstream",G0291,-61.125,52.575,remapped
+278,1742,,Canada,North America,-87.79,51.52,-87.95,51.55,-87.95,51.55,"cat2, not main river",,-87.925,51.525,remapped
+279,1758,,Canada,North America,-102.59,55.57,-102.55,55.45,-102.85,55.55,,,-102.575,55.475,remapped
+280,1786,,Canada,North America,-129.34,61.38,-129.25,61.15,-129.65,61.45,,G0156,-129.275,61.225,remapped
+281,1799,,Canada,North America,-95.43,62.55,-95.15,62.45,-95.15,62.45,,,-95.175,62.475,remapped
+282,7,Tanganyika,Zaire,Africa,29.46,-6.07,29.25,-5.95,29.25,-5.95,,,29.225,-5.925,remapped
+283,10,Malawi,Malawi,Africa,34.59,-11.96,35.25,-14.35,35.25,-14.35,,,35.225,-14.375,remapped
+284,16,Ladoga,Russia,Europe,31.39,60.84,31.05,59.95,31.05,59.95,,,31.075,59.975,remapped
+285,18,Onegh,Russia,Europe,35.35,61.9,35.35,61.05,35.35,61.45,,,35.525,60.975,remapped
+286,20,Titicaca,Peru,South America,-69.3,-15.92,-69.05,-16.55,-68.95,-16.45,"lake out: only10% outlet, 90% evap.",,-69.025,-16.525,remapped
+287,21,Nicaragua,Nicaragua,North America,-85.36,11.57,-84.85,11.15,-84.85,11.15,,G1054,-84.825,11.125,remapped
+288,29,Vanern,Sweden,Europe,13.22,58.88,12.55,58.45,12.45,58.45,,G0193,12.375,58.425,shift res 1 pxl North
+289,30,Albert,Uganda,Africa,30.91,1.67,31.45,2.35,31.35,2.15,,,31.425,2.325,remapped
+290,36,Mweru,Zambia,Africa,28.74,-9.01,28.85,-8.55,28.85,-8.55,,,28.875,-8.475,remapped
+291,50,Peipus,Russia,Europe,27.59,58.41,27.65,58.95,27.65,58.95,,,27.675,58.975,remapped
+292,55,T'ana,Ethiopia,Africa,37.31,11.95,37.35,11.65,37.35,11.65,,,37.375,11.675,remapped
+293,67,Kivu,Zaire,Africa,29.23,-2.04,28.85,-2.45,28.85,-2.45,dams,,28.875,-2.425,remapped
+294,69,Edward,Zaire,Africa,29.61,-0.39,29.55,-0.15,29.55,-0.25,,,29.625,-0.175,remapped
+295,73,,Brazil,South America,-55.14,-2.88,-54.95,-2.45,-54.95,-2.45,,,-54.925,-2.375,shift 1pxl west and then 1pxl north
+296,81,Bangweulu,Zambia,Africa,29.76,-11.19,29.75,-11.45,29.85,-11.35,,,29.825,-11.375,remapped
+297,90,Mai-Ndombe,Zaire,Africa,18.32,-2.14,18.25,-2.65,18.25,-2.65,,,18.225,-2.675,remapped
+298,94,Buenos Aires,Chile,South America,-72.5,-46.66,-72.85,-46.95,-72.85,-46.95,,,-72.775,-46.825,remapped
+299,95,Vattern,Sweden,Europe,14.57,58.33,14.95,58.55,14.95,58.55,lots of smaller lakes downstream,G0188,14.975,58.525,remapped
+300,99,Kyoga,Uganda,Africa,33.01,1.5,32.65,1.45,32.65,1.45,,,32.375,1.675,check with 325
+301,117,Argentina,Argentina,South America,-73.03,-50.33,-72.05,-50.25,-72.05,-50.25,lake from glacier melt,,-71.975,-50.225,lake gets waters also from north No pop
+302,119,Chishi,Zambia,Africa,29.72,-8.71,29.45,-8.95,29.55,-8.95,"Mweru Wantipa, cat2, unlike ldd doesnt flow toMweu",,29.525,-8.875,remapped
+303,133,Poopo,Bolivia,South America,-67.06,-18.81,-67.05,-19.15,-67.05,-19.05,"cat2, very rarle water outflows (when wet)",,-67.025,-19.125,remapped
+304,134,,Brazil,South America,-52.2,-2.16,-52.25,-1.65,-52.25,-1.85,,,-52.225,-1.675,remapped
+305,136,Vygozero,Russia,Europe,34.84,63.54,34.35,63.85,34.35,63.85,,"G1563, G0073",34.325,63.825,remapped
+306,157,Paijanne,Finland,Europe,25.49,61.71,25.65,61.45,25.55,61.65,,,25.575,61.275,remapped
+307,160,Beloye,Russia,Europe,37.64,60.18,37.95,60.05,37.95,60.05,,,37.975,60.075,remapped
+308,163,Granfjarden_MΣlaren,Sweden,,16.19,59.44,17.75,59.45,17.65,59.45,,G0175,17.725,59.425,remapped
+309,164,Puruvesi,Finland,Europe,29.02,61.77,28.55,61.75,28.55,61.75,,,28.525,61.775,remapped
+310,176,Managua,Nicaragua,North America,-86.35,12.32,-86.15,12.15,-86.25,12.25,sporadiaccly connected with l.nicaragua,,-86.125,12.225,remapped
+311,186,Topozero,Russia,Europe,32.09,65.62,32.55,65.45,32.55,65.45,"cat2, not populated area, many lakes",,31.425,65.775,remapped - river flows opposite direction on 1deg
+312,187,Orivesi,Finland,Europe,29.59,62.35,29.65,62.15,29.65,62.15,,,29.275,62.175,remapped
+313,195,Pjelinen,Finland,Europe,29.71,63.16,30.15,62.95,30.15,62.95,hydraulic structure at the outlet?,G0108,30.175,62.925,remapped
+314,214,Haukivesi,Finland,Europe,28.52,62.1,28.75,61.95,28.75,61.95,,,28.825,61.925,remapped
+315,219,Colhue Huapi,Argentina,South America,-68.76,-45.47,-68.75,-45.65,-68.75,-45.65,"cat2, now endorheic, once outflowed to the river",,-68.925,-45.475,remapped
+316,228,Segozero,Russia,Europe,33.76,63.32,33.95,63.35,33.85,63.35,,,33.925,63.375,remapped
+317,250,Manych oudilo,Russia,Europe,42.98,46.26,42.35,46.55,42.55,46.45,,,42.375,46.525,remapped
+318,255,Tumba,Zaire,Africa,17.98,-0.82,17.95,-0.65,17.95,-0.65,,,17.875,-0.675,remapped
+319,273,Pyaozero,Russia,Europe,30.98,66.07,31.15,65.95,31.15,65.95,"cat2, not populated area, many lakes",,31.075,66.275,difficultAreaBestMatch shift to 31_075 and 66_275
+320,277,Coari,Brazil,South America,-63.37,-4.25,-63.25,-4.05,-63.15,-4.05,,G1176,-63.225,-4.025,remapped
+321,283,,Brazil,South America,-56.26,-1.54,-55.95,-1.75,-56.15,-1.55,,,-55.925,-1.725,remapped
+322,295,Taupo,New Zealand,Oceania,175.9,-38.81,176.05,-38.75,176.05,-38.75,,,176.075,-38.725,remapped
+323,310,Balaton,Hungary,Europe,17.83,46.88,18.05,46.95,18.05,46.95,"cat2, not on major river, but big",G0560,18.075,46.875,improve its in wrong pxl (1 pixel south)
+324,314,Upemba,Zaire,Africa,26.4,-8.65,26.35,-8.65,26.25,-8.65,"not on main river, but somehow connected, cat2",,26.375,-8.625,remapped
+325,325,Kwania,Uganda,Africa,32.65,1.72,32.25,1.65,32.35,1.65,,,32.375,1.575,"check with 300 (2 rivers, 2 lakes)"
+326,327,Geneva,Switzerland,Europe,6.25,46.37,6.15,46.25,6.15,46.25,,G0554,6.175,46.275,remapped
+327,343,Nahuel Huapi,Argentina,South America,-71.52,-40.92,-71.15,-41.05,-71.45,-41.05,,,-71.175,-41.075,remapped
+328,346,Keitele,Finland,Europe,25.99,62.89,26.35,62.75,26.35,62.75,,,25.775,62.675,remapped
+329,352,Bodensee,Germany,Europe,9.28,47.65,8.95,47.65,9.25,47.65,,,8.975,47.675,remapped
+330,369,Nasijarvi,Finland,Europe,23.97,61.88,23.75,61.55,23.75,61.55,,,23.575,61.475,remapped
+331,387,Hjalmaren,Sweden,Europe,15.86,59.23,15.85,59.25,15.85,59.25,,,16.275,59.275,remapped
+332,393,Storsjon,Sweden,Europe,14.41,63.09,14.45,63.25,14.35,63.25,,,14.475,63.275,remapped
+333,416,Ranco,Chile,South America,-72.48,-40.23,-72.55,-40.25,-72.55,-40.25,,,-72.525,-40.275,remapped
+334,422,Onkivesi,Finland,Europe,27.77,62.64,27.95,62.35,27.85,62.45,,,27.875,62.828,shift to 27_875 and 62_828 check station G0113
+335,427,Vozhe,Russia,Europe,39.1,60.57,38.95,60.75,38.95,60.75,"cat2, upstream of other lake",,38.925,60.725,remapped
+336,434,Kubenskoye,Russia,Europe,39.45,59.64,39.65,59.45,39.35,59.65,"ldd incorrect, river should flow E not W",,39.725,59.475,remapped
+337,440,,Brazil,South America,-57.22,-3.08,-57.05,-2.85,-57.05,-2.85,,,-56.975,-2.825,remapped
+338,446,,Brazil,South America,-57.56,-3.91,-57.75,-3.35,-57.55,-3.95,,,-57.725,-3.425,remapped
+339,448,Musters,Argentina,South America,-69.23,-45.41,-69.15,-45.55,-69.15,-45.55,"cat2, now endorheic, once outflowed to the river",,-69.175,-45.525,shift 1 pixel north
+340,455,,Sudan,Africa,32.22,14.73,32.45,15.25,32.45,15.15,,,32.475,15.225,remapped
+341,472,Sredneye Kuyto,Russia,Europe,31.59,65.02,31.75,64.95,31.75,64.95,"cat2, not populated, many lakes",G1562,31.925,64.875,remapped
+342,476,,Brazil,South America,-55.38,-2.24,-55.15,-2.25,-55.15,-2.25,in reality some of lake inflow comes from river?,,-55.225,-2.225,remapped
+343,481,Neagh,United Kingdom,Europe,-6.42,54.62,-6.45,54.75,-6.45,54.65,,,-6.475,54.725,remapped
+344,499,Pool Malebo,Zaire,Africa,15.52,-4.22,15.35,-4.25,15.45,-4.35,,,15.325,-4.275,remapped
+345,505,Garda,Italy,Europe,10.7,45.67,10.65,45.45,10.65,45.55,,,10.675,45.475,remapped
+346,513,,Brazil,South America,-58.25,-2.92,-58.15,-2.85,-58.25,-2.85,"cat2, not dorectly connected to the river",,-58.175,-2.825,shift 1pxl north and then 1 pxl west
+347,522,Vodlozero,Russia,Europe,36.92,62.32,36.75,62.25,36.85,62.35,,,37.075,62.225,remapped
+348,525,Niangay,Mali,Africa,-3,15.85,-3.15,15.85,-3.05,15.85,"cat2, not sure if lake fedds river or oposite",G0970,-3.125,15.825,see question in efcc2254
+349,533,Lacha,Russia,Europe,38.77,61.31,38.85,61.45,38.75,61.25,,,38.875,61.425,remapped
+350,560,Biarini,Brazil,South America,-63.29,-3.51,-63.05,-3.55,-63.25,-3.55,,,-63.075,-3.575,remapped
+351,586,Malombe,Malawi,Africa,35.26,-14.64,35.25,-14.75,35.25,-14.75,,,35.225,-14.725,remapped
+352,588,Cochrane,Chile,South America,-71.95,-47.32,-72.45,-47.25,-72.45,-47.25,,,-72.475,-47.225,remapped
+353,594,Tornetrask,Sweden,Europe,19.34,68.34,19.95,68.25,19.95,68.25,,,19.925,68.225,remapped
+354,595,Wakatipu,New Zealand,Oceania,168.4,-44.98,168.65,-45.05,168.65,-45.05,,,168.675,-45.025,remapped
+355,599,,Argentina,South America,-57.11,-28.44,-57.25,-28.45,-57.15,-28.35,"once it was one big lake, instead of 3?",,-57.125,-28.425,remapped
+356,613,Retenue de la Lufira,Zaire,Africa,27.02,-10.9,27.15,-10.85,27.05,-10.85,real drainage direction? not sure...,,27.175,-10.825,remapped
+357,654,Siljan,Sweden,Europe,14.8,60.86,14.95,60.75,14.85,60.85,"cat2, lots of smaller lakes downstream",,14.975,60.725,remapped
+358,674,Kisale,Zaire,Africa,26.49,-8.28,26.55,-8.25,26.45,-8.25,"not closed, on main river",,26.525,-8.225,remapped
+359,679,Vortis-Jarv,Estonia,Europe,26.04,58.22,26.15,58.35,26.15,58.35,cat2,,26.125,58.375,remapped
+360,683,,Brazil,South America,-54.99,-1.99,-54.95,-1.95,-55.05,-1.95,"in reality, some lake inflow comes from river?",,-54.975,-1.975,correct position - centered in pixel
+361,687,George,Uganda,Africa,30.17,0,30.15,-0.05,30.15,-0.05,,,30.175,-0.075,remapped
+362,698,,Brazil,South America,-56.81,-2.96,-56.75,-2.85,-56.75,-2.85,,,-56.775,-2.875,remapped
+363,707,Nzilo,Zaire,Africa,25.72,-10.66,25.45,-10.55,25.65,-10.55,,,25.475,-10.525,remapped
+364,710,Uddjaur,Sweden,Europe,17.82,65.98,17.85,65.95,17.85,65.95,,,17.875,65.925,remapped
+365,715,Suvasvesi,Finland,Europe,28.33,62.62,28.15,62.75,28.15,62.75,,,28.325,62.625,correct position
+366,731,Zapatosa,Colombia,South America,-73.83,9.14,-73.95,9.05,-73.85,9.05,,,-73.925,9.025,remapped
+367,741,Onangue,Gabon,Africa,10.05,-1.01,10.05,-0.95,10.05,-0.95,"keep but on side, most of flow passes the lake",,10.025,-0.875,remapped
+368,758,Hornavan,Sweden,Europe,17.59,66.24,17.75,66.15,17.75,66.15,"cat2, upstream of big lake, lake mess",,17.775,66.125,remapped
+369,785,Debo,Mali,Africa,-4.16,15.3,-4.25,15.35,-4.25,15.25,on the main channel,G0979,-4.225,15.375,remapped
+370,820,,Algeria,Africa,-2.68,30.92,-2.65,30.85,-2.65,30.85,dry,,-2.625,30.825,remapped
+371,826,Badajos,Brazil,South America,-62.74,-3.29,-62.75,-3.35,-62.95,-3.25,,,-62.725,-3.325,remapped
+372,831,Rupanco,Chile,South America,-72.44,-40.83,-72.45,-40.85,-72.45,-40.85,"cat2, close to sea, not poplulated",,-72.475,-40.825,remapped
+373,832,Wanaka,New Zealand,Oceania,169.14,-44.43,169.05,-44.55,169.15,-44.65,,,169.125,-44.675,remapped
+374,834,Hedesundefj,Sweden,Europe,17.14,60.33,17.35,60.45,17.35,60.45,,G0153,17.325,60.425,remapped
+375,835,Grande de Manacapuru,Brazil,South America,-61.47,-3.03,-61.25,-3.05,-61.45,-3.05,,,-61.275,-3.025,remapped
+376,838,,Russia,Europe,31.88,64.48,31.95,64.45,31.95,64.45,,,31.925,64.475,remapped
+377,840,Yalpug,Ukraine,Europe,28.63,45.48,28.65,45.35,28.65,45.35,,,28.725,45.325,remapped
+378,861,Lovozero,Russia,Europe,35.22,67.9,35.15,67.95,35.15,67.95,"cat2, reservoir downstream",,35.225,67.975,remapped
+379,875,,Russia,Europe,41.09,47.06,40.75,47.15,41.35,46.95,some kind of hydraulic structure,,40.775,47.125,remapped
+380,878,,Brazil,South America,-61.05,-3.11,-60.85,-3.15,-60.75,-3.25,,,-60.925,-3.125,remapped
+381,886,Juojarvi,Finland,Europe,28.69,62.68,28.65,62.65,28.65,62.65,"cat2, many lakes around",,28.675,62.625,remapped
+382,888,,Finland,Europe,27.37,63.03,27.65,62.95,27.65,62.95,,,27.675,62.975,remapped
+383,889,Amana,Brazil,South America,-64.68,-2.56,-64.55,-2.75,-64.55,-2.75,,,-64.575,-2.725,remapped
+384,893,Neuchatel,Switzerland,Europe,6.84,46.9,6.95,46.95,6.95,46.95,,,6.975,46.975,remapped
+385,896,Mamia,Brazil,South America,-63.05,-4.25,-63.05,-4.15,-63.05,-4.15,,,-63.025,-4.125,remapped
+386,897,Femunden,Norway,Europe,11.85,62.17,11.75,62.05,11.85,62.15,,,11.925,61.925,remapped
+387,901,Virmasvesi,Finland,Europe,26.87,62.83,26.75,62.75,26.75,62.75,,,26.775,62.725,remapped
+388,915,,Brazil,South America,-60.79,-3.33,-60.75,-3.25,-60.85,-3.35,,,-60.675,-3.275,correct position - centered in pixel
+389,917,Zimbambo,Zaire,Africa,26.88,-8.11,26.85,-8.15,26.85,-8.05,"not on main river, in real drains to Kabamba, cat2",,26.925,-8.025,LddOkGoesTo Kabamba Improve to 26_925 and -8_025
+390,919,,Russia,Europe,30.68,65.06,30.75,65.05,30.75,65.05,"cat2, not populated, many lakes",G1562,30.775,65.075,remapped
+391,928,Konnevesi,Finland,Europe,26.54,62.69,26.35,62.65,26.65,62.55,,,26.325,62.625,remapped
+392,941,,Brazil,South America,-56.72,-2.07,-56.75,-2.15,-56.75,-2.15,,,-56.775,-2.175,correct position
+393,948,Maggiore,Italy,Europe,8.63,45.96,8.55,45.75,8.65,45.95,,G0570,8.575,45.725,remapped
+394,953,,Brazil,South America,-56.63,-2.26,-56.45,-2.25,-56.55,-2.25,in reality some of lake inflow comes from river?,,-56.475,-2.175,shift 1 pxl west
+395,961,Storavan,Sweden,Europe,18.21,65.74,18.15,65.65,18.35,65.65,,,18.125,65.675,remapped
+396,1002,Tekapo,New Zealand,Oceania,170.53,-43.75,170.45,-43.95,170.55,-43.85,"cat2, some hyd. structure, reservoir downsteam",,170.475,-43.975,remapped
+397,1006,,Argentina,South America,-56.96,-28.23,-56.95,-28.25,-56.95,-28.25,"once it was one big lake, instead of 3?",,-56.975,-28.225,remapped
+398,1023,Kianta,Finland,Europe,29.12,65.03,29.05,64.95,29.05,64.95,"cat2, big reservoir downstream",,28.975,64.875,remapped
+399,1028,Bolmen,Sweden,Europe,13.67,56.92,13.65,56.75,13.75,57.05,"cat2, not on major river",,13.675,56.775,remapped
+400,1030,Langelmavesi,Finland,Europe,24.47,61.57,24.35,61.55,24.35,61.55,"cat2, keep for testing",,24.325,61.525,remapped
+401,1034,,Brazil,South America,-58.68,-4.17,-58.75,-4.05,-58.75,-4.05,,,-58.775,-3.975,in glwd shp lake much longer
+402,1042,Asnen,Sweden,Europe,14.72,56.7,14.75,56.55,14.65,56.65,"cat2, not on major river",,14.725,56.525,remapped
+403,1046,Kabamba,Zaire,Africa,27.04,-7.9,27.05,-7.95,27.05,-7.95,"not on main river, cat2",,27.025,-7.875,remapped
+404,1057,Corrib,Ireland,Europe,-9.17,53.42,-9.15,53.45,-9.25,53.45,"close to sea, but populated area",,-9.075,53.325,remapped
+405,1080,Bisina,Uganda,Africa,34.03,1.66,33.85,1.65,33.95,1.65,,,33.875,1.675,remapped
+406,1095,Randijaur,Sweden,Europe,19.06,66.8,19.35,66.75,19.15,66.75,"cat2, some reservoir downstream",G0056,19.375,66.675,remapped
+407,1109,Villarrica,Chile,South America,-72.09,-39.26,-72.15,-39.25,-72.15,-39.25,,,-72.175,-39.275,remapped
+408,1111,,Bolivia,South America,-67.1,-18.11,-67.15,-18.15,-67.05,-18.05,,,-67.075,-18.125,remapped
+409,1115,Neusiedl,Austria,Europe,16.78,47.8,16.85,47.65,16.75,47.75,"cat2, not on major river",,16.825,47.675,remapped
+410,1134,Kampolombo,Zambia,Africa,29.67,-11.67,29.75,-11.75,29.75,-11.55,,,29.775,-11.575,remapped
+411,1137,Aiapua,Brazil,South America,-62.13,-4.46,-62.15,-4.45,-62.15,-4.45,"cat2, not sure if outflow goes to main river",,-62.125,-4.475,correct position - centered in pixel
+412,1159,,Sudan,Africa,30.46,9.16,30.45,9.15,30.45,9.15,"cat2, maybe seasonal, fed by river?",,30.375,9.375,remapped
+413,1195,Blanc,Chile,South America,-69.04,-54.07,-68.95,-53.95,-69.05,-54.05,,,-68.975,-53.975,remapped
+414,1197,,Russia,Europe,33.11,57.2,33.15,57.15,33.05,57.15,,,33.175,57.175,remapped
+415,1201,Vanajanselka,Finland,Europe,24.09,61.18,24.15,61.15,24.15,61.15,"cat2, lake mess, goes straight to river",,24.075,61.175,correct position - centered in pixel
+416,1207,Puyehue,Chile,South America,-72.47,-40.68,-72.55,-40.65,-72.55,-40.65,"cat2, close to sea, not poplulated",,-72.575,-40.675,remapped
+417,1241,Tefe,Brazil,South America,-64.75,-3.45,-64.75,-3.35,-64.75,-3.35,,,-64.775,-3.325,remapped
+418,1246,Lappajarvi,Finland,Europe,23.67,63.15,23.65,63.25,23.65,63.25,"cat2, not populated",,23.675,63.225,remapped
+419,1250,,Russia,Europe,38.51,59.65,38.45,59.55,38.55,59.65,,,38.475,59.575,remapped
+420,1285,Stroms Vattudal,Sweden,Europe,15.36,64.02,15.55,63.85,15.55,63.85,"cat2, lots of smaller lakes, reservoirs downstream",,15.525,63.875,remapped
+421,1313,,New Zealand,Oceania,170.86,-43.54,171.05,-43.75,170.95,-43.65,natural outlet,,171.125,-43.725,remapped
+422,1314,,Brazil,South America,-58.92,-4.24,-58.95,-4.15,-58.95,-4.15,,,-58.875,-3.975,in glwd shp lake much longer
+423,1315,Tanda,Mali,Africa,-4.77,15.71,-4.65,15.75,-4.65,15.75,"cat2, not sure if lake fedds river or oposite",,-4.825,15.725,remapped - river flows in opposite direction on 1deg
+424,1355,General Vintter,Argentina,South America,-71.53,-43.93,-71.45,-43.95,-71.55,-43.95,,,-71.475,-43.925,remapped
+425,1392,Tyrifjorden,Norway,Europe,10.17,60.02,10.05,60.05,10.15,60.05,,G0161,10.075,60.025,remapped
+426,1409,,Australia,Australia,142.53,-32.27,142.45,-32.25,142.45,-32.25,"cat3, dry area",,142.525,-32.275,correct position
+427,1414,,Brazil,South America,-56.55,-1.33,-56.45,-1.35,-56.45,-1.35,,,-56.475,-1.325,remapped
+428,1420,Sommen,Sweden,Europe,15.19,58.01,15.05,58.05,15.05,58.05,"cat2, not on major river",,15.025,58.075,remapped
+429,1423,Skagern,Sweden,Europe,14.25,58.99,14.35,59.05,14.35,59.05,"cat 2, just upsteam of a big lake",,14.175,58.975,remapped
+430,1438,Randsfjorden,Norway,Europe,10.3,60.53,10.35,60.35,10.35,60.65,,,10.375,60.275,remapped
+431,1457,,Brazil,South America,-57.93,-3.69,-57.95,-3.55,-57.95,-3.65,,,-57.975,-3.575,remapped
+432,1470,Guajaro,Colombia,South America,-75.03,10.52,-75.05,10.55,-75.05,10.55,"cat2, close to sea",,-75.175,10.275,correct position
+433,1519,Derg,Ireland,Europe,-8.33,52.93,-8.45,52.85,-8.45,52.85,,,-8.475,52.825,remapped
+434,1526,Erne,United Kingdom,Europe,-7.69,54.42,-7.95,54.45,-7.75,54.45,"close to sea, but some towns downsteam, cat2",,-7.925,54.475,remapped
+435,1537,Victoria,Australia,Australia,141.3,-34.02,141.25,-34.05,141.25,-33.95,"cat2, dry area, small upstream",,141.275,-34.075,remapped
+436,1583,Calafquem,Chile,South America,-72.15,-39.53,-72.15,-39.55,-72.05,-39.55,"cat2, close to sea, not populated",,-72.175,-39.575,remapped
+437,1588,,Russia,Europe,38.24,62.06,38.25,62.05,38.25,62.05,,G0095,38.375,62.075,remapped
+438,1622,,Finland,Europe,24.14,61.35,24.15,61.35,24.15,61.35,"cat2, goes straight to river",,24.075,61.275,remapped
+439,1632,,Russia,Europe,28.15,59.28,28.15,59.35,28.15,59.25,,,28.175,59.325,remapped
+440,1634,Ranguipulli,Chile,South America,-72.22,-39.73,-72.15,-39.85,-72.25,-39.65,"cat2, close to sea, not populated",,-72.125,-39.825,remapped
+441,1645,Laj,Chile,South America,-71.31,-37.34,-71.35,-37.35,-71.35,-37.35,,,-71.325,-37.375,remapped
+442,1650,Oro,Mali,Africa,-3.88,16.22,-3.85,16.15,-3.85,16.25,"cat2, not sure if lake fedds river or oposite",G0968,-3.825,16.175,remapped
+443,1660,,Finland,Europe,28.06,63.32,28.15,63.25,28.15,63.25,"cat2, many lakes around",,28.225,63.225,remapped
+444,1669,,Brazil,South America,-61.54,-3.5,-61.45,-3.55,-61.65,-3.55,,,-61.475,-3.525,remapped
+445,1679,Ekoln,Sweden,Europe,17.65,59.64,17.65,59.55,17.65,59.75,,,17.675,59.625,remapped
+446,1694,Ree,Ireland,Europe,-7.99,53.56,-7.95,53.45,-8.05,53.65,,,-7.975,53.475,remapped
+447,1718,Virihaure,Sweden,Europe,16.55,67.37,16.75,67.45,16.55,67.35,"cat2, big reservoir downstream",,16.525,67.425,remapped
+448,1733,Kitangiri,Tanzania,Africa,34.3,-4.09,34.35,-4.05,34.35,-4.05,,,34.375,-4.025,remapped
+449,1772,,Russia,Europe,34.47,55.98,34.55,56.15,34.35,55.85,"cat2, not natural",,34.525,56.125,remapped
+450,1774,Kabele,Zaire,Africa,25.97,-8.94,25.95,-8.95,25.95,-8.95,"not on main river, but somehow connected, cat2",,26.025,-8.925,remapped
+451,1788,,Finland,Europe,27.9,64.2,28.05,64.15,28.05,64.15,"cat2, big reservoir downsteam",,27.875,64.225,remapped
+452,1800,,Argentina,South America,-58.14,-28.71,-58.25,-28.75,-58.15,-28.75,"once it was one big lake, instead of 3?",,-58.225,-28.725,remapped
+453,1663,Chengdong,,,116.36,32.27,116.45,32.35,0,0,,,116.425,32.375,remapped
+454,1904,Semajang+Melintang,,Asia,0,0,116.55,-0.25,-0.25,116.5,"added manually, combined with lake upstream",,116.475,-0.225,remapped
+455,1781,Lucerne,,,0,0,8.35,47.05,0,0,,,8.325,47.075,remapped
+456,2152,Oyeren,Norway,,0,0,11.15,59.85,0,0,,G0170,11.225,59.675,remapped
+457,1801,Kabwe,,,0,0,25.95,-9.25,0,0,"not on main river, but somehow connected, cat2",,26.025,-9.125,remapped - not on main channel - see notes
+458,1701,Iro,,,0,0,19.35,10.05,0,0,"cat2, not on main river",,19.375,10.075,remapped
+459,2707,Beechy Lake_probably,,,0,0,-106.35,65.25,0,0,smaller than 100km2 but station below,G0068,-106.375,65.225,remapped
+460,333,Wapata,,,0,0,-105.65,58.85,0,0,"not in GLWD but there is a lake in google maps and there is GloFAS station downstream of this lake, area/reported inflow approximated",,-105.775,58.875,remapped
+461,1231,,,,0,0,-97.55,58.85,0,0,"added manually,on main river",,-97.625,58.825,remapped - Shethanei Lake Canada
+462,2801,,,,0,0,-98.45,57.95,0,0,"added manually,<100km2 but station below",,-98.425,58.025,remapped - Chipewyan Lake Canada
+463,,Victoria,,,,,33.175,0.425,,,,,33.175,0.425,
