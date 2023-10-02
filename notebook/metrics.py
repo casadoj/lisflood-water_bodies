@@ -7,23 +7,28 @@ from typing import Union, List, Dict
 # crear logger
 FRND_logger = logging.getLogger('metricas_rendimiento')
 
-
-def NSE(observado, simulado):
-    """Calcula el coeficiente de eficiencia de Nash-Sutcliffe.
+def NSE(obs: pd.Series, sim: pd.Series) -> float:
+    """It computes the Nash-Sutcliffe efficiency coefficient.
     
-    Parámetros:
+    Parameters:
     -----------
-    observado:   series. Serie observada
-    simulado:    series. Serie simulada"""
+    obs:   pd.Series.
+        Observed time series
+    sim:   pd.Series
+        Simulated time series
+    
+    Returns:
+    -------
+    NSE: float
+        Nash-Sutcliffe efficiency coefficient
+    """
     
     # Eliminar pasos sin dato
-    data = pd.concat((observado, simulado), axis=1)
+    data = pd.concat((obs, sim), axis=1)
     data.columns = ['obs', 'sim']
     data.dropna(axis=0, how='any', inplace=True)
     # Para la función si no hay datos
-    if data.shape[0] == 0:
-        FRND_logger.error('No hay valores')
-        return
+    assert data.shape[0] > 0, "ERROR. No indices match between the observed and the simulated series."
     # Calcular NSE
     nse = 1 - sum((data.obs - data.sim)**2) / sum((data.obs - data.obs.mean())**2)
     
@@ -67,34 +72,42 @@ def sesgo(observado, simulado):
     data.columns = ['obs', 'sim']
     data.dropna(axis=0, how='any', inplace=True)
     # Para la función si no hay datos
-    if data.shape[0] == 0:
-        FRND_logger.error('No hay valores')
-        return 
+    assert data.shape[0] > 0, "ERROR. No indices match between the observed and the simulated series."
     # Calcular el sesgo    
     return (data.sim.sum() - data.obs.sum()) / data.obs.sum() * 100
 
   
-def KGE(observado, simulado, sa=1, sb=1, sr=1):
-    """Calcula el coeficiente de eficiencia de Kling-Gupta.
+def KGE(obs: pd.Series, sim: pd.Series, sa: float = 1, sb: float = 1, sr: float = 1) -> List[float]:
+    """It computes the Kling-Gupta efficiency coefficient.
     
-    Parámetros:
+    Parameters:
     -----------
-    observado:   series. Serie observada
-    simulado:    series. Serie simulada
-    sa, sb, sr: integer. Factores de escala de los tres términos del KGE: alpha, beta y coeficiente de correlación, respectivamente
+    obs:   pd.Series.
+        Observed time series
+    sim:   pd.Series
+        Simulated time series
+    sa, sb, sr: float
+        Scale factors of the three terms of the modified KGE: ratio of the coefficient of variation (alpha), bias (beta), and coefficient of correlation (r), respectively
     
-    Salida:
+    Returns:
     -------
-    KGE:        float. Eficienica de Kling-Gupta"""
+    KGE: float
+        Modified KGE
+    alpha: float
+        Ratio of the standard deviations
+    beta: float
+        Bias, i.e., ratio of the mean values
+    r: float
+        Coefficient of correlation
+    """
     
     # Eliminar pasos sin dato
-    data = pd.concat((observado, simulado), axis=1)
+    data = pd.concat((obs, sim), axis=1)
     data.columns = ['obs', 'sim']
     data.dropna(axis=0, how='any', inplace=True)
     # Para la función si no hay datos
-    if data.shape[0] == 0:
-        return
-
+    assert data.shape[0] > 0, "ERROR. No indices match between the observed and the simulated series."
+    
     # calcular cada uno de los términos del KGE
     alpha = data.sim.std() / data.obs.std()
     beta = data.sim.mean() / data.obs.mean()
@@ -137,8 +150,7 @@ def KGEmod(obs: pd.Series, sim: pd.Series, sa: float = 1, sb: float = 1, sr: flo
     data.columns = ['obs', 'sim']
     data.dropna(axis=0, how='any', inplace=True)
     # Para la función si no hay datos
-    if data.shape[0] == 0:
-        return
+    assert data.shape[0] > 0, "ERROR. No indices match between the observed and the simulated series."
 
     # calcular cada uno de los términos del KGE
     alpha = (data.sim.std() / data.sim.mean()) / (data.obs.std() / data.obs.mean())
@@ -204,20 +216,37 @@ def logBiasNSE(obs, sim):
 
 
 
-def ECDF(serie, plot=True, **kwargs):
-    """Calcula (y dibuja) la función de distribución empírica (empirical cumulative distribution function, ECDF) de una serie
+def ECDF(serie: pd.Series, plot: bool = True, **kwargs) -> pd.Series:
+    """it computes the empirical cumulative distribution function (ECDF) of the input data. If specified, the ECDF is plotted.
 
-    Parámetros:
+    Parametres:
     -----------
-    serie:     pd.Series. Serie de la que se quiere calcular la ECDF
-    plot:      boolean. Si se quiere generar un gráfico de la ECDF
+    serie:     pd.Series. 
+        Input data
+    plot:      bool
+        Whether to plot or not the ECMWF
 
-    Salida:
+    Output:
     -------
-    ecdf:      pd.Series. Serie que contiene la ECDF. El íncide es la probabilidad de no excedencia y los valores los mismos de la serie de entrada, pero ordenados ascendentemente
+    ecdf:      pd.Series
+        The ECDF, where the index represents the non-exceedance probability and the values are those of the input data in ascending order
+        
+    Keyword arguments:
+    ------------------
+    lw:        float
+        Line width for the line plot
+    c:         str
+        Line colour for the line plot
+    xlim:      Tuple (2,)
+        Limits of the X axis in the plot
+    ylim:      Tuple (2,)
+        Limits of the Y axis in the plot
+    ylabel:    str
+        Lable of the Y axis in the plot
+    title:     str
+        Text to be added as the plot title.
     """
 
-    # ordenar valores
     ecdf = pd.Series(data=serie.sort_values().values,
                      index=np.arange(1, serie.shape[0] + 1) / serie.count(),
                      name='ECDF')

@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import geopandas as gpd
 import cartopy.feature as cfeature
 import cartopy.crs as ccrs
-from typing import Union, List, Dict
+from typing import Union, List, Dict, Tuple
 from pathlib import Path
 
 
@@ -122,3 +122,36 @@ def plot_resops(storage: pd.Series = None, elevation: pd.Series = None, inflow: 
     
     if save is not None:
         plt.savefig(save, dpi=300, bbox_inches='tight')
+        
+        
+
+def decomposition(data: Union[pd.DataFrame, pd.Series]) -> Tuple[Union[pd.DataFrame, pd.Series], Union[pd.DataFrame, pd.Series], Union[pd.DataFrame, pd.Series]]:
+    """It decomposes the timeseries in three components: annual average, seasonality and residuals.
+    
+    Parameters:
+    -----------
+    data: Union[pd.DataFrame, pd.Series]
+        Time series to be decomposed
+        
+    Returns:
+    --------
+    annual: Union[pd.DataFrame, pd.Series]
+        Timeseries of mean annual values. The length of the timeseries will be the number of years in "data"
+    seasonality: Union[pd.DataFrame, pd.Series]
+        Timeseries of montly mean values after removal of the annual trend. The length of the timeseries will be alwas 12, the months
+    residuals: Union[pd.DataFrame, pd.Series]
+        Timeseries of residuals, that is, the difference of the original "data" and the annual and seosonal timeseris. The length of the timeseries is the same as the input "data"
+    """
+    
+    # annual average storage
+    annual = data.resample('Y').mean()
+    annual.index = annual.index.year
+
+    # seasonal variability
+    detrended = data - data.resample('Y').transform('mean')
+    seasonality = detrended.groupby(detrended.index.month).mean()
+
+    # residual
+    residuals = detrended - detrended.groupby(detrended.index.month).transform('mean')
+    
+    return annual, seasonality, residuals
