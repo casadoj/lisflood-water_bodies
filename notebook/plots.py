@@ -106,7 +106,7 @@ def plot_resops(storage: pd.Series = None, elevation: pd.Series = None, inflow: 
         
         
         
-def plot_decomposition(obs: Decomposition, sim: Decomposition, id: int, save: Union[str, Path] = None, **kwargs):
+def plot_decomposition(obs: Decomposition, sim: Decomposition, id: int, lims: List[float] = [.1, .67, .97], save: Union[str, Path] = None, **kwargs):
     """It creates a figure that compares the decomposition of the observed and simulated time series. The figure is composed of 4 plots: original time series, trend, seasonality and residuals. Each plot includes the performance in terms of modified KGE and its components.
     
     Parameters:
@@ -117,6 +117,8 @@ def plot_decomposition(obs: Decomposition, sim: Decomposition, id: int, save: Un
         The result of decomposing the simulated timeseries with the function utils.decompose_timeseries
     id:        int
         Identification number of the station to be plotted
+    lims:      List[float]
+        Values of the conservative (clim), normal (nlim) and flood (flim) limits in the LISFLOOD parameterization. If not provided, it takes the default values in GloFAS
     save:      bool
         Whether to save of not the figure. By default is None and the figure is note saved
         
@@ -157,7 +159,7 @@ def plot_decomposition(obs: Decomposition, sim: Decomposition, id: int, save: Un
         
         # settings
         if comp in ['original', 'trend']:
-            for lim in [.1, .67, .97]:
+            for lim in lims:
                 ax.axvline(lim, ls=':', c='k', lw=.5)
             ax.set(xlim=(-.02, 1.02),
                    ylim=(obs_comp.index.max(), obs_comp.index.min()))
