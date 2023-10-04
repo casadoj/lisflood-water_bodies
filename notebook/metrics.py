@@ -254,7 +254,7 @@ def ECDF(serie: pd.Series, plot: bool = True, **kwargs) -> pd.Series:
     if plot:
         fig, ax = plt.subplots(figsize=(5, 5))
         ax.plot(ecdf.index, ecdf, lw=kwargs.get('lw', 1), c=kwargs.get('c', 'steelblue'))
-        ax.set(ylim=kwargs.get('xlim', (-1.02, 1.02)), ylabel=kwargs.get('ylabel', serie.name),
+        ax.set(ylim=kwargs.get('ylim', (-1.02, 1.02)), ylabel=kwargs.get('ylabel', serie.name),
                xlim=(-.02, 1.02), xlabel='ECDF (-)',
                title=kwargs.get('title', ''));
 

@@ -54,79 +54,53 @@ def select_reservoirs(df: pd.DataFrame, sort: str, storage: str, target: float, 
         ax.add_artist(legend2);
     
     return df_sel
-
-
-
-def plot_resops(storage: pd.Series = None, elevation: pd.Series = None, inflow: pd.Series = None, outflow: pd.Series = None, capacity: Union[List[float], float] = None,
-                   save: Union[str, Path] = None, **kwargs):
-    """It creates a plot with two graphs that shows the reservoir time series. The first graph is the storage-elevation curve of the reservoir (if both storage and elevation time series are available). The second graph is the time series of storage, inflow and outflow.
-    
-    Parameters:
-    -----------
-    storage: pd.Series
-        Time series of reservoir storage (hm3)
-    elevation: pd.Series
-        Time series of reservoir level (masl)
-    inflow: pd.Series
-        Time series of reservoir inflow (m3/s)
-    outflow: pd.Series
-        Time series of reservoir outflow (m3/s)
-    capacity: Union[List[float], float]
-        Values of storage capacity that will be plotted as horizontal lines in the time series plot
-    save: Union[str, Path]
-        File name where the plot will be saved. By default is None and the plot is not saved.
-    kwargs:
-        figsize: tuple
-            Size of the plot
-        xlim: tuple
-            Limits of the X axis (time) in the time series plot
-        ylim: tuple
-            Limites of the Y axis (storage) in both plots. They share the Y axis
-        title: str
-            If given, title of the plot
-    """
-    
-    # Create the figure and define the grid specification
-    fig = plt.figure(figsize=kwargs.get('figsize', (20, 6)))
-    gs = gridspec.GridSpec(1, 3)
-
-    # Create the first graph in the left-most third
-    ax1 = plt.subplot(gs[0])
-    if isinstance(elevation, pd.Series) and isinstance(storage, pd.Series):
-        ax1.scatter(elevation, storage, s=1, c= df.index, cmap='Greys')
-    ax1.set(xlabel='elevation (m)',
-            ylabel='storage (hm3)')
-
-    # Create the second graph in the remaining area
-    ax2 = plt.subplot(gs[1:], sharey=ax1)
-    if isinstance(storage, pd.Series):
-        ax2.fill_between(storage.index, storage, color='lightgray', alpha=.5, label='storage')
-    if capacity is not None:
-        if isinstance(capacity, float):
-            capacity = [capacity]
-        for ls, value in zip(['-', '--', ':'], capacity):
-            ax2.axhline(value, lw=.8, c='k', ls=ls)
-    ax2.set(xlim=kwargs.get('xlim', (storage.index[0], storage.index[-1])),
-            ylim=(0, None))
-
-    ax2_ = ax2.twinx()
-    if isinstance(inflow, pd.Series):
-        ax2_.plot(inflow, lw='.8', c='steelblue', label='inflow')
-    if isinstance(outflow, pd.Series):
-        ax2_.plot(outflow, lw='.8', c='indianred', label='outflow')
-    ax2_.set(ylim=(0, None),
-             ylabel='flow (m3/s)');
-    
-    fig.legend(ncol=3, loc=8, frameon=False, bbox_to_anchor=[.5, .0, .3, .1])
-    fig.text(.5, .925, kwargs.get('title', None), fontsize=15, horizontalalignment='center')
-    
-    if save is not None:
-        plt.savefig(save, dpi=300, bbox_inches='tight')
         
         
 
-def decomposition(data: Union[pd.DataFrame, pd.Series]) -> Tuple[Union[pd.DataFrame, pd.Series], Union[pd.DataFrame, pd.Series], Union[pd.DataFrame, pd.Series]]:
-    """It decomposes the timeseries in three components: annual average, seasonality and residuals.
+# def decomposition(data: Union[pd.DataFrame, pd.Series]) -> Tuple[Union[pd.DataFrame, pd.Series], Union[pd.DataFrame, pd.Series], Union[pd.DataFrame, pd.Series]]:
+#     """It decomposes the timeseries in three components: annual average, seasonality and residuals.
+    
+#     Parameters:
+#     -----------
+#     data: Union[pd.DataFrame, pd.Series]
+#         Time series to be decomposed
+        
+#     Returns:
+#     --------
+#     annual: Union[pd.DataFrame, pd.Series]
+#         Timeseries of mean annual values. The length of the timeseries will be the number of years in "data"
+#     seasonality: Union[pd.DataFrame, pd.Series]
+#         Timeseries of montly mean values after removal of the annual trend. The length of the timeseries will be alwas 12, the months
+#     residuals: Union[pd.DataFrame, pd.Series]
+#         Timeseries of residuals, that is, the difference of the original "data" and the annual and seosonal timeseris. The length of the timeseries is the same as the input "data"
+#     """
+    
+#     # annual average storage
+#     annual = data.resample('Y').mean()
+#     annual.index = annual.index.year
+
+#     # seasonal variability
+#     detrended = data - data.resample('Y').transform('mean')
+#     seasonality = detrended.groupby(detrended.index.month).mean()
+
+#     # residual
+#     residuals = detrended - detrended.groupby(detrended.index.month).transform('mean')
+    
+#     return annual, seasonality, residuals
+
+
+
+class Decomposition:
+    def __init__(self, original: Tuple[Union[pd.DataFrame, pd.Series]], trend: Tuple[Union[pd.DataFrame, pd.Series]], seasonal: Tuple[Union[pd.DataFrame, pd.Series]], residuals: Tuple[Union[pd.DataFrame, pd.Series]]):
+        self.original = original
+        self.trend = trend
+        self.seasonal = seasonal
+        self.residual = residuals
+
+        
+        
+def decompose_timeseries(data: Union[pd.DataFrame, pd.Series], window: int = 365, center: bool = True) -> Decomposition:
+    """It decomposes the timeseries in three components: trend, seasonality and residuals.
     
     Parameters:
     -----------
@@ -135,23 +109,18 @@ def decomposition(data: Union[pd.DataFrame, pd.Series]) -> Tuple[Union[pd.DataFr
         
     Returns:
     --------
-    annual: Union[pd.DataFrame, pd.Series]
-        Timeseries of mean annual values. The length of the timeseries will be the number of years in "data"
-    seasonality: Union[pd.DataFrame, pd.Series]
-        Timeseries of montly mean values after removal of the annual trend. The length of the timeseries will be alwas 12, the months
-    residuals: Union[pd.DataFrame, pd.Series]
-        Timeseries of residuals, that is, the difference of the original "data" and the annual and seosonal timeseris. The length of the timeseries is the same as the input "data"
-    """
-    
-    # annual average storage
-    annual = data.resample('Y').mean()
-    annual.index = annual.index.year
+    DecompositionResult:
+        Object with three methods: trend(), seasonal(), residuals()
+    """ 
 
-    # seasonal variability
-    detrended = data - data.resample('Y').transform('mean')
-    seasonality = detrended.groupby(detrended.index.month).mean()
+    # trend as the 365 rolling mean
+    trend = data.rolling(window=365, min_periods=180, center=center).mean()
 
-    # residual
-    residuals = detrended - detrended.groupby(detrended.index.month).transform('mean')
-    
-    return annual, seasonality, residuals
+    # seasonality
+    detrended = data - trend
+    seasonal = detrended.groupby(detrended.index.month).transform('mean')
+
+    # residuals
+    residual = detrended - seasonal
+
+    return Decomposition(data, trend, seasonal, residual)
