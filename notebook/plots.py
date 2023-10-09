@@ -1,6 +1,7 @@
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
+import seaborn as sns
 import cartopy.crs as ccrs
 import cartopy.feature as cf
 import numpy as np
@@ -174,3 +175,124 @@ def plot_decomposition(obs: Decomposition, sim: Decomposition, id: int, lims: Li
 
     if save is not None:
         plt.savefig(save, dpi=300, bbox_inches='tight');
+        
+        
+        
+def storage_outflow(storage: pd.Series, outflow: pd.Series, storage2: pd.Series = None, outflow2: pd.Series = None, s_lims: List = None, q_lims: List = None, save: Union[Path, str] = None, **kwargs):
+    """It creates a figure that compares the storage and outflow time series. The figure is composed of three plots. In the center, a scatter plot of storage versus outflow; if the storage and outflow limits are provided, a line
+    represents the reference LISFLOOD routine. On top, a plot shows the density function (kernel density estimation) of storage. On the right, a plot shows the density function (kernel density estimation) of outflow.
+    
+    Parameters:
+    -----------
+    storage:   pd.Series
+        Series of reservoir storage. By default, it should be storage relative to the total reservoir capacity. It is supposed to be simulated storage
+    outflow:   pd.Series
+        Series of reservoir outflow. By default, it should be relative to the non-damaging outflow. It is supposed to be simulated outflow
+    storage2:  pd.Series
+        Series of reservoir storage. By default, it should be storage relative to the total reservoir capacity. It is supposed to be observed storage
+    outflow2:  pd.Series
+        Series of reservoir outflow. By default, it should be relative to the non-damaging outflow. It is supposed to be observed outflow
+    s_lims:    List
+        Storage limits (conservative, 2 times conservation, normal, adjusted normal, flood) used in the LISFLOOD reservoir routine
+    q_lims:    List
+        Outflow limits (minimum, minimum, normal adjusted, normal adjusted, non-damaging) used in the LISFLOOD reservoir routine
+    save:      Union[str, Path]
+        Path where to save the figure
+    
+    Keyword arguments:
+    ------------------
+    size:      float
+        Point size in the scatter plot
+    alpha:     float
+        Transparency in the scatter plot
+    title:     str
+        Title of the figure
+    xlabel:    str
+        Label of the X axis in the scatter plot
+    ylabel:    str
+        Label of the Y axis in the scatter plot
+    ymin:      float
+        Minimum value of the Y axis in the scatter plot
+    """
+    
+    # extract kwargs
+    s = kwargs.get('size', .5)
+    a = kwargs.get('alpha', .05)
+    ymin = kwargs.get('ymin', -.1)
+    xlabel = kwargs.get('xlabel', 'relative storage (-)')
+    ylabel = kwargs.get('ylabel', 'relative outflow (-)')
+    
+    if storage2 is not None:
+        if storage2.isnull().all():
+            storage2 = None
+    if outflow2 is not None:
+        if outflow2.isnull().all():
+            outflow2 = None
+    
+    if (s_lims is not None) & (q_lims is not None):
+        assert len(s_lims) == len(q_lims), 'The length of "s_lims" and "q_lims" must be the same.'
+    
+    # Create the figure and set the size
+    fig = plt.figure(figsize=(5, 5))
+    gs = gridspec.GridSpec(2, 2, height_ratios=[1, 4], width_ratios=[4, 1])
+    if 'title' in kwargs:
+        fig.text(.95, .95, kwargs['title'], ha='right', va='top')  
+
+    # scatter plot outflow vs storage
+    ax1 = plt.subplot(gs[1, 0])
+    ax1.scatter(storage, outflow, c='C0', s=s, alpha=a)
+    ax1.scatter(-1, -1, c='C0', s=s, label=kwargs.get('label1', 'sim'))
+    if (storage2 is not None) & (outflow2 is not None):
+        ax1.scatter(storage2, outflow2, c='C1', s=s, alpha=a)
+        ax1.scatter(-1, -1, s=s, c='C1', label=kwargs.get('label2', 'obs'))
+    if (s_lims is not None) & (q_lims is not None):
+        ax1.plot(s_lims, q_lims, c='k', lw=1, zorder=0, label='routine');
+        for s, q in zip(s_lims, q_lims):
+            ax1.hlines(q, xmin=-.02, xmax=s, color='k', ls=':', lw=.5, zorder=10)
+            ax1.vlines(s, ymin=ymin, ymax=q, color='k', ls=':', lw=.5, zorder=10)
+    ax1.set(ylim= (ymin, None),
+            xlim=(-.02, 1.02), 
+            xlabel=xlabel,
+            ylabel=ylabel)
+    ax1.spines[['top', 'right']].set_visible(False)
+    ax1.legend(frameon=False, loc=2)
+    
+    # densidy distribution: storage
+    ax2 = plt.subplot(gs[0, 0])
+    sns.kdeplot(storage, fill=True, ax=ax2)
+    if storage2 is not None:
+        sns.kdeplot(storage2, fill=True, ax=ax2)
+        kge = KGEmod(storage, storage2)[0]
+        ax2.text(.5, -.2, f"KGE' = {kge:.2f}", fontsize=9, va='center', ha='center', transform=ax2.transAxes)
+    if s_lims is not None:
+        for s in s_lims:
+            ax2.axvline(s, color='k', ls=':', lw=.5, zorder=10)
+    ax2.spines[['top', 'left', 'right']].set_visible(False)
+    ax2.set(xlim=(-.02, 1.02),
+            ylabel=None,
+            xlabel=None)
+    ax2.set_yticks([])
+    ax2.set_xticklabels([])
+
+    # density distribution: outflow
+    ax3 = plt.subplot(gs[1, 1])
+    sns.kdeplot(y=outflow, fill=True, ax=ax3)
+    if outflow2 is not None:
+        sns.kdeplot(y=outflow2, fill=True, ax=ax3)
+        kge = KGEmod(outflow, outflow2)[0]
+        ax3.text(-0.2, .55, f"KGE' = {kge:.2f}", fontsize=9, va='center', ha='center', rotation=90, transform=ax3.transAxes)
+    if q_lims is not None:
+        for q in q_lims:
+            ax3.axhline(q, color='k', ls=':', lw=.5, zorder=10)
+    ax3.spines[['top', 'bottom', 'right']].set_visible(False)
+    ax3.set(ylim=(ymin, None),
+            xlabel=None,
+            ylabel=None)
+    ax3.set_xticks([])
+    ax3.set_yticklabels([])
+
+    # Adjust the spacing between subplots
+    fig.tight_layout();
+    
+    if save is not None:
+        plt.savefig(save, dpi=300, bbox_inches='tight')
