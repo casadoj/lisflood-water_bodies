@@ -8,6 +8,7 @@ import cartopy.feature as cfeature
 import cartopy.crs as ccrs
 from typing import Union, List, Dict, Tuple
 from pathlib import Path
+import xml.etree.ElementTree as ET
 
 
 
@@ -90,21 +91,49 @@ def select_reservoirs(df: pd.DataFrame, sort: str, storage: str, target: float, 
 
 
 
-class Decomposition:
-    def __init__(self, original: Tuple[Union[pd.DataFrame, pd.Series]], trend: Tuple[Union[pd.DataFrame, pd.Series]], seasonal: Tuple[Union[pd.DataFrame, pd.Series]], residuals: Tuple[Union[pd.DataFrame, pd.Series]]):
-        self.original = original
-        self.trend = trend
-        self.seasonal = seasonal
-        self.residual = residuals
+# class Decomposition:
+#     def __init__(self, original: Tuple[Union[pd.DataFrame, pd.Series]], trend: Tuple[Union[pd.DataFrame, pd.Series]], seasonal: Tuple[Union[pd.DataFrame, pd.Series]], residuals: Tuple[Union[pd.DataFrame, pd.Series]]):
+#         self.original = original
+#         self.trend = trend
+#         self.seasonal = seasonal
+#         self.residual = residuals
 
         
         
-def decompose_timeseries(data: Union[pd.DataFrame, pd.Series], window: int = 365, center: bool = True) -> Decomposition:
+# def decompose_timeseries(data: Union[pd.DataFrame, pd.Series], window: int = 365, center: bool = True) -> Decomposition:
+#     """It decomposes the timeseries in three components: trend, seasonality and residuals.
+    
+#     Parameters:
+#     -----------
+#     data: Union[pd.DataFrame, pd.Series]
+#         Time series to be decomposed
+        
+#     Returns:
+#     --------
+#     DecompositionResult:
+#         Object with three methods: trend(), seasonal(), residuals()
+#     """ 
+
+#     # trend as the 365 rolling mean
+#     trend = data.rolling(window=365, min_periods=180, center=center).mean()
+
+#     # seasonality
+#     detrended = data - trend
+#     seasonal = detrended.groupby(detrended.index.month).transform('mean')
+
+#     # residuals
+#     residual = detrended - seasonal
+
+#     return Decomposition(data, trend, seasonal, residual)
+
+
+
+def decompose_timeseries(data: pd.Series, window: int = 365, center: bool = True) -> pd.DataFrame:
     """It decomposes the timeseries in three components: trend, seasonality and residuals.
     
     Parameters:
     -----------
-    data: Union[pd.DataFrame, pd.Series]
+    data: pd.Series
         Time series to be decomposed
         
     Returns:
@@ -112,7 +141,9 @@ def decompose_timeseries(data: Union[pd.DataFrame, pd.Series], window: int = 365
     DecompositionResult:
         Object with three methods: trend(), seasonal(), residuals()
     """ 
-
+    
+    assert isinstance(data, pd.Series), '"data" must be a pandas.Series'
+    
     # trend as the 365 rolling mean
     trend = data.rolling(window=365, min_periods=180, center=center).mean()
 
@@ -122,5 +153,40 @@ def decompose_timeseries(data: Union[pd.DataFrame, pd.Series], window: int = 365
 
     # residuals
     residual = detrended - seasonal
+    
+    decomposition = pd.concat((data, trend, seasonal, residual), axis=1)
+    decomposition.columns = ['original', 'trend', 'seasonal', 'residual']
+    
+    return decomposition
 
-    return Decomposition(data, trend, seasonal, residual)
+
+
+def xml_parameters(xml: Union[str, Path], pars: Union[str, List[str]] = None) -> Dict:
+    """It extracts the temporal information from the settings XML file.
+    
+    Input:
+    ------
+    xml:         Union[str, Path] 
+        A XML settings file (path, filename and extension)
+    pars:        Union[str, List[str]]
+        Name(s) of the parameters to be extracted
+        
+    Output:
+    -------
+    parameters:  Dict
+        Keys are parameter names and values the calibrated parameter value
+    """
+    
+    # extract temporal info from the XML
+    tree = ET.parse(xml)
+    root = tree.getroot()
+    
+    if pars is None:
+        pars = ['b_Xinanjiang', 'UpperZoneTimeConstant', 'LowerZoneTimeConstant', 'LZThreshold',
+                'GwPercValue', 'GwLoss', 'PowerPrefFlow', 'SnowMeltCoef',
+                'AvWaterRateThreshold' , 'LakeMultiplier', 'adjust_Normal_Flood', 'ReservoirRnormqMult', 
+                'QSplitMult', 'CalChanMan', 'CalChanMan2', 'ChanBottomWMult', 'ChanDepthTMult', 'ChanSMult']
+    
+    parameters = {par: float(root.find(f'.//textvar[@name="{par}"]').attrib['value']) for par in pars}
+        
+    return parameters

@@ -107,17 +107,86 @@ def plot_resops(storage: pd.Series = None, elevation: pd.Series = None, inflow: 
         
         
         
-def plot_decomposition(obs: Decomposition, sim: Decomposition, id: int, lims: List[float] = [.1, .67, .97], save: Union[str, Path] = None, **kwargs):
+# def plot_decomposition(obs: Decomposition, sim: Decomposition, id: int, lims: List[float] = [.1, .67, .97], save: Union[str, Path] = None, **kwargs):
+#     """It creates a figure that compares the decomposition of the observed and simulated time series. The figure is composed of 4 plots: original time series, trend, seasonality and residuals. Each plot includes the performance in terms of modified KGE and its components.
+    
+#     Parameters:
+#     -----------
+#     obs:       Decomposition
+#         The result of decomposing the observed timeseries with the function utils.decompose_timeseries
+#     sim:       Decomposition
+#         The result of decomposing the simulated timeseries with the function utils.decompose_timeseries
+#     id:        int
+#         Identification number of the station to be plotted
+#     lims:      List[float]
+#         Values of the conservative (clim), normal (nlim) and flood (flim) limits in the LISFLOOD parameterization. If not provided, it takes the default values in GloFAS
+#     save:      bool
+#         Whether to save of not the figure. By default is None and the figure is note saved
+        
+#     kwargs:
+#     -------
+#     figsize:   Tuple (2,)
+#         Size of each of the individual plots
+#     lw:        float
+#         Line width
+#     title:     str
+#         If provided, the title of the figure
+#     """
+    
+#     # kwargs
+#     figsize = kwargs.get('figsize', (3, 6))
+#     lw = kwargs.get('lw', 1)
+    
+#     # setup
+#     bbox_props = dict(boxstyle='round, pad=0.05', facecolor='w', edgecolor='none', alpha=.666)
+#     ncols = 4
+#     fig, axes = plt.subplots(figsize=(figsize[0] * ncols, figsize[1]), ncols=ncols, tight_layout=True, sharey=True)#, sharex=True)
+    
+#     components = [attr for attr in dir(obs) if not attr.startswith('_')]
+#     for ax, comp in zip(axes, ['original', 'trend', 'seasonal', 'residual']):
+#         # extract series
+#         obs_comp = getattr(obs, comp)[id]
+#         sim_comp = getattr(sim, comp)[id]
+        
+#         # line plots
+#         ax.plot(obs_comp, obs_comp.index, lw=lw, label='obs')
+#         ax.plot(sim_comp, sim_comp.index, lw=lw, label='sim')
+        
+#         # add performance as text
+#         performance = KGEmod(obs_comp, sim_comp)
+#         performance = ['-∞' if x < -10 else '∞' if x > 10 else np.round(x, 2) for x in performance]
+#         ax.text(.02, .99, "KGE' = {0}\nα = {1}\nβ = {2}\nρ = {3}".format(*performance),
+#                 va='top', transform=ax.transAxes, bbox=bbox_props)
+        
+#         # settings
+#         if comp in ['original', 'trend']:
+#             for lim in lims:
+#                 ax.axvline(lim, ls=':', c='k', lw=.5)
+#             ax.set(xlim=(-.02, 1.02),
+#                    ylim=(obs_comp.index.max(), obs_comp.index.min()))
+#         else:
+#             ax.set(xlim=(-.51, .51))
+#         ax.set(xlabel='Snorm',
+#                title=comp);
+        
+#     fig.legend(*ax.get_legend_handles_labels(), ncol=2, loc=8, frameon=False, bbox_to_anchor=[.4, -.025, .2, .1])
+#     if 'title' in kwargs:
+#         fig.text(.5, 1, kwargs['title'], fontsize=11, ha='center');
+
+#     if save is not None:
+#         plt.savefig(save, dpi=300, bbox_inches='tight');
+
+
+
+def plot_decomposition(sim: pd.DataFrame, obs: pd.DataFrame = None, lims: List[float] = None, save: Union[str, Path] = None, **kwargs):
     """It creates a figure that compares the decomposition of the observed and simulated time series. The figure is composed of 4 plots: original time series, trend, seasonality and residuals. Each plot includes the performance in terms of modified KGE and its components.
     
     Parameters:
     -----------
-    obs:       Decomposition
-        The result of decomposing the observed timeseries with the function utils.decompose_timeseries
     sim:       Decomposition
         The result of decomposing the simulated timeseries with the function utils.decompose_timeseries
-    id:        int
-        Identification number of the station to be plotted
+    obs:       Decomposition
+        The result of decomposing the observed timeseries with the function utils.decompose_timeseries
     lims:      List[float]
         Values of the conservative (clim), normal (nlim) and flood (flim) limits in the LISFLOOD parameterization. If not provided, it takes the default values in GloFAS
     save:      bool
@@ -136,6 +205,8 @@ def plot_decomposition(obs: Decomposition, sim: Decomposition, id: int, lims: Li
     # kwargs
     figsize = kwargs.get('figsize', (3, 6))
     lw = kwargs.get('lw', 1)
+    xlim = kwargs.get('xlim', [(-.02, 1.02), (-.51, .51)])
+    xlabel = kwargs.get('xlabel', 'Snorm')
     
     # setup
     bbox_props = dict(boxstyle='round, pad=0.05', facecolor='w', edgecolor='none', alpha=.666)
@@ -144,29 +215,32 @@ def plot_decomposition(obs: Decomposition, sim: Decomposition, id: int, lims: Li
     
     components = [attr for attr in dir(obs) if not attr.startswith('_')]
     for ax, comp in zip(axes, ['original', 'trend', 'seasonal', 'residual']):
-        # extract series
-        obs_comp = getattr(obs, comp)[id]
-        sim_comp = getattr(sim, comp)[id]
-        
-        # line plots
-        ax.plot(obs_comp, obs_comp.index, lw=lw, label='obs')
+        if obs is not None:
+            # observed time series
+            obs_comp = obs[comp] #getattr(obs, comp)[id]
+            ax.plot(obs_comp, obs_comp.index, lw=lw, label='obs')
+            
+        # simulated time series
+        sim_comp = sim[comp] #getattr(sim, comp)[id]
         ax.plot(sim_comp, sim_comp.index, lw=lw, label='sim')
-        
-        # add performance as text
-        performance = KGEmod(obs_comp, sim_comp)
-        performance = ['-∞' if x < -10 else '∞' if x > 10 else np.round(x, 2) for x in performance]
-        ax.text(.02, .99, "KGE' = {0}\nα = {1}\nβ = {2}\nρ = {3}".format(*performance),
-                va='top', transform=ax.transAxes, bbox=bbox_props)
+            
+        if obs is not None:        
+            # add performance as text
+            performance = KGEmod(obs_comp, sim_comp)
+            performance = ['-∞' if x < -10 else '∞' if x > 10 else np.round(x, 2) for x in performance]
+            ax.text(.02, .99, "KGE' = {0}\nα = {1}\nβ = {2}\nρ = {3}".format(*performance),
+                    va='top', transform=ax.transAxes, bbox=bbox_props)
         
         # settings
         if comp in ['original', 'trend']:
-            for lim in lims:
-                ax.axvline(lim, ls=':', c='k', lw=.5)
-            ax.set(xlim=(-.02, 1.02),
-                   ylim=(obs_comp.index.max(), obs_comp.index.min()))
+            if lims is not None:
+                for lim in lims:
+                    ax.axvline(lim, ls=':', c='k', lw=.5)
+            ax.set(xlim=xlim[0],
+                   ylim=(sim_comp.index.max(), sim_comp.index.min()))
         else:
-            ax.set(xlim=(-.51, .51))
-        ax.set(xlabel='Snorm',
+            ax.set(xlim=xlim[1])
+        ax.set(xlabel=xlabel,
                title=comp);
         
     fig.legend(*ax.get_legend_handles_labels(), ncol=2, loc=8, frameon=False, bbox_to_anchor=[.4, -.025, .2, .1])
@@ -177,7 +251,7 @@ def plot_decomposition(obs: Decomposition, sim: Decomposition, id: int, lims: Li
         plt.savefig(save, dpi=300, bbox_inches='tight');
         
         
-        
+
 def storage_outflow(storage: pd.Series, outflow: pd.Series, storage2: pd.Series = None, outflow2: pd.Series = None, s_lims: List = None, q_lims: List = None, save: Union[Path, str] = None, **kwargs):
     """It creates a figure that compares the storage and outflow time series. The figure is composed of three plots. In the center, a scatter plot of storage versus outflow; if the storage and outflow limits are provided, a line
     represents the reference LISFLOOD routine. On top, a plot shows the density function (kernel density estimation) of storage. On the right, a plot shows the density function (kernel density estimation) of outflow.
@@ -201,10 +275,12 @@ def storage_outflow(storage: pd.Series, outflow: pd.Series, storage2: pd.Series 
     
     Keyword arguments:
     ------------------
-    size:      float
-        Point size in the scatter plot
     alpha:     float
         Transparency in the scatter plot
+    color:     list(2,)
+        Colours to be used in the simulated and observed data
+    size:      float
+        Point size in the scatter plot
     title:     str
         Title of the figure
     xlabel:    str
@@ -218,6 +294,7 @@ def storage_outflow(storage: pd.Series, outflow: pd.Series, storage2: pd.Series 
     # extract kwargs
     s = kwargs.get('size', .5)
     a = kwargs.get('alpha', .05)
+    c = kwargs.get('color', ['C1', 'C0'])
     ymin = kwargs.get('ymin', -.1)
     xlabel = kwargs.get('xlabel', 'relative storage (-)')
     ylabel = kwargs.get('ylabel', 'relative outflow (-)')
@@ -240,11 +317,11 @@ def storage_outflow(storage: pd.Series, outflow: pd.Series, storage2: pd.Series 
 
     # scatter plot outflow vs storage
     ax1 = plt.subplot(gs[1, 0])
-    ax1.scatter(storage, outflow, c='C0', s=s, alpha=a)
-    ax1.scatter(-1, -1, c='C0', s=s, label=kwargs.get('label1', 'sim'))
+    ax1.scatter(storage, outflow, c=c[0], s=s, alpha=a)
+    ax1.scatter(-1, -1, c=c[0], s=s, label=kwargs.get('label1', 'sim'))
     if (storage2 is not None) & (outflow2 is not None):
-        ax1.scatter(storage2, outflow2, c='C1', s=s, alpha=a)
-        ax1.scatter(-1, -1, s=s, c='C1', label=kwargs.get('label2', 'obs'))
+        ax1.scatter(storage2, outflow2, c=c[1], s=s, alpha=a)
+        ax1.scatter(-1, -1, s=s, c=c[1], label=kwargs.get('label2', 'obs'))
     if (s_lims is not None) & (q_lims is not None):
         ax1.plot(s_lims, q_lims, c='k', lw=1, zorder=0, label='routine');
         for s, q in zip(s_lims, q_lims):
@@ -259,9 +336,9 @@ def storage_outflow(storage: pd.Series, outflow: pd.Series, storage2: pd.Series 
     
     # densidy distribution: storage
     ax2 = plt.subplot(gs[0, 0])
-    sns.kdeplot(storage, fill=True, ax=ax2)
+    sns.kdeplot(storage, color=c[0], fill=True, ax=ax2)
     if storage2 is not None:
-        sns.kdeplot(storage2, fill=True, ax=ax2)
+        sns.kdeplot(storage2, color=c[1], fill=True, ax=ax2)
         kge = KGEmod(storage, storage2)[0]
         ax2.text(.5, -.2, f"KGE' = {kge:.2f}", fontsize=9, va='center', ha='center', transform=ax2.transAxes)
     if s_lims is not None:
@@ -276,9 +353,9 @@ def storage_outflow(storage: pd.Series, outflow: pd.Series, storage2: pd.Series 
 
     # density distribution: outflow
     ax3 = plt.subplot(gs[1, 1])
-    sns.kdeplot(y=outflow, fill=True, ax=ax3)
+    sns.kdeplot(y=outflow, color=c[0], fill=True, ax=ax3)
     if outflow2 is not None:
-        sns.kdeplot(y=outflow2, fill=True, ax=ax3)
+        sns.kdeplot(y=outflow2, color=c[1], fill=True, ax=ax3)
         kge = KGEmod(outflow, outflow2)[0]
         ax3.text(-0.2, .55, f"KGE' = {kge:.2f}", fontsize=9, va='center', ha='center', rotation=90, transform=ax3.transAxes)
     if q_lims is not None:
