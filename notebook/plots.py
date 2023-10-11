@@ -1,4 +1,5 @@
 import matplotlib as mpl
+from matplotlib.axes import Axes
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 import seaborn as sns
@@ -8,7 +9,7 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 from typing import Union, Dict, List, Tuple
-from utils import Decomposition
+# from utils import Decomposition
 from metrics import KGEmod
         
         
@@ -207,6 +208,7 @@ def plot_decomposition(sim: pd.DataFrame, obs: pd.DataFrame = None, lims: List[f
     lw = kwargs.get('lw', 1)
     xlim = kwargs.get('xlim', [(-.02, 1.02), (-.51, .51)])
     xlabel = kwargs.get('xlabel', 'Snorm')
+    c = kwargs.get('color', ['C1', 'C0'])
     
     # setup
     bbox_props = dict(boxstyle='round, pad=0.05', facecolor='w', edgecolor='none', alpha=.666)
@@ -214,15 +216,15 @@ def plot_decomposition(sim: pd.DataFrame, obs: pd.DataFrame = None, lims: List[f
     fig, axes = plt.subplots(figsize=(figsize[0] * ncols, figsize[1]), ncols=ncols, tight_layout=True, sharey=True)#, sharex=True)
     
     components = [attr for attr in dir(obs) if not attr.startswith('_')]
-    for ax, comp in zip(axes, ['original', 'trend', 'seasonal', 'residual']):
+    for ax, comp in zip(axes, sim.columns):
         if obs is not None:
             # observed time series
             obs_comp = obs[comp] #getattr(obs, comp)[id]
-            ax.plot(obs_comp, obs_comp.index, lw=lw, label='obs')
+            ax.plot(obs_comp, obs_comp.index, c=c[1], lw=lw, label='obs')
             
         # simulated time series
         sim_comp = sim[comp] #getattr(sim, comp)[id]
-        ax.plot(sim_comp, sim_comp.index, lw=lw, label='sim')
+        ax.plot(sim_comp, sim_comp.index, c=c[0], lw=lw, label='sim')
             
         if obs is not None:        
             # add performance as text
@@ -252,24 +254,338 @@ def plot_decomposition(sim: pd.DataFrame, obs: pd.DataFrame = None, lims: List[f
         
         
 
-def storage_outflow(storage: pd.Series, outflow: pd.Series, storage2: pd.Series = None, outflow2: pd.Series = None, s_lims: List = None, q_lims: List = None, save: Union[Path, str] = None, **kwargs):
+# def storage_outflow(storage: pd.Series, outflow: pd.Series, storage2: pd.Series = None, outflow2: pd.Series = None, s_lims: List = None, q_lims: List = None, save: Union[Path, str] = None, **kwargs):
+#     """It creates a figure that compares the storage and outflow time series. The figure is composed of three plots. In the center, a scatter plot of storage versus outflow; if the storage and outflow limits are provided, a line
+#     represents the reference LISFLOOD routine. On top, a plot shows the density function (kernel density estimation) of storage. On the right, a plot shows the density function (kernel density estimation) of outflow.
+    
+#     Parameters:
+#     -----------
+#     storage:   pd.Series
+#         Series of reservoir storage. By default, it should be storage relative to the total reservoir capacity. It is supposed to be simulated storage
+#     outflow:   pd.Series
+#         Series of reservoir outflow. By default, it should be relative to the non-damaging outflow. It is supposed to be simulated outflow
+#     storage2:  pd.Series
+#         Series of reservoir storage. By default, it should be storage relative to the total reservoir capacity. It is supposed to be observed storage
+#     outflow2:  pd.Series
+#         Series of reservoir outflow. By default, it should be relative to the non-damaging outflow. It is supposed to be observed outflow
+#     s_lims:    List
+#         Storage limits (conservative, 2 times conservation, normal, adjusted normal, flood) used in the LISFLOOD reservoir routine
+#     q_lims:    List
+#         Outflow limits (minimum, minimum, normal adjusted, normal adjusted, non-damaging) used in the LISFLOOD reservoir routine
+#     save:      Union[str, Path]
+#         Path where to save the figure
+    
+#     Keyword arguments:
+#     ------------------
+#     alpha:     float
+#         Transparency in the scatter plot
+#     color:     list(2,)
+#         Colours to be used in the simulated and observed data
+#     size:      float
+#         Point size in the scatter plot
+#     title:     str
+#         Title of the figure
+#     xlabel:    str
+#         Label of the X axis in the scatter plot
+#     ylabel:    str
+#         Label of the Y axis in the scatter plot
+#     ymin:      float
+#         Minimum value of the Y axis in the scatter plot
+#     """
+    
+#     # extract kwargs
+#     s = kwargs.get('size', .5)
+#     a = kwargs.get('alpha', .05)
+#     c = kwargs.get('color', ['C1', 'C0'])
+#     ymin = kwargs.get('ymin', -.1)
+#     xlabel = kwargs.get('xlabel', 'relative storage (-)')
+#     ylabel = kwargs.get('ylabel', 'relative outflow (-)')
+    
+#     if storage2 is not None:
+#         if storage2.isnull().all():
+#             storage2 = None
+#     if outflow2 is not None:
+#         if outflow2.isnull().all():
+#             outflow2 = None
+    
+#     if (s_lims is not None) & (q_lims is not None):
+#         assert len(s_lims) == len(q_lims), 'The length of "s_lims" and "q_lims" must be the same.'
+    
+#     # Create the figure and set the size
+#     fig = plt.figure(figsize=(5, 5))
+#     gs = gridspec.GridSpec(2, 2, height_ratios=[1, 4], width_ratios=[4, 1])
+#     if 'title' in kwargs:
+#         fig.text(.95, .95, kwargs['title'], ha='right', va='top')  
+
+#     # scatter plot outflow vs storage
+#     ax1 = plt.subplot(gs[1, 0])
+#     ax1.scatter(storage, outflow, c=c[0], s=s, alpha=a)
+#     ax1.scatter(-1, -1, c=c[0], s=s, label=kwargs.get('label1', 'sim'))
+#     if (storage2 is not None) & (outflow2 is not None):
+#         ax1.scatter(storage2, outflow2, c=c[1], s=s, alpha=a)
+#         ax1.scatter(-1, -1, s=s, c=c[1], label=kwargs.get('label2', 'obs'))
+#     if (s_lims is not None) & (q_lims is not None):
+#         ax1.plot(s_lims, q_lims, c='k', lw=1, zorder=0, label='routine');
+#         for s, q in zip(s_lims, q_lims):
+#             ax1.hlines(q, xmin=-.02, xmax=s, color='k', ls=':', lw=.5, zorder=10)
+#             ax1.vlines(s, ymin=ymin, ymax=q, color='k', ls=':', lw=.5, zorder=10)
+#     ax1.set(ylim= (ymin, None),
+#             xlim=(-.02, 1.02), 
+#             xlabel=xlabel,
+#             ylabel=ylabel)
+#     ax1.spines[['top', 'right']].set_visible(False)
+#     ax1.legend(frameon=False, loc=2)
+    
+#     # densidy distribution: storage
+#     ax2 = plt.subplot(gs[0, 0])
+#     sns.kdeplot(storage, color=c[0], fill=True, ax=ax2)
+#     if storage2 is not None:
+#         sns.kdeplot(storage2, color=c[1], fill=True, ax=ax2)
+#         kge = KGEmod(storage, storage2)[0]
+#         ax2.text(.5, -.2, f"KGE' = {kge:.2f}", fontsize=9, va='center', ha='center', transform=ax2.transAxes)
+#     if s_lims is not None:
+#         for s in s_lims:
+#             ax2.axvline(s, color='k', ls=':', lw=.5, zorder=10)
+#     ax2.spines[['top', 'left', 'right']].set_visible(False)
+#     ax2.set(xlim=(-.02, 1.02),
+#             ylabel=None,
+#             xlabel=None)
+#     ax2.set_yticks([])
+#     ax2.set_xticklabels([])
+
+#     # density distribution: outflow
+#     ax3 = plt.subplot(gs[1, 1])
+#     sns.kdeplot(y=outflow, color=c[0], fill=True, ax=ax3)
+#     if outflow2 is not None:
+#         sns.kdeplot(y=outflow2, color=c[1], fill=True, ax=ax3)
+#         kge = KGEmod(outflow, outflow2)[0]
+#         ax3.text(-0.2, .55, f"KGE' = {kge:.2f}", fontsize=9, va='center', ha='center', rotation=90, transform=ax3.transAxes)
+#     if q_lims is not None:
+#         for q in q_lims:
+#             ax3.axhline(q, color='k', ls=':', lw=.5, zorder=10)
+#     ax3.spines[['top', 'bottom', 'right']].set_visible(False)
+#     ax3.set(ylim=(ymin, None),
+#             xlabel=None,
+#             ylabel=None)
+#     ax3.set_xticks([])
+#     ax3.set_yticklabels([])
+
+#     # Adjust the spacing between subplots
+#     fig.tight_layout();
+    
+#     if save is not None:
+#         plt.savefig(save, dpi=300, bbox_inches='tight')
+        
+        
+        
+def reservoir_scatter(sim: pd.DataFrame, x: str, y: str, obs: pd.DataFrame = None, x_thr: List = None, y_thr: List = None, legend: bool = True, ax: Axes = None, **kwargs):
     """It creates a figure that compares the storage and outflow time series. The figure is composed of three plots. In the center, a scatter plot of storage versus outflow; if the storage and outflow limits are provided, a line
     represents the reference LISFLOOD routine. On top, a plot shows the density function (kernel density estimation) of storage. On the right, a plot shows the density function (kernel density estimation) of outflow.
     
     Parameters:
     -----------
-    storage:   pd.Series
-        Series of reservoir storage. By default, it should be storage relative to the total reservoir capacity. It is supposed to be simulated storage
-    outflow:   pd.Series
-        Series of reservoir outflow. By default, it should be relative to the non-damaging outflow. It is supposed to be simulated outflow
-    storage2:  pd.Series
-        Series of reservoir storage. By default, it should be storage relative to the total reservoir capacity. It is supposed to be observed storage
-    outflow2:  pd.Series
-        Series of reservoir outflow. By default, it should be relative to the non-damaging outflow. It is supposed to be observed outflow
-    s_lims:    List
-        Storage limits (conservative, 2 times conservation, normal, adjusted normal, flood) used in the LISFLOOD reservoir routine
-    q_lims:    List
-        Outflow limits (minimum, minimum, normal adjusted, normal adjusted, non-damaging) used in the LISFLOOD reservoir routine
+    sim:   pd.DataFrame
+        Simulated time series of reservoir behaviour. It should contain colums "x" and "y"
+    x:     str
+        Column of "sim" (and "obs") to be used in the X axis
+    y:     str
+        Column of "sim" (and "obs") to be used in the Y axis
+    obs:   pd.DataFrame
+        Oberved time series of reservoir behaviour. It should contain colums "x" and "y"
+    x_thr:    List
+        Thresholds in the LISFLOOD reservoir routine to be used in the X axis
+    y_thr:    List
+        Thresholds in the LISFLOOD reservoir routine to be used in the Y axis
+    legend:   bool
+        Whether to plot the legend or not
+    ax:       Axes
+        Matplotlib axes in which to insert the plot
+    
+    Keyword arguments:
+    ------------------
+    alpha:     float
+        Transparency in the scatter plot
+    color:     List(2,)
+        Colours to be used in the simulated and observed data
+    figsize    Tuple(2,)
+        Size of the figure
+    labels:    List(2,)
+        Labels of the datasets "sim" and "obs"
+    size:      float
+        Point size in the scatter plot
+    xlabel:    str
+        Label of the X axis in the scatter plot
+    xlim:      Tuple(2,)
+        Limits of the X axis
+    xticklabels: bool
+        Whether to include values in the X ticks or not
+    ylabel:    str
+        Label of the Y axis in the scatter plot
+    ylim:      Tuple(2,)
+        Limits of the Y axis
+    yticklabels: bool
+        Whether to include values in the Y ticks or not
+    """
+    
+    # extract kwargs
+    a = kwargs.get('alpha', .05)
+    c = kwargs.get('color', ['C1', 'C0'])
+    figsize = kwargs.get('figsize', (4, 4))
+    labels = kwargs.get('labels', ['sim', 'obs'])
+    s = kwargs.get('size', .5)
+    xlabel = kwargs.get('xlabel', x)
+    xlim = kwargs.get('xlim', (-.1, None))
+    xticklabels = kwargs.get('xticklabels', True)
+    ylabel = kwargs.get('ylabel', y)
+    ylim = kwargs.get('ylim', (-.1, None))
+    yticklabels = kwargs.get('yticklabels', True)
+    
+    if (x_thr is not None) & (y_thr is not None):
+        assert len(x_thr) == len(y_thr), 'The length of "x_thr" and "y_thr" must be the same.'
+    
+    # Create the figure and set the size
+    if ax is None:
+        fig, ax = plt.subplots(figsize=figsize)
+
+    # scatter plot outflow vs storage
+    ax.scatter(sim[x], sim[y], c=c[0], s=s, alpha=a, zorder=2)
+    ax.scatter(-1, -1, c=c[0], s=s, label=labels[0])
+    if obs is not None:
+        ax.scatter(obs[x], obs[y], c=c[1], s=s, alpha=a, zorder=1)
+        ax.scatter(-1, -1, s=s, c=c[1], label=labels[1])
+    if (x_thr is not None) & (y_thr is not None):
+        ax.plot(x_thr, y_thr, c='k', lw=1, zorder=0, label='routine');
+        for s, q in zip(x_thr, y_thr):
+            ax.hlines(q, xmin=-.02, xmax=s, color='k', ls=':', lw=.5, zorder=10)
+            ax.vlines(s, ymin=ylim[0], ymax=q, color='k', ls=':', lw=.5, zorder=10)
+    ax.set(xlim=xlim,
+           ylim=ylim,
+           xlabel=xlabel,
+           ylabel=ylabel)
+    if xticklabels is False:
+        ax.set_xticklabels([])
+    if yticklabels is False:
+        ax.set_yticklabels([])
+    ax.spines[['top', 'right']].set_visible(False)
+    
+    if legend:
+        ax.legend(frameon=False, loc=2)
+
+        
+        
+def reservoir_kde(sim: pd.DataFrame, obs: pd.DataFrame = None, x: str = None, y: str = None, thr: List = None, ax: Axes = None, **kwargs):
+    """It creates a figure that compares the storage and outflow time series. The figure is composed of three plots. In the center, a scatter plot of storage versus outflow; if the storage and outflow limits are provided, a line
+    represents the reference LISFLOOD routine. On top, a plot shows the density function (kernel density estimation) of storage. On the right, a plot shows the density function (kernel density estimation) of outflow.
+    
+    Parameters:
+    -----------
+    sim:   pd.DataFrame
+        Simulated time series of reservoir behaviour. It should contain colums "x" and "y"
+    obs:   pd.DataFrame
+        Oberved time series of reservoir behaviour. It should contain colums "x" and "y"
+    x:     str
+        Column of "sim" (and "obs") for which the distribution will be computed. The plot will be horizontal
+    y:     str
+        Column of "sim" (and "obs") for which the distribution will be computed. The plot will be vertical
+    thr:    List
+        Thresholds in the LISFLOOD reservoir routine
+    ax:       Axes
+        Matplotlib axes in which to insert the plot
+    
+    Keyword arguments:
+    ------------------
+    color:     List(2,)
+        Colours to be used in the simulated and observed data
+    figsize    Tuple(2,)
+        Size of the figure
+    xlabel:    str
+        Label of the X axis in the scatter plot
+    xlim:      Tuple(2,)
+        Limits of the X axis
+    xticklabels: bool
+        Whether to include values in the X ticks or not
+    ylabel:    str
+        Label of the Y axis in the scatter plot
+    ylim:      Tuple(2,)
+        Limits of the Y axis
+    yticklabels: bool
+        Whether to include values in the Y ticks or not
+    """
+    
+    assert (x != y) & ((x is not None) | (y is not None)), 'Either "x" or "y" must indicate a column in "sim".'
+    
+    # extract kwargs
+    c = kwargs.get('color', ['C1', 'C0'])
+    figsize = kwargs.get('figsize', (4, 4))
+    xlim = kwargs.get('xlim', (-.1, None))
+    xlabel = kwargs.get('xlabel', None)
+    xticklabels = kwargs.get('xticklabels', True)
+    ylabel = kwargs.get('ylabel', None)
+    ylim = kwargs.get('ylim', (-.1, None))
+    yticklabels = kwargs.get('yticklabels', True)
+    
+    # Create the figure and set the size
+    if ax is None:
+        fig, ax = plt.subplots(figsize=figsize)  
+    
+    # density distribution
+    if x is not None:
+        sns.kdeplot(sim[x], color=c[0], fill=True, ax=ax)
+        if obs is not None:
+            if not obs[x].isnull().all():
+                sns.kdeplot(obs[x], color=c[1], fill=True, ax=ax)
+                kge = KGEmod(obs[x], sim[x])[0]
+                ax.text(.5, -.2, f"KGE' = {kge:.2f}", fontsize=9, va='center', ha='center', transform=ax.transAxes)
+        if thr is not None:
+            for x in thr:
+                ax.axvline(x, color='k', ls=':', lw=.5, zorder=10)
+        ax.spines[['top', 'left', 'right']].set_visible(False)
+        ax.set(xlim=xlim,
+                 ylabel=None,
+                 xlabel=None)
+        ax.set_yticks([])
+        if xticklabels is False:
+            ax.set_xticklabels([])
+    elif y is not None:
+        sns.kdeplot(y=sim[y], color=c[0], fill=True, ax=ax)
+        if obs is not None:
+            if not obs[y].isnull().all():
+                sns.kdeplot(y=obs[y], color=c[1], fill=True, ax=ax)
+                kge = KGEmod(obs[y], sim[y])[0]           
+                ax.text(-0.2, .55, f"KGE' = {kge:.2f}", fontsize=9, va='center', ha='center', rotation=90, transform=ax.transAxes)
+        if thr is not None:
+            for y in thr:
+                ax.axhline(y, color='k', ls=':', lw=.5, zorder=10)
+        ax.spines[['top', 'bottom', 'right']].set_visible(False)
+        ax.set(ylim=ylim,
+               xlabel=None,
+               ylabel=None)
+        ax.set_xticks([])
+        if yticklabels is False:
+            ax.set_yticklabels([])
+
+            
+            
+def reservoir_analysis(sim: pd.DataFrame, obs: pd.DataFrame = None, x1: str = 'storage', x2: str = 'inflow', y: str = 'outflow', x_thr: List = None, y_thr: List = None, save: Union[Path, str] = None, **kwargs):
+    """It creates a figure that compares the storage and outflow time series. The figure is composed of three plots. In the center, a scatter plot of storage versus outflow; if the storage and outflow limits are provided, a line
+    represents the reference LISFLOOD routine. On top, a plot shows the density function (kernel density estimation) of storage. On the right, a plot shows the density function (kernel density estimation) of outflow.
+    
+    Parameters:
+    -----------
+    sim:   pd.DataFrame
+        Simulated time series of reservoir behaviour. It should contain colums "x" and "y"
+    obs:   pd.DataFrame
+        Oberved time series of reservoir behaviour. It should contain colums "x" and "y"
+    x1:     str
+        Column of "sim" (and "obs") that will be used in the X axis of the first scatter plot
+    x2:     str
+        Column of "sim" (and "obs") that will be used in the X axis of the second scatter plot
+    y:     str
+        Column of "sim" (and "obs") that will be used in the Y axis of both scatter plots
+    x_thr:    List
+        Thresholds in the LISFLOOD reservoir routine to be used in the "x1" variable
+    y_thr:    List
+        Thresholds in the LISFLOOD reservoir routine to be used in the "y" axis
     save:      Union[str, Path]
         Path where to save the figure
     
@@ -279,95 +595,58 @@ def storage_outflow(storage: pd.Series, outflow: pd.Series, storage2: pd.Series 
         Transparency in the scatter plot
     color:     list(2,)
         Colours to be used in the simulated and observed data
+    figsize:   Tuple(2,)
+        Size of the figure
+    labels:    List(2,)
+        Labels of the datasets "sim" and "obs"
     size:      float
         Point size in the scatter plot
     title:     str
         Title of the figure
-    xlabel:    str
-        Label of the X axis in the scatter plot
-    ylabel:    str
-        Label of the Y axis in the scatter plot
-    ymin:      float
-        Minimum value of the Y axis in the scatter plot
     """
     
     # extract kwargs
-    s = kwargs.get('size', .5)
     a = kwargs.get('alpha', .05)
     c = kwargs.get('color', ['C1', 'C0'])
-    ymin = kwargs.get('ymin', -.1)
-    xlabel = kwargs.get('xlabel', 'relative storage (-)')
-    ylabel = kwargs.get('ylabel', 'relative outflow (-)')
+    figsize = kwargs.get('figsize', (9, 5))
+    labels = kwargs.get('labels', ['sim', 'obs'])
+    s = kwargs.get('size', .5)
     
-    if storage2 is not None:
-        if storage2.isnull().all():
-            storage2 = None
-    if outflow2 is not None:
-        if outflow2.isnull().all():
-            outflow2 = None
-    
-    if (s_lims is not None) & (q_lims is not None):
-        assert len(s_lims) == len(q_lims), 'The length of "s_lims" and "q_lims" must be the same.'
+    if (x_thr is not None) & (y_thr is not None):
+        assert len(x_thr) == len(y_thr), 'The length of "x_thr" and "y_thr" must be the same.'
     
     # Create the figure and set the size
-    fig = plt.figure(figsize=(5, 5))
-    gs = gridspec.GridSpec(2, 2, height_ratios=[1, 4], width_ratios=[4, 1])
+    fig = plt.figure(figsize=figsize)
+    gs = gridspec.GridSpec(2, 3, height_ratios=[1, 4], width_ratios=[4, 4, 1])
     if 'title' in kwargs:
         fig.text(.95, .95, kwargs['title'], ha='right', va='top')  
 
-    # scatter plot outflow vs storage
-    ax1 = plt.subplot(gs[1, 0])
-    ax1.scatter(storage, outflow, c=c[0], s=s, alpha=a)
-    ax1.scatter(-1, -1, c=c[0], s=s, label=kwargs.get('label1', 'sim'))
-    if (storage2 is not None) & (outflow2 is not None):
-        ax1.scatter(storage2, outflow2, c=c[1], s=s, alpha=a)
-        ax1.scatter(-1, -1, s=s, c=c[1], label=kwargs.get('label2', 'obs'))
-    if (s_lims is not None) & (q_lims is not None):
-        ax1.plot(s_lims, q_lims, c='k', lw=1, zorder=0, label='routine');
-        for s, q in zip(s_lims, q_lims):
-            ax1.hlines(q, xmin=-.02, xmax=s, color='k', ls=':', lw=.5, zorder=10)
-            ax1.vlines(s, ymin=ymin, ymax=q, color='k', ls=':', lw=.5, zorder=10)
-    ax1.set(ylim= (ymin, None),
-            xlim=(-.02, 1.02), 
-            xlabel=xlabel,
-            ylabel=ylabel)
-    ax1.spines[['top', 'right']].set_visible(False)
-    ax1.legend(frameon=False, loc=2)
+    # scatter plot: x1 vs y
+    ax10 = plt.subplot(gs[1, 0])
+    reservoir_scatter(sim, x1, y, obs, x_thr=x_thr, y_thr=y_thr, xlim=(-.02, 1.02), ax=ax10, legend=False,
+                      size=s, alpha=a, color=c, labels=labels)
     
-    # densidy distribution: storage
-    ax2 = plt.subplot(gs[0, 0])
-    sns.kdeplot(storage, color=c[0], fill=True, ax=ax2)
-    if storage2 is not None:
-        sns.kdeplot(storage2, color=c[1], fill=True, ax=ax2)
-        kge = KGEmod(storage, storage2)[0]
-        ax2.text(.5, -.2, f"KGE' = {kge:.2f}", fontsize=9, va='center', ha='center', transform=ax2.transAxes)
-    if s_lims is not None:
-        for s in s_lims:
-            ax2.axvline(s, color='k', ls=':', lw=.5, zorder=10)
-    ax2.spines[['top', 'left', 'right']].set_visible(False)
-    ax2.set(xlim=(-.02, 1.02),
-            ylabel=None,
-            xlabel=None)
-    ax2.set_yticks([])
-    ax2.set_xticklabels([])
+    # scatter plot: x2 vs y
+    ax11 = plt.subplot(gs[1, 1])
+    reservoir_scatter(sim, x2, y, obs, x_thr=y_thr, y_thr=y_thr, ax=ax11, legend=False, ylim=ax10.get_ylim(), ylabel='', yticklabels=False,
+                      size=s, alpha=a, color=c, labels=labels)
+    
+    # density distribution: x1
+    ax00 = plt.subplot(gs[0, 0])
+    reservoir_kde(sim, obs, x=x1, thr=x_thr, ax=ax00, xlim=ax10.get_xlim(), xticklabels=False,
+                  color=c)
+    
+    # density distribution: x2
+    ax01 = plt.subplot(gs[0, 1])
+    reservoir_kde(sim, obs, x=x2, thr=x_thr, ax=ax01, xlim=ax11.get_xlim(), xticklabels=False,
+                  color=c)
 
-    # density distribution: outflow
-    ax3 = plt.subplot(gs[1, 1])
-    sns.kdeplot(y=outflow, color=c[0], fill=True, ax=ax3)
-    if outflow2 is not None:
-        sns.kdeplot(y=outflow2, color=c[1], fill=True, ax=ax3)
-        kge = KGEmod(outflow, outflow2)[0]
-        ax3.text(-0.2, .55, f"KGE' = {kge:.2f}", fontsize=9, va='center', ha='center', rotation=90, transform=ax3.transAxes)
-    if q_lims is not None:
-        for q in q_lims:
-            ax3.axhline(q, color='k', ls=':', lw=.5, zorder=10)
-    ax3.spines[['top', 'bottom', 'right']].set_visible(False)
-    ax3.set(ylim=(ymin, None),
-            xlabel=None,
-            ylabel=None)
-    ax3.set_xticks([])
-    ax3.set_yticklabels([])
-
+    # density distribution: y
+    ax12 = plt.subplot(gs[1, 2])
+    reservoir_kde(sim, obs, y=y, thr=y_thr, ax=ax12, ylim=ax10.get_ylim(), yticklabels=False)
+    
+    fig.legend(*ax10.get_legend_handles_labels(), frameon=False, ncol=3, loc=8, bbox_to_anchor=[.25, -.04, .5, .05])
+    
     # Adjust the spacing between subplots
     fig.tight_layout();
     
