@@ -630,6 +630,7 @@ def reservoir_analysis(sim: pd.DataFrame, obs: pd.DataFrame = None, x1: str = 's
     ax11 = plt.subplot(gs[1, 1])
     reservoir_scatter(sim, x2, y, obs, x_thr=y_thr, y_thr=y_thr, ax=ax11, legend=False, ylim=ax10.get_ylim(), ylabel='', yticklabels=False,
                       size=s, alpha=a, color=c, labels=labels)
+    ax11.plot(ax10.get_ylim(), ax10.get_ylim(), c='k', lw=.5, ls=':', zorder=0)
     
     # density distribution: x1
     ax00 = plt.subplot(gs[0, 0])
