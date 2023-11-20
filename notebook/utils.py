@@ -9,6 +9,7 @@ import cartopy.crs as ccrs
 from typing import Union, List, Dict, Tuple
 from pathlib import Path
 import xml.etree.ElementTree as ET
+from scipy.stats import gumbel_r, gaussian_kde
 
 
 
@@ -190,3 +191,85 @@ def xml_parameters(xml: Union[str, Path], pars: Union[str, List[str]] = None) ->
     parameters = {par: float(root.find(f'.//textvar[@name="{par}"]').attrib['value']) for par in pars}
         
     return parameters
+
+
+
+def CDF(series: pd.Series):
+    """It estimates the value associated to a specific return period based on the observed time series and the Gumbel distribution
+    
+    Input:
+    ------
+    series: pd.Series
+        Time series from which the annual maxima (therefore the index must be a timestamp) will be extracted and then used to fit a Gumbel distribution
+        
+    Ouput:
+    ------
+    CDF: pd.Series
+        A series in which the index is the sorted annual maxima and the values the probability of non exceeding that value
+    """
+    
+    # annual maxima
+    maxima = series.groupby(series.index.year).max()
+    maxima.sort_values(ascending=True, inplace=True)
+    
+    # fit gumbel distribution
+    pars = gumbel_r.fit(maxima.values)
+    
+    CDF = pd.Series(gumbel_r.cdf(maxima, *pars), index=maxima)
+    
+    return CDF
+
+
+
+def get_normal_value(series: pd.Series):
+    """Given values of a variable, it estimates the Gaussian kernel density and ouputs the value of the variable with the highest density.
+    
+    Input:
+    ------
+    series: pd.Series
+        Values of any variable
+        
+    Ouput:
+    ------
+    x: float
+        Value of the input variable with the highest Gaussian density.
+    """
+    
+    series_ = series.dropna()
+    kde = gaussian_kde(series_)
+    x = np.linspace(series_.min(), series_.max(), 1000) #serie.copy().sort_values()
+    y = kde(x)
+    return x[np.argmax(y)]
+
+
+
+def return_period(series: pd.Series, T: float = 100):
+    """It estimates the value associated to a specific return period based on the observed time series and the Gumbel distribution
+    
+    Input:
+    ------
+    series: pd.Series
+        Time series from which the annual maxima (therefore the index must be a timestamp) will be extracted and then used to fit a Gumbel distribution
+    T: int
+        Return period (in years) to be estimated
+        
+    Output:
+    -------
+    x: float
+        Value of the input variable associated with a return period of 'T' years.
+    """
+    
+    series_ = series.dropna()
+    
+    # annual maxima
+    maxima = series_.groupby(series_.index.year).max()
+    maxima.sort_values(ascending=True, inplace=True)
+    
+    # fit gumbel distribution
+    pars = gumbel_r.fit(maxima.values)
+    return_period.parameters = pars
+    
+    # discharge associated to return period
+    x = gumbel_r.ppf(1 - 1 / T, *pars)
+    
+    return x

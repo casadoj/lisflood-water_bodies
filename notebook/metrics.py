@@ -259,3 +259,75 @@ def ECDF(serie: pd.Series, plot: bool = True, **kwargs) -> pd.Series:
                title=kwargs.get('title', ''));
 
     return ecdf
+
+
+
+def PDE(obs: pd.Series, sim: pd.Series) -> float:
+    """It computes the peak discharge error: mean of the absolute values of the relative error in the annual maximum discharge.
+    
+    Parameters:
+    -----------
+    obs:   pd.Series.
+        Observed time series
+    sim:   pd.Series
+        Simulated time series
+    
+    Returns:
+    -------
+    PDE: float
+        Peak discharge error
+    """
+    
+    # remove timesteps with missing values
+    data = pd.concat((obs, sim), axis=1)
+    data.columns = ['obs', 'sim']
+    data.dropna(axis=0, how='any', inplace=True)
+    
+    # annual maxima
+    maxima = data.groupby(data.index.year).max()
+    
+    # peak discharge error
+    PDE = ((maxima.obs - maxima.sim).abs() / maxima.obs).mean()
+    
+    return PDE
+
+
+
+def pareto_front(of1: pd.Series, of2: pd.Series) -> pd.DataFrame:
+    """It computes the Pareto front of two sets of objective functions.
+    
+    Inputs:
+    -------
+    of1: pd.Series
+        Values of the objective function 1
+    of2: pd.Series
+        Values of the objective function 2
+        
+    Output:
+    -------
+    front: pd.DataFrame
+        the pairs of values in 'of1' and 'of2' that delineate the Pareto front
+    """
+    
+
+    df = pd.concat((of1, of2), axis=1).dropna(axis=0, how='any')
+    cols = df.columns
+    df.sort_values(by=cols[0], inplace=True)  
+
+    # Iterate through each row in the sorted DataFrame
+    pareto_front = []
+    for index, row in df.iterrows():
+        is_dominated = False
+
+        # Check if the current row is dominated by any row in the Pareto front list
+        for p_row in pareto_front:
+            if row[cols[0]] >= p_row[cols[0]] and row[cols[1]] > p_row[cols[1]]:
+                is_dominated = True
+                break
+
+        # If the current row is not dominated, add it to the Pareto front list
+        if not is_dominated:
+            pareto_front.append(row)
+
+    # Convert the Pareto front list to a new DataFrame
+    return pd.DataFrame(pareto_front)

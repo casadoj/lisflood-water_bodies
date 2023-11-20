@@ -1,0 +1,8 @@
+# static map of reservoir ID
+path_res: ../data/reservoirs/GloFAS/GloFAS_reservoirs_US.nc
+# directory with the NetCDFs generated in the Lisflood run
+path_ts: Z:/nahaUsers/casadje/GloFASv4/long_run/dis_US/
+# variable of interest
+var: dis
+# directory where the extracted NetCDFs will be saved
+path_out: Z:/nahaUsers/casadje/GloFASv4/extraction/dis_US/

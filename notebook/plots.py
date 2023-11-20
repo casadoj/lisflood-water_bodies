@@ -2,6 +2,7 @@ import matplotlib as mpl
 from matplotlib.axes import Axes
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
+import geopandas as gpd
 import seaborn as sns
 import cartopy.crs as ccrs
 import cartopy.feature as cf
@@ -9,6 +10,7 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 from typing import Union, Dict, List, Tuple
+
 # from utils import Decomposition
 from metrics import KGEmod
         
@@ -454,7 +456,7 @@ def reservoir_scatter(sim: pd.DataFrame, x: str, y: str, obs: pd.DataFrame = Non
         ax.scatter(obs[x], obs[y], c=c[1], s=s, alpha=a, zorder=1)
         ax.scatter(-1, -1, s=s, c=c[1], label=labels[1])
     if (x_thr is not None) & (y_thr is not None):
-        ax.plot(x_thr, y_thr, c='k', lw=1, zorder=0, label='routine');
+        #ax.plot(x_thr, y_thr, c='k', lw=1, zorder=0, label='routine');
         for s, q in zip(x_thr, y_thr):
             ax.hlines(q, xmin=-.02, xmax=s, color='k', ls=':', lw=.5, zorder=10)
             ax.vlines(s, ymin=ylim[0], ymax=q, color='k', ls=':', lw=.5, zorder=10)
@@ -611,6 +613,7 @@ def reservoir_analysis(sim: pd.DataFrame, obs: pd.DataFrame = None, x1: str = 's
     figsize = kwargs.get('figsize', (9, 5))
     labels = kwargs.get('labels', ['sim', 'obs'])
     s = kwargs.get('size', .5)
+    x1_lim = kwargs.get('x1lim', (-.02, 1.02))
     
     if (x_thr is not None) & (y_thr is not None):
         assert len(x_thr) == len(y_thr), 'The length of "x_thr" and "y_thr" must be the same.'
@@ -623,7 +626,7 @@ def reservoir_analysis(sim: pd.DataFrame, obs: pd.DataFrame = None, x1: str = 's
 
     # scatter plot: x1 vs y
     ax10 = plt.subplot(gs[1, 0])
-    reservoir_scatter(sim, x1, y, obs, x_thr=x_thr, y_thr=y_thr, xlim=(-.02, 1.02), ax=ax10, legend=False,
+    reservoir_scatter(sim, x1, y, obs, x_thr=x_thr, y_thr=y_thr, xlim=x1_lim, ax=ax10, legend=False,
                       size=s, alpha=a, color=c, labels=labels)
     
     # scatter plot: x2 vs y
@@ -639,7 +642,7 @@ def reservoir_analysis(sim: pd.DataFrame, obs: pd.DataFrame = None, x1: str = 's
     
     # density distribution: x2
     ax01 = plt.subplot(gs[0, 1])
-    reservoir_kde(sim, obs, x=x2, thr=x_thr, ax=ax01, xlim=ax11.get_xlim(), xticklabels=False,
+    reservoir_kde(sim, obs, x=x2, thr=y_thr, ax=ax01, xlim=ax11.get_xlim(), xticklabels=False,
                   color=c)
 
     # density distribution: y
@@ -653,3 +656,111 @@ def reservoir_analysis(sim: pd.DataFrame, obs: pd.DataFrame = None, x1: str = 's
     
     if save is not None:
         plt.savefig(save, dpi=300, bbox_inches='tight')
+        
+        
+        
+def maps_performance(x: pd.Series, y: pd.Series, performance: pd.DataFrame, s: Union[pd.Series, int] = None, polygons: gpd.GeoDataFrame = None, save: Union[Path, str] = None, **kwargs):
+    """It creates a figure that contains 4 maps with the KGE and its 3 components.
+    
+    Inputs:
+    -------
+    x: pd.Series
+        X coordinate of the points 
+    y: pd.Series
+        Y coordinate of the points
+    performance: pd.DataFrame
+        Performance of each of the points. It must contain at least 4 columns: 'KGE', 'r', 'alpha', 'beta'
+    s: Union[pd.Series, int]
+        Size of each point. In case of an integer all points will have the same size. In case of a pd.Series every point will have an specific size
+    save: Union[Path, str]
+        File in which the plot will be saved
+        
+    kwargs:
+    -------
+    figsize: Tuple
+        Size of the figure
+    proj: 
+        Projection of the map
+    extent: List
+        Extension of the map [xmin, xmax, ymin, ymax]
+    alpha: float
+        Transparency of the points
+    title: str
+        Title of the figure
+    """
+    
+    figsize = kwargs.get('figsize', (15, 7))
+    proj = kwargs.get('proj', ccrs.PlateCarree())
+    extent = kwargs.get('extent', None)#[-125, -67.5, 24, 51]
+    alpha = kwargs.get('alpha', .8)
+    if s is None:
+        s = 5
+    
+    fig, axes = plt.subplots(ncols=2, nrows=2, figsize=figsize, tight_layout=True, subplot_kw={'projection': proj})
+
+    for i, metric in enumerate(['KGE', 'r', 'alpha', 'beta']):
+
+        if metric == 'KGE':
+            cmap, norm = create_cmap('Spectral', [-100, -1, -.75, -.5, -.25 ,0, .25, .5, .75, 1])
+        elif metric in ['alpha', 'beta']:
+            cmap, norm = create_cmap('RdBu', [1e-6, 1/16, 1/8, 1/4, 1/2, 1/1.2, 1.2, 2, 4, 8, 16, 1e6])
+        elif metric == 'r':
+            cmap, norm = create_cmap('Spectral', [-1, -.75, -.5, -.25, 0, .25, .5, .75, 1])
+
+        # background map
+        ax = axes[int(i / 2), i % 2]
+        ax.add_feature(cf.NaturalEarthFeature('physical', 'land', '50m', edgecolor='face', facecolor='lightgray'), alpha=.5, zorder=0)
+        if polygons is not None:
+            polygons.plot(facecolor='none', edgecolor='white', ax=ax)
+        if extent is not None:
+            ax.set_extent(extent)
+        ax.axis('off')
+
+        # scatter plot
+        sct = ax.scatter(x, y, c=performance[metric], cmap=cmap, norm=norm, edgecolor='w', lw=1, 
+                          s=s, alpha=alpha)
+        # # setup: color bar, title...
+        cbar = plt.colorbar(sct, ax=ax, shrink=.66)#, orientation='horizontal')
+        cbar.set_label(metric, rotation=90)
+    
+    if 'title' in kwargs:
+        fig.text(.5, 1.0, kwargs['title'], ha='center', va='bottom', fontsize=12);
+    if save is not None:
+        plt.savefig(save, dpi=300, bbox_inches='tight')
+        
+        
+        
+def plot_iterations(iters: pd.DataFrame, pareto: pd.DataFrame, best_iter: int, cols: List = ['like1', 'like2'], save: Union[str, Path] = None, **kwargs):
+    """It creates a scatter plot that shows the performance of the iterations in the calibration. On top of the scatter plot a line depicts the Pareto front, from which the best iteration is taken.
+    
+    Inputs:
+    -------
+    iters: pd.DataFrame
+        A table that contains the two objective functions ("cols") to be plotted
+    pareto: pd.DataFrame
+        A table that contains the Pareto front from "iters[cols]"
+    best_iter: int
+        The index of "iters" that contains the best iteration
+    save: Union[str, Path]
+        If provided, where to save the plot
+    """
+    
+    figsize = kwargs.get('figsize', (4, 4))
+    vmax = kwargs.get('vmax', None)
+    xlabel = kwargs.get('xlabel', r'$L_{outflow}$')
+    ylabel = kwargs.get('ylabel', r'$L_{storage}$')
+    title = kwargs.get('title', None)
+    
+    fig, ax = plt.subplots(figsize=figsize)
+    ax.scatter(iters[cols[0]], iters[cols[1]], s=1, c='gray', label='iteration', alpha=.2)
+    ax.scatter(*iters.loc[best_iter, cols], c='steelblue', label='optimum', s=4)
+    ax.plot(pareto[cols[0]], pareto[cols[1]], c='k', lw=1, ls=':', label='pareto front', zorder=0)
+    ax.set(xlim=(-.025, vmax),
+           xlabel=xlabel,
+           ylim=(-.025, vmax),
+           ylabel=ylabel)
+    if 'title' in kwargs:
+        ax.set_title(kwargs['title'])
+    fig.legend(frameon=False, loc=1, bbox_to_anchor=[1.175, .7, .1, .2])
+    if save is not None:
+        plt.savefig(save, dpi=300, bbox_inches='tight');
