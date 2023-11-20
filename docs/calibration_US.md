@@ -25,8 +25,12 @@ Figure 1 shows the LISFLOOD reservoir routine and the two parameters that are fi
 
 The GloFAS calibration does not tune directly the parameters $V_n'$ and $Q_n'$, but it uses two indirect hyperparameters (here called $a$ and $b$). The equations below show the relation between these hyperparameters and the reservoir parameters:
 
-$$V_n' = V_n + a \cdot (V_f - V_n) \quad \forall \; a \in (0, 1)$$
-$$Q_n' = b \cdot Q_n \quad \forall \; b \in (0.25, 2)$$
+$$
+\begin{align*}
+V_n' &= V_n + a \cdot (V_f - V_n) & \forall \; a &\in (0, 1) \\
+Q_n' &= b \cdot Q_n & \forall \; b &\in (0.25, 2) \\
+\end{align*}
+$$
 
 
 <img src='GloFAS_reservoir_calibration.JPG' width='700'>
@@ -47,11 +51,15 @@ In this study I have actual reservoir time series which can be used to train the
 
 Instead of 2 parameters, in this study I will calibrate 6 parameters: 3 regarding storage ($V_n$, $V_n'$, $V_f$), and 3 regarding outflow ($Q_n$, $Q_f$, $\kappa$). In summary, all but the minimum storage and outflow. In reality, I will not calibrate the parameters directly, but a set of 5 hyperparameters; the equations below show the relation between parameters and hyperparameters. Only the $\kappa$ parameter will be calibrated directly.
 
-$$V_f = FF_f \cdot V_{tot} \quad \forall \; FF_f \in [0.2, 1)$$
-$$V_n = V_c + \alpha \cdot (V_f - V_c) \quad \forall \; \alpha \in (0, 1)$$
-$$V_n' = V_n + \beta \cdot (V_f - V_n) \quad \forall \; \beta \in (0, 1)$$
-$$Q_f = I_{QQ_f} \quad \forall \; QQ_f \in (0, 1)$$
-$$Q_n = Q_c + \gamma \cdot (Q_f - Q_c) \quad \forall \; \gamma \in (0, 1)$$
+$$
+\begin{align*}
+V_f &= FF_f \cdot V_{tot} & \forall \; FF_f &\in [0.2, 1) \\
+V_n &= V_c + \alpha \cdot (V_f - V_c) & \forall \; \alpha &\in (0, 1) \\
+V_n' &= V_n + \beta \cdot (V_f - V_n) & \forall \; \beta &\in (0, 1) \\
+Q_f &= I_{QQ_f} & \forall \; QQ_f &\in (0, 1) \\
+Q_n &= Q_c + \gamma \cdot (Q_f - Q_c) & \forall \; \gamma &\in (0, 1)
+\end{align*}
+$$
 
 In words:
 * The upper bound of the flood zone ($V_f$) is a proportion ($FF_f$) of the total reservoir capacity.
