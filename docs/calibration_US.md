@@ -56,7 +56,7 @@ $$
 V_f &= FF_f \cdot V_{tot} & \forall \, FF_f &\in [0.2, 1) \\
 V_n &= V_c + \alpha \cdot (V_f - V_c) & \forall \, \alpha &\in (0, 1) \\
 V_n' &= V_n + \beta \cdot (V_f - V_n) & \forall \, \beta &\in (0, 1) \\
-Q_f &= I_{QQ_f} & \forall \, QQ_f &\in (0, 1) \\
+Q_f &= I_{QQ_f} & \forall \, QQ_f &\in [0.1, 1) \\
 Q_n &= Q_c + \gamma \cdot (Q_f - Q_c) & \forall \, \gamma &\in (0, 1)
 \end{align*}
 $$
@@ -161,12 +161,12 @@ There is only a clear pattern that affects the reservoirs in the South-East. A f
 
 ## 5 Conclusions
 
-This document reports the results of the optimization of the LISFLOOD reservoir routine for 93 reservoirs in the US. Three calibrations are presented that differ in the target variable(s): outflow, storage or both. The best performances are obtained for the calibration of reservoir storage and the bivariate calibration. The fact that the calibration of storage renders better results than that of outflow is interesting, since global datasets of reservoir storage have been derived from satellite products. The comparison of the optimized parameters and those used in GloFAS (most of them fixed) show defficits in the GloFAS parameterization. Unfortunately, the obtained parameters do not show clear patterns neither regarding reservoir use nor geographic location.
+This document reports the results of the optimization of the LISFLOOD reservoir routine for 93 reservoirs in the US. Three calibrations are presented that differ in the target variable(s): outflow, storage or both. The best performances are obtained for the calibration of reservoir storage and the bivariate calibration. The fact that the calibration of storage renders better results than that of outflow is interesting, since global datasets of reservoir storage have been derived from satellite products. The comparison of the optimized parameters and those used in GloFAS (most of them fixed) show deficits in the GloFAS parameterization. Unfortunately, the obtained parameters do not show clear patterns neither regarding reservoir use nor geographic location.
 
 There are several points that could be improved/added to this analysis:
 
 * Add more reservoirs. As the calibration only requires GloFAS inflow time series and the storage capacity of the reservoir, it could be expanded to all the reservoirs in the ResOpsUS data set even if they are not included in the current GloFAS setup. A larger sample of reservoirs would improve the conclusions of the analysis and help in a future regionalization of the reservoir parameters.
-* Regionalizaion is needed to infer the parameters in reservoirs with no records. The regionalization could be based on reservoir use, location, climate, size... Unfortunately, the results here presented do not show clear patterns. In any case, a test could be done on the GloFAS reservoirs not included in ResOpsUS.
+* Regionalization is needed to infer the parameters in reservoirs with no records. The regionalization could be based on reservoir use, location, climate, size... Unfortunately, the results here presented do not show clear patterns. In any case, a test could be done on the GloFAS reservoirs not included in ResOpsUS.
 * KGE was selected as the objective function in all the three calibrations. This metric may not be the most appropriate to optimize the reservoir behaviour during floods. Moreover, the combination of the outflow and storage KGE in the bivariate calibration gives equal value to the simulation of storage and outflow, which enhances the storage performance compared with GloFAS at the expense of a poorer representation of outflow peaks.
 * The calibration procedure left out a 30% of the available records to validate the optimized parameters, but the validation was not included in this report.
 * The selection of 6 reservoir parameters was purely subjective. A sensitivity analysis could reduce this number of parameters so that the calibration focuses only on those that are sensitive.

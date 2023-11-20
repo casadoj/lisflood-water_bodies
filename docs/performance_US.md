@@ -17,7 +17,7 @@ I've noticed that the reservoir storage capacity in GloFAS (taken from GLWD), GR
 
 To limit this uncertainty, I have compared the values of total capacity from three data sets (GloFAS, GRanD and ResOpsUS) and manually select for each reservoir whether GRanD or GloFAS is the data source more coherent when comparing against the observations from ResOpsUS. The plot below compares the maximum observed storage (ResOpsUS) against the total reservoir capacity reported both in GloFAS and GRanD. The Spearman correlation coefficient ($R^2$) gives an idea of the coherence between each pair of data sets.
 
-<img src='../notebook/GloFAS/parameters/scatter_capacity.jpg' width="600">
+<img src='../results/reservoirs/timeseries/GloFAS/parameters/scatter_capacity.jpg' width="600">
 
 ***Figure 1**. Scatter plots of total reservoir capacity in three different data sets: ResOpsUS, GRanD and GloFAS.*
 
@@ -29,7 +29,7 @@ Before analysing the performance of the simulations, I had a look at the calibra
 
 <font color='red'>Add the sketch of the reservoir routine</font>
 
-![Calibrated parameters](../notebook/GloFAS/parameters/parameters_calibration_maps.jpg)
+![Calibrated parameters](../results/reservoirs/timeseries/GloFAS/parameters/parameters_calibration_maps.jpg)
 
 ***Figure 2**. Values of the LISFLOOD reservoir parameters calibrated in GloFASv4. The size of the dots corresponds to the total reservoir capacity.*
 
@@ -39,7 +39,7 @@ Both parameters take values throughout the whole search range (0-1 for _adjustNo
 
 The maps below show the 4 reservoir limits in the LISFLOOD routine (1 related to storage and 3 to outflow). $nlim_{adj}$ is the normal reservoir storage adjusted by the calibrated parameter _adjustNormalFlood_; $minq$ is the minimum outflow; $normq_{adj}$ is the normal outflow adjusted by the calibrated parameter _ReservoirRnormqMult_; $ndq$ is the non-damaging outflow.
 
-![Reservoir limits](../notebook/GloFAS/parameters/parameters_maps.jpg)
+![Reservoir limits](../results/reservoirs/timeseries/GloFAS/parameters/parameters_maps.jpg)
 
 ***Figure 3**. Values of the LISFLOOD reservoir limits in GloFASv4. The size of the dots corresponds to the total reservoir capacity.*
 
@@ -55,7 +55,7 @@ In the following subsections I will explore the performance of the GloFASv4 rese
 
 The maps below show the performance of the reservoir storage simulations in GloFAS, both in terms of the modified KGE and its three components.
 
-![Performance storage](../notebook/GloFAS/storage/maps_performance.jpg)
+![Performance storage](../results/reservoirs/timeseries/GloFAS/storage/maps_performance.jpg)
 
 ***Figure 4**. GloFASv4 performance in simulating reservoir storage. It shows the modified Klin-Gupta efficiency coefficient (KGE) and its three components: correlation (r), ratio of the coefficient of variance (alpha) and bias (beta). The size of the dots represents total reservoir capacity.*
 
@@ -69,9 +69,9 @@ Following the analysis of [Steyaert and Condon (2023)](https://hess.copernicus.o
 
 The analysis was done for all the reservoirs, but here I show only three cases. The plots below show the comparison of the observed and simulated time series in its original form, and in the trend, seasonality and residual components. Each of the time series show the performance in terms of the KGE and its components. The dotted, vertical lines show the reservoir storage limits.
 
-<img src='../notebook/GloFAS/storage/decomposition/064.jpg'>
-<img src='../notebook/GloFAS/storage/decomposition/107.jpg'>
-<img src='../notebook/GloFAS/storage/decomposition/169.jpg'>
+<img src='../results/reservoirs/timeseries/GloFAS/storage/decomposition/064.jpg'>
+<img src='../results/reservoirs/timeseries/GloFAS/storage/decomposition/107.jpg'>
+<img src='../results/reservoirs/timeseries/GloFAS/storage/decomposition/169.jpg'>
 
 ***Figure 5**. Time series of reservoir storage and their decomposition in trend, seasonality and residuals. The dotted, vertical lines show the reservoir storage limits used in the LISFLOOD reservoir routine.*
 
@@ -85,7 +85,7 @@ The reservoir 169 represents another common case in which the seasonality of the
 
 The maps below show the GloFAS performance in simulating reservoir inflow. ResOpsUS only contains inflow records for 62 of the reservoirs analysed here; they are represented as empty circles in the maps (mostly in the Gulf of Mexico and Mississipi).
 
-![Performance inflow](../notebook/GloFAS/inflow/maps_performance.jpg)
+![Performance inflow](../results/reservoirs/timeseries/GloFAS/inflow/maps_performance.jpg)
 
 ***Figure 6**. GloFASv4 performance in simulating reservoir inflow. It shows the modified Klin-Gupta efficiency coefficient (KGE) and its three components: correlation (r), ratio of the coefficient of variance (alpha) and bias (beta). The size of the dots represents total reservoir capacity.*
 
@@ -105,7 +105,7 @@ Similarly to what was done for the storage time series, I have decomposed the in
 
 The maps below show the GloFAS performance in the last of the three reservoir variables, the outflow. ResOpsUS contains outflow time series for 96 out of the 107 reservoirs analysed here.
 
-![Performance outflow](../notebook/GloFAS/outflow/maps_performance.jpg)
+![Performance outflow](../results/reservoirs/timeseries/GloFAS/outflow/maps_performance.jpg)
 
 ***Figure 7**. GloFASv4 performance in simulating reservoir outflow. It shows the modified Klin-Gupta efficiency coefficient (KGE) and its three components: correlation (r), ratio of the coefficient of variance (alpha) and bias (beta). The size of the dots represents total reservoir capacity.*
 
@@ -117,10 +117,10 @@ The correlation between simulated and observed outflow is very good overall, aga
 
 Figue 8 shows some examples of the decomposition of the outflow time series.
 
-<img src='../notebook/GloFAS/outflow/decomposition/236.jpg'>
-<img src='../notebook/GloFAS/outflow/decomposition/382.jpg'>
-<img src='../notebook/GloFAS/outflow/decomposition/635.jpg'>
-<img src='../notebook/GloFAS/outflow/decomposition/220.jpg'>
+<img src='../results/reservoirs/timeseries/GloFAS/outflow/decomposition/236.jpg'>
+<img src='../results/reservoirs/timeseries/GloFAS/outflow/decomposition/382.jpg'>
+<img src='../results/reservoirs/timeseries/GloFAS/outflow/decomposition/635.jpg'>
+<img src='../results/reservoirs/timeseries/GloFAS/outflow/decomposition/220.jpg'>
 
 ***Figure 8**. Time series of reservoir outflow and their decomposition in trend, seasonality and residuals. The dotted, vertical lines show the reservoir outflow limits (conservative, normal adjusted and non-damaging) used in the LISFLOOD reservoir routine. Outflow values are normalized by the non-damaging outflow, so any value above one represents and outflow over this limit.*
 
@@ -138,7 +138,7 @@ The reservoir 220 is an example of a simulation with no bias and correct coeffic
 
 The figure below summarises the performance of the three previous variables. It shows the KGE of each pair of variables to look for possible correlations, and it shows the ECDF of each variable.
 
-<img src='../notebook/GloFAS/behaviour/scatter_KGE.jpg' width='600'>
+<img src='../results/reservoirs/timeseries/GloFAS/behaviour/scatter_KGE.jpg' width='600'>
 
 ***Figure 9**. Summary of the reservoir performance in GloFAS. The top, right panel shows the empirical cumulative density function of the KGE for storage, inflow and outflow. The other three plots compare the KGE of every pair of variables. The colours represent reservoir size (lighter yellow for small reservoirs and dark purple for large ones).*
 
@@ -154,10 +154,10 @@ In the previous section I analysed the performance of the model in reproducing t
 
 To do so, I have create pair-wise scatter plots of storage-outflow and inflow-outflow daily time series. In these plots I show both the observed (blue) and simulated (orange) timeseries. I include also the LISFLOOD reservoir routine (black, solid line) controled by 8 parameters (5 storage limits and 3 outflow limits). Moreover, density plots show the overlap in the distribution of the observed and simulated timeseries. Figure 10 shows a few examples of these type of plots.
 
-<img src='../notebook/GloFAS/behaviour/016.jpg' width='675'>
-<img src='../notebook/GloFAS/behaviour/140.jpg' width='675'>
-<img src='../notebook/GloFAS/behaviour/227.jpg' width='675'>
-<img src='../notebook/GloFAS/behaviour/076.jpg' width='675'>
+<img src='../results/reservoirs/timeseries/GloFAS/behaviour/016.jpg' width='675'>
+<img src='../results/reservoirs/timeseries/GloFAS/behaviour/140.jpg' width='675'>
+<img src='../results/reservoirs/timeseries/GloFAS/behaviour/227.jpg' width='675'>
+<img src='../results/reservoirs/timeseries/GloFAS/behaviour/076.jpg' width='675'>
 
 ***Figure 10**. Representation of the reservoir behaviour in the simulated (orange) and observed (blue) time series. The left panel shows the pair plot between storage and ouflow; the black, solid line represents the reference LISFLOOD routine defined by 5 pairs of storage-outflow values. The right plot compares inflow and outflow; the black-solid line is the 1:1 line. Density plots show the overlap of the observed and simulated distributions for each of the three variables.*
 
