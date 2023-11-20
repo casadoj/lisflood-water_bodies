@@ -28,7 +28,8 @@ The GloFAS calibration does not tune directly the parameters $V_n'$ and $Q_n'$, 
 $$V_n' = V_n + a \cdot (V_f - V_n) \quad \forall \; a \in (0, 1)$$
 $$Q_n' = b \cdot Q_n \quad \forall \; b \in (0.25, 2)$$
 
-<img src='GloFAS_reservoir_calibration.jpg' width='700'>
+
+<img src='GloFAS_reservoir_calibration.JPG' width='700'>
 
 ***Figure 1**. LISFLOOD reservoir routine including its parameters. Parameters in orange are those fitted in GloFASv4 using discharge data in a gauging station downstream. The blue line represents the reference routine, and the blue shade the allowed variation depending on several conditions (mostly inflow).*
 
@@ -40,7 +41,7 @@ It is important to keep in mind that the calibration of the rerservoir parameter
 
 In this study I have actual reservoir time series which can be used to train the reservoir routine. This allows me to add more flexibility to the calibration, i.e., more parameters to be tuned. Figure 2 shows the same LISFLOOD routine as Figure 1, but with the parameters that will be calibrated specifically for each reservoir.
 
-<img src='New_reservoir_calibration.jpg' width='700'>
+<img src='New_reservoir_calibration.JPG' width='700'>
 
 ***Figure 2**. LISFLOOD reservoir routine including its parameters. Parameters in orange are those fitted in the calibrations performed in this study. The blue line represents the reference routine, and the blue shade the allowed variation depending on several conditions (mostly inflow).*
 
