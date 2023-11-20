@@ -53,11 +53,11 @@ Instead of 2 parameters, in this study I will calibrate 6 parameters: 3 regardin
 
 $$
 \begin{align*}
-V_f &= FF_f \cdot V_{tot} & \forall \; FF_f &\in [0.2, 1) \\
-V_n &= V_c + \alpha \cdot (V_f - V_c) & \forall \; \alpha &\in (0, 1) \\
-V_n' &= V_n + \beta \cdot (V_f - V_n) & \forall \; \beta &\in (0, 1) \\
-Q_f &= I_{QQ_f} & \forall \; QQ_f &\in (0, 1) \\
-Q_n &= Q_c + \gamma \cdot (Q_f - Q_c) & \forall \; \gamma &\in (0, 1)
+V_f &= FF_f \cdot V_{tot} & \forall \, FF_f &\in [0.2, 1) \\
+V_n &= V_c + \alpha \cdot (V_f - V_c) & \forall \, \alpha &\in (0, 1) \\
+V_n' &= V_n + \beta \cdot (V_f - V_n) & \forall \, \beta &\in (0, 1) \\
+Q_f &= I_{QQ_f} & \forall \, QQ_f &\in (0, 1) \\
+Q_n &= Q_c + \gamma \cdot (Q_f - Q_c) & \forall \, \gamma &\in (0, 1)
 \end{align*}
 $$
 
@@ -81,8 +81,13 @@ The difference between calibrations is the target variable:
 
 In all cases the objective function is the modified KGE, a metric that combines three components: the coefficient of correlation ($r$), the bias or quotient of the means ($\mu$), and the quotient of the coefficient of variation ($CV$). The bivariate calibration requires a metric that combines KGEs of outflow and storage. Following the concept of the KGE (Euclidean distance of three components to their optimal value of 1), I combine the 2 KGEs of outflow and storage as the Euclidean distance from the optimal point (1, 1).
 
-$$KGE' = \sqrt{(1 - r)^2 + (1 - \frac{\mu_{sim}}{\mu_{obs}})^2 + (1 - \frac{CV_{sim}}{CV_{obs}})^2}$$
-$$KGE_{bivariate}' = \sqrt{(1 - KGE_Q')^2 + (1 - KGE_S')^2}$$
+$$
+\begin{align*}
+KGE' &= \sqrt{(1 - r)^2 + \left(1 - \frac{\mu_{\text{sim}}}{\mu_{\text{obs}}}\right)^2 + \left(1 - \frac{CV_{\text{sim}}}{CV_{\text{obs}}}\right)^2} \\
+KGE_{\text{bivariate}}' &= \sqrt{(1 - KGE_Q')^2 + (1 - KGE_S')^2}
+\end{align*}
+$$
+
 
 ## 4 Results
 
