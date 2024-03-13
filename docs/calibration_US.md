@@ -21,7 +21,7 @@ The GloFASv4 long run is used both as a benchmark and as an input to the reservo
 
 ### 3.1 GloFAS calibration
 
-Figure 1 shows the LISFLOOD reservoir routine and the two parameters that are fitted during calibration. The calibration of reservoirs in LISFLOOD only allows to tune the normal outflow ($Q_n'$) and the upper bound of the storage that produces this normal outflow ($V_n'$). All the other 6 parameters are fixed. The three storage limits ($V_c$, $V_n$, $V_f$) are constant for all reservoirs. The outflow parameters ($Q_c$, $Q_n$, $Q_f$) are reservoir specific (<font color='indianred'>I guess they are fixed quantiles of some time series</font>). I add an extra parameter ($\kappa$) that controls the maximum allowed outflow with respect to the inflow in the flood control zone; in the LISFLOOD code this parameters has a fixed value of $1.2$.
+Figure 1 shows the LISFLOOD reservoir routine and the two parameters that are fitted during calibration. The calibration of reservoirs in LISFLOOD only allows to tune the normal outflow ($Q_n'$) and the upper bound of the storage that produces this normal outflow ($V_n'$). All the other 6 parameters are fixed. The three storage limits ($V_c$, $V_n$, $V_f$) are constant for all reservoirs. The outflow parameters ($Q_c$, $Q_n$, $Q_f$) are reservoir specific (<font color='indianred'>I guess they are fixed quantiles of some time series</font>). I add an extra parameter ($\kappa$) that controls the maximum allowed outflow with respect to the inflow in the flood control zone; in the LISFLOOD code $\kappa$ has a fixed value of $1.2$.
 
 The GloFAS calibration does not tune directly the parameters $V_n'$ and $Q_n'$, but it uses two indirect hyperparameters (here called $a$ and $b$). The equations below show the relation between these hyperparameters and the reservoir parameters:
 
@@ -37,7 +37,7 @@ $$
 
 ***Figure 1**. LISFLOOD reservoir routine including its parameters. Parameters in orange are those fitted in GloFASv4 using discharge data in a gauging station downstream. The blue line represents the reference routine, and the blue shade the allowed variation depending on several conditions (mostly inflow).*
 
-It is important to keep in mind that the calibration of the rerservoir parameters in GloFAS is done based on discharge at a downstream gauging station. This means that the reservoir simulation is only one of the multiple factors affecting the performance of the model. In this setup, calibrating more reservoir parameters will only add more complexity to the calibration with no effect on the performance, since the reservoir problem is not constrained enough if we only compare discharge downstream.
+It is important to keep in mind that the calibration of the reservoir parameters in GloFAS is done based on discharge at a downstream gauging station. This means that the reservoir simulation is only one of the multiple factors affecting the performance of the model. In this setup, calibrating more reservoir parameters will only add more complexity to the calibration with no effect on the performance, since the reservoir problem is not constrained enough if we only compare discharge downstream.
 
 ### 3.2 Reservoir-specific calibration
 
@@ -49,7 +49,7 @@ In this study I have actual reservoir time series which can be used to train the
 
 ***Figure 2**. LISFLOOD reservoir routine including its parameters. Parameters in orange are those fitted in the calibrations performed in this study. The blue line represents the reference routine, and the blue shade the allowed variation depending on several conditions (mostly inflow).*
 
-Instead of 2 parameters, in this study I will calibrate 6 parameters: 3 regarding storage ($V_n$, $V_n'$, $V_f$), and 3 regarding outflow ($Q_n$, $Q_f$, $\kappa$). In summary, all but the minimum storage and outflow. In reality, I will not calibrate the parameters directly, but a set of 5 hyperparameters; the equations below show the relation between parameters and hyperparameters. Only the $\kappa$ parameter will be calibrated directly.
+Instead of 2, in this study I will calibrate 6 parameters: 3 regarding storage ($V_n$, $V_n'$, $V_f$), and 3 regarding outflow ($Q_n$, $Q_f$, $\kappa$). In summary, all but the minimum storage and outflow. In reality, I will not calibrate the parameters directly, but a set of 5 hyperparameters; the equations below show the relation between parameters and hyperparameters. Only the $\kappa$ parameter will be calibrated directly.
 
 $$
 \begin{align*}
@@ -115,13 +115,13 @@ The univariate calibration of storage (**SCEUA-S**) clearly outperforms GloFAS i
 
 As it could be expected, the bivariate calibration (**SCEUA-QS**) falls in a middle ground between the two univariate calibrations. The losses in performance compared with the univariate calibrations are minimal, both in terms of outflow and storage, but it outperforms GloFAS in all cases: outflow, storage and the combination of both.
 
-Figure 5 and Figure 6 show the geographical distribution of the performance of the bivariate calibration (**SCEUA-QS**), that with the highest performance. Both show the KGE and its three components. Figure 5 shows performance in terms of revervoir outflow, and Figure 6 performance in terms of reservoir storage. The objective of these plots is to identify possible geographic/climatic patterns in the performance.
+Figure 5 and Figure 6 show the geographical distribution of the performance of the bivariate calibration (**SCEUA-QS**) — the highest-performing approach. Both show the KGE and its three components. Figure 5 shows performance in terms of revervoir outflow, and Figure 6 performance in terms of reservoir storage. The objective of these plots is to identify possible geographic/climatic patterns in performance.
 
 <img src='../results/reservoirs/LISFLOOD/calibration/plots/maps_performance_SCEUA-QS_outflow.jpg' width='1000'>
 
 ***Figure 5**. Performance of the bivariate calibration in terms of **outflow**. The top, left map shows the objective function of the calibration, KGE, whereas the other three maps show the components of the KGE: r for coefficient of correlation, alpha for the quotient of the coefficients of variation, and beta for the bias (the quotient of the means). The size of the dots represents the reservoir capacity.*
 
-As commented above, the KGE of outflow is overall good. There are a few reservoirs with very poor performance, most of them in the Central Southern US. Reservoir in the Western US show slightly lower performance that those in the Central and Eastern US. When looking at the components of the KGE, the main errors are in the variability (alpha) and bias (beta). All the reservoirs with a poor KGE show a high positive bias, which could be an indicator of issues in the observed time series. The lack of variation is the main problem in the Eastern part, even though KGE is high.
+As commented above, the outflow KGE is overall good. There are a few reservoirs with very poor performance, most of them in the Central Southern US. Reservoir in the Western US show slightly lower performance that those in the Central and Eastern US. When looking at the components of the KGE, the main errors are in the variability (alpha) and bias (beta). All the reservoirs with poor KGE show a high positive bias, which could be an indicator of issues in the observed time series. The lack of variation is the main problem in the Eastern part, even though KGE is high.
 
 <img src='../results/reservoirs/LISFLOOD/calibration/plots/maps_performance_SCEUA-QS_storage.jpg' width='1000'>
 
@@ -157,7 +157,7 @@ The maps in Figure 9 try to find geographical patterns in the parameters optimiz
 
 ***Figure 9**. Maps of the parameters optimized in the calibration SCEUA-QS. To avoid spurious parameterizations, reservoirs with a combined KGE (outflow & storage) lower than 0 were removed.*
 
-There is only a clear pattern that affects the reservoirs in the South-East. A fair number of the reservoirs in this area show a surprisingly low flood storage ($FF_f$), which means that either a large volume of the reservoir is the freeboard in case of flood, or the reservoir capacity is erroneously large. Most of the reservoirs in this same area of the country also show relative high values of normal storage ($\alpha$), which means that the normal storage zone covers a large proportion of the usable reservoir storage.
+There is only a clear pattern that affects the reservoirs in the South-East. A fair number of the reservoirs in this area show a surprisingly low flood storage ($FF_f$), which means that either a large volume of the reservoir is leaft as freeboard in case of flood, or the reservoir capacity is erroneously large. Most of the reservoirs in this same area of the country also show relative high values of normal storage ($\alpha$), which means that the normal storage zone covers a large proportion of the usable reservoir storage.
 
 ## 5 Conclusions
 

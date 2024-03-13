@@ -27,8 +27,6 @@ In general, the agreement between the 3 capacity data sets is good (correlation 
 
 Before analysing the performance of the simulations, I had a look at the calibrated parameters, both at its statistical and geographical distribution. Two reservoir parameters were fitted during calibration: _adjustNormalFlood_ modulates the normal reservoir storage limit, _ReservoirRnormqMult_ is a multiplier of the default value of the normal outflow. The maps below show the geographical distribution of the fitted parameter values.
 
-<font color='red'>Add the sketch of the reservoir routine</font>
-
 ![Calibrated parameters](../results/reservoirs/timeseries/GloFAS/parameters/parameters_calibration_maps.jpg)
 
 ***Figure 2**. Values of the LISFLOOD reservoir parameters calibrated in GloFASv4. The size of the dots corresponds to the total reservoir capacity.*
@@ -75,11 +73,11 @@ The analysis was done for all the reservoirs, but here I show only three cases. 
 
 ***Figure 5**. Time series of reservoir storage and their decomposition in trend, seasonality and residuals. The dotted, vertical lines show the reservoir storage limits used in the LISFLOOD reservoir routine.*
 
-The reservoir 64 shows the common case in which the reservoir routine captures adequately the seasonality, but there is a large bias in the trend, which causes a poor KGE in the original time series. There is a set of reservoirs whose simulated storage is constantly around the flood limit. This incorrect behaviour can be caused by the reservoir storage limits. In the specific case of reservoir 64, the adjusted normal storage is very close to the flood storage (both well above the observed values), and the reservoir stays almost full for the complete simulation.
+Reservoir 64 shows the common case in which the reservoir routine captures adequately the seasonality, but there is a large bias in the trend, which causes a poor KGE in the original time series. There is a set of reservoirs whose simulated storage is constantly around the flood limit. This incorrect behaviour can be caused by the reservoir storage limits. In the specific case of reservoir 64, the adjusted normal storage is very close to the flood storage (both well above the observed values), and the reservoir stays almost full for the complete simulation.
 
-The reservoir 107 shows a case in which the reservoir routine performs very well. Goth the trend and the seasonality are correctly captured by the GloFAS simulation. In this specific case the adjusted normal storage is very close to the normal storage, but that is not the case in other good-performing reservoirs.
+Reservoir 107 shows a case in which the reservoir routine performs very well. Goth the trend and the seasonality are correctly captured by the GloFAS simulation. In this specific case the adjusted normal storage is very close to the normal storage, but that is not the case in other good-performing reservoirs.
 
-The reservoir 169 represents another common case in which the seasonality of the reservoir storage is not reproduced in the simulation. In this specific case, the trend also suffer from a large bias.
+Reservoir 169 represents another common case in which the seasonality of the reservoir storage is not reproduced in the simulation. In this specific case, the trend also suffer from a large bias.
 
 ### 4.2 Reservoir inflow
 
@@ -124,13 +122,13 @@ Figue 8 shows some examples of the decomposition of the outflow time series.
 
 ***Figure 8**. Time series of reservoir outflow and their decomposition in trend, seasonality and residuals. The dotted, vertical lines show the reservoir outflow limits (conservative, normal adjusted and non-damaging) used in the LISFLOOD reservoir routine. Outflow values are normalized by the non-damaging outflow, so any value above one represents and outflow over this limit.*
 
-The reservoir 236 is the reservoir with the highest performance. Both the trend and the seasonality are appropiately reproduced by GloFAS.
+Reservoir 236 is the reservoir with the highest performance. Both the trend and the seasonality are appropiately reproduced by GloFAS.
 
-The reservoir 382 is an example of a biased outflow simulation. The model overpredicts outflow, which can be seen both in the original and trend time series.
+Reservoir 382 is an example of a biased outflow simulation. The model overpredicts outflow, which can be seen both in the original and trend time series.
 
-The reservoir 635 is an example of a simulation that underpredicts the coefficient of variation of outflow. The bias and correlation coefficient of the original time series are good, but the simulation overpredicts the seasonal variation.
+Reservoir 635 is an example of a simulation that underpredicts the coefficient of variation of outflow. The bias and correlation coefficient of the original time series are good, but the simulation overpredicts the seasonal variation.
 
-The reservoir 220 is an example of a simulation with no bias and correct coefficient of variation, but with a poor correlation coefficient due to a shift in the seasonality and an excesive daily variation.
+Reservoir 220 is an example of a simulation with no bias and correct coefficient of variation, but with a poor correlation coefficient due to a shift in the seasonality and an excesive daily variation.
 
 >**Note**. It is surprising that for some reservoirs, both the observed and simulated time series, the outflow clearly exceeds (dozens or hundreds of times) the non-damaging outflow ($ndq$) used in LISFLOOD. Reservoirs 193 and 71 are extreme cases caused by very low outflow limits in LISFLOOD.
 
@@ -161,9 +159,9 @@ To do so, I have create pair-wise scatter plots of storage-outflow and inflow-ou
 
 ***Figure 10**. Representation of the reservoir behaviour in the simulated (orange) and observed (blue) time series. The left panel shows the pair plot between storage and ouflow; the black, solid line represents the reference LISFLOOD routine defined by 5 pairs of storage-outflow values. The right plot compares inflow and outflow; the black-solid line is the 1:1 line. Density plots show the overlap of the observed and simulated distributions for each of the three variables.*
 
-The reservoir 76 is included here because it is a clear example of the LISFLOOD reservoir routine. The outflow is a linear function of the storage unless it largely exceeds the inflow. This plot shows that the dispersion in the reservoir-outflow cannot be modelled with such a fixed reservoir routine, where a given storage produces a fixed outflow unless it exceeds certain limitations. However, as seen before, this simple routine is able to reproduce correctly the outflow in many cases. Another idea to extract from this first example is the offset between the storage limits and the actual reservoir behaviour. In this case, the actual reservoir storage varies between 0.4 and 0.75, whereas the LISFLOOD parameters allow for a variation betweeen 0.2 and 1. This has been seen in many reservoirs, this is not an unusual case.
+The reservoir 16 is included here because it is a clear example of the LISFLOOD reservoir routine. Outflow is a linear function of the storage unless it largely exceeds inflow. This plot shows that the dispersion in the reservoir-outflow cannot be modelled with such a fixed reservoir routine, where a given storage produces a fixed outflow unless it exceeds certain limitations. However, as seen before, this simple routine is able to reproduce correctly the outflow in many cases. Another idea to extract from this first example is the offset between the storage limits and the actual reservoir behaviour. In this case, the actual reservoir storage varies between 0.4 and 0.75, whereas the LISFLOOD parameters allow for a variation betweeen 0.2 and 1. This has been seen in many reservoirs, this is not an unusual case.
 
-The second plot is an example of a reservoir (ResID=140) in which the inflow and outflow time series are simulated decently well, but the storage is completely off. As in the first case, the observed storage fluctuate in a narrow range between 0.55 and 0.8, whereas the simulation expands a very wide range from 0.1 to close to 1. The density plots are a good summary of how the inflow and outflow time series overlap the observations, but the storage is wrongly simulated.
+The second plot is an example of a reservoir (ResID=140) in which the inflow and outflow time series are simulated decently well, but the storage is completely off. As in the first case, the observed storage fluctuates in a narrow range between 0.55 and 0.8, whereas the simulation ranges from 0.1 to close to 1. The density plots are a good summary of how the inflow and outflow time series overlap the observations, but the storage is wrongly simulated.
 
 Reservoir 227 is a case in which the inflow performs particularly well, and the outflow performs good, in spite of simulating a storage out of the observed range. The outflow density plot shows a typical case in which there are two modes that correspond to the adjusted normal outflow and the non-damaging outflow.
 
