@@ -109,7 +109,7 @@ class Lisflood:
         
         return Q, V
 
-    def simulate(self, inflow: pd.Series, Vo: float = None, limit_Q: bool = True, k: float = 1):
+    def simulate(self, inflow: pd.Series, Vo: float = None, limit_Q: bool = True, k: float = 1) -> pd.DataFrame:
         """Given a inflow time series (m3/s) and an initial storage (m3), it computes the time series of outflow (m3/s) and storage (m3)
         
         Parameters:
@@ -145,7 +145,7 @@ class Lisflood:
         return pd.concat((storage, inflow, outflow), axis=1)
         
         
-    def routine(self, V: pd.Series, I: Union[float, pd.Series]):
+    def routine(self, V: pd.Series, I: Union[float, pd.Series]) -> pd.Series:
         """Given a time series of reservoir storage (m3) and a value or a time series of inflow (m3/s), it computes the ouflow (m3/s). This function is only meant for explanatory purposes; since the volume time series is given, the computed outflow does not update the reservoir storage. If the intention is to simulate the behaviour of the reservoir, refer to the function "simulate"
         
         Parameters:
@@ -614,7 +614,7 @@ class Lisflood:
         
         return Q, V
     
-    def simulate(self, inflow: pd.Series, Vo: float = None, limit_Q: bool = True, routine: int = 1, k: float = 1):
+    def simulate(self, inflow: pd.Series, Vo: float = None, limit_Q: bool = True, routine: int = 1, k: float = 1) -> pd.DataFrame:
         """Given a inflow time series (m3/s) and an initial storage (m3), it computes the time series of outflow (m3/s) and storage (m3)
         
         Parameters:

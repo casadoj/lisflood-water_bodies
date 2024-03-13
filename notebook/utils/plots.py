@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Union, Dict, List, Tuple
 
 # from utils import Decomposition
-from metrics import KGEmod
+from .metrics import KGEmod
         
         
 def create_cmap(cmap: str, bounds: List, name: str = '', specify_color: Tuple = None):
@@ -78,7 +78,7 @@ def plot_resops(storage: pd.Series = None, elevation: pd.Series = None, inflow: 
     # Create the first graph in the left-most third
     ax1 = plt.subplot(gs[0])
     if isinstance(elevation, pd.Series) and isinstance(storage, pd.Series):
-        ax1.scatter(elevation, storage, s=1, c= df.index, cmap='Greys')
+        ax1.scatter(elevation, storage, s=1, c=elevation.index, cmap='Greys')
     ax1.set(xlabel='elevation (m)',
             ylabel='storage (hm3)')
 
